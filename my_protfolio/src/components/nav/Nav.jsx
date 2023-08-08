@@ -39,13 +39,13 @@ const Nav = () => {
     return (
         <nav className="flex justify-between p-5 items-center shadow-lg">
             <h1 className="font-semibold text-lg sm:text-center text-[#7050EF]">Mohamed Khassar</h1>
-            <ul className={`text-[#7050EF] lg:flex gap-10 font-semibold capitalize ${isOpened ? "absolute top-20  right-48 gap-10" : "hidden"}`}>
+            <ul className={`transition-all duration-500 text-[#7050EF] lg:flex gap-10 font-semibold capitalize ${isOpened ? "absolute top-20  right-[40%] gap-10" : "hidden"}`}>
                 {list.map((l, i) => (
                     <li className={`hover:text-[#7050EF] hover:bg-gray-200 transition-all duration-300 p-2 rounded-md ${l.isClicked ? "text-[#7050EF] bg-gray-200" : null} `} key={i} onClick={() => l.isClicked = true}><Link to={l.link}>{l.name}</Link></li>
                 ))}
             </ul>
             {isOpened ? <button className="lg:hidden text-[30px] text-[#7050EF]" onClick={() => setO(!isOpened)}><AiOutlineClose /></button> : <button className="lg:hidden text-[30px] text-[#7050EF]" onClick={() => setO(!isOpened)}><BiMenu /></button>}
-            <button className="lg:block hidden border p-3 text-white capitalize font-bold rounded-lg bg-[#7050EF] hover:bg-white hover:border-[#7050EF] hover:text-[#7050EF] transition-all duration-300" >contact me</button>
+            <button className={`lg:block border p-3 text-white capitalize font-bold rounded-lg bg-[#7050EF] hover:bg-white hover:border-[#7050EF] hover:text-[#7050EF] transition-all duration-300 ${isOpened?"absolute top-64 right-[38%]":"hidden"}`} >contact me</button>
         </nav>
     );
 }
