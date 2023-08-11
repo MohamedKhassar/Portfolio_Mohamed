@@ -5,3 +5,13 @@
 body{
     font-family: 'Poppins', sans-serif !important; 
 }
+::-webkit-scrollbar{
+    width: .2em;
+    border-radius: 15px;
+    background: #7050EF;
+    -webkit-border-radius: 15px;
+    -moz-border-radius: 15px;
+    -ms-border-radius: 15px;
+    -o-border-radius: 15px;
+    height: .2em;
+}

@@ -1,10 +1,9 @@
 import { Link } from "react-router-dom";
 import { BiMenu } from "react-icons/bi"
 import { AiOutlineClose } from "react-icons/ai"
-import { useEffect, useState } from "react";
+import {  useEffect, useState } from "react";
 const Nav = () => {
     const [isOpened, setO] = useState(false)
-
     useEffect(() => {
         // Function to update the state based on the screen width
         const handleResize = () => {
