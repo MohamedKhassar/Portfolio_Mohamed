@@ -1,17 +1,20 @@
-import { useActionData } from "react-router-dom"
 import Me from "../../assets/36.png"
 import bg from "../../assets/abstract-purple-watercolor-stain-texture-background-design_1017-28783.png"
 import 'aos/dist/aos.css'
+import { useContext } from "react"
+import { NavContext } from "../nav/Nav"
 
 const Body = () => {
 
 
+   
+console.log(useContext(NavContext));
     return (
         <div className="" >
             <div className="flex flex-col gap-12 absolute top-[30%] left-[10%]">
                 <h1 className="flex flex-col gap-5"><span className="font-bold text-3xl">Hello I am </span><span className="text-[#7050EF] font-extrabold text-4xl">Mohamed Khassar</span>
                 <small className="text-gray-500 relative left-[10%]">Full-Stack Developer</small></h1>
-                <p className="w-[32%]  font-medium text-justify">Welcome to my portfolio! I'm a passionate and dedicated Junior Full Stack Developer with a strong desire to craft innovative and user-centric digital solutions. My journey in the world of development began with a curiosity that has now blossomed into a versatile skill set.</p>
+                <p className="w-[32%]  font-medium text-justify">Welcome to my portfolio! I am a passionate and dedicated Junior Full Stack Developer with a strong desire to craft innovative and user-centric digital solutions. My journey in the world of development began with a curiosity that has now blossomed into a versatile skill set.</p>
             </div>
             <div className="">
                 <img src={bg}
