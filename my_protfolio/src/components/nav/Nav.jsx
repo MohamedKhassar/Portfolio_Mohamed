@@ -27,15 +27,15 @@ const Nav = () => {
     const list = [
         {
             name: 'Home',
-            link: '#',
+            link: '/',
             isClicked: false
         },
         {
             name: 'About Me',
-            link: '#aboutMe', isClicked: false
+            link: '/#aboutMe', isClicked: false
         },
-        { name: "Skills", link: "#skill", isClicked: false },
-        { name: "Contact", link: "#contact", isClicked: false }
+        { name: "Skills", link: "/#skill", isClicked: false },
+        { name: "Contact", link: "/#contact", isClicked: false }
     ]
 
     return (
