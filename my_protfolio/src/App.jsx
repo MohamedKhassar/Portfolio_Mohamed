@@ -1,15 +1,10 @@
 import { BrowserRouter } from "react-router-dom";
-import Nav from "./components/nav/Nav";
-import Body from "./components/body/Body";
-import Main from "./components/main/Main";
+import Navbar from "./components/Navbar";
 
 const App = () => {
   return (
     <BrowserRouter>
-  
-    <Nav />
-    <Body />
-    <Main />
+      <Navbar/>
     </BrowserRouter>
   );
 }
