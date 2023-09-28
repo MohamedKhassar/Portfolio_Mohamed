@@ -20,22 +20,22 @@ const Navbar = () => {
     ]
     const link = [
         {
-            icon: <BsLinkedin color="0077B5" size={20} />,
+            icon: <BsLinkedin className="dark:text-white " size={20} />,
             link: "/#Home",
             color: "blue"
         },
         {
-            icon: <BsGithub color="black" size={20} />,
+            icon: <BsGithub className="dark:text-white " size={20} />,
             link: "/#AboutMe",
             color: "black"
         },
         {
-            icon: <BsWhatsapp color="green" size={20} />,
+            icon: <BsWhatsapp className="dark:text-white " size={20} />,
             link: "/#ContactMe",
             color: "green"
         },
         {
-            icon: <FaXTwitter color="black" size={20} />,
+            icon: <FaXTwitter className="dark:text-white " size={20} />,
             link: "/#ContactMe",
             color: "black"
         },
