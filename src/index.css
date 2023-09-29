@@ -15,3 +15,7 @@ body{
     -o-border-radius: 15px;
     height: .2em;
 }
+
+body{
+    overflow: hidden;
+}

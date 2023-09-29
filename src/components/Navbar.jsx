@@ -40,39 +40,41 @@ const Navbar = () => {
             color: "black"
         },
     ]
-    const [isDark, setIsDark] = useState(false)
-
+   
+    const [theme,setTheme]=useState(window.matchMedia("(prefers-color-scheme: dark)"))
     const setDark = () => {
-        setIsDark(!isDark)
+        setTheme(!theme)
     }
 
 
     useEffect(() => {
-        if (isDark) {
+        if (theme) {
             document.body.classList.add("bg-[#202124]")
             document.body.classList.add("dark")
         } else {
             document.body.classList.remove('bg-[#202124]')
             document.body.classList.remove("dark")
         }
-    }, [isDark])
+    }, [theme])
 
+console.log(theme);
+    
     return (
-        <nav className="p-5 px-16 shadow-lg dark:shadow-2xl flex justify-between items-center ">
+        <nav className="p-5 px-16 shadow-lg dark:shadow-lg flex justify-between items-center ">
             <div>
-                <h1 className="dark:text-white text-blue-900 text-2xl font-extrabold">Mohamed Khassar</h1>
+                <h1 className="dark:text-cyan-900  text-blue-800 text-2xl font-extrabold"><Link to="/">Mohamed Khassar</Link></h1>
             </div>
             <div className="w-[20%]">
                 <ul className="flex justify-evenly">
                     {infos.map((inf, i) =>
-                        <Link key={i} to={inf.link}><li className="hover:bg-blue-900 hover:text-blue-100 text-blue-900 font-bold p-2 rounded-md transition-all duration-300 dark:text-[#FFFFFF]">{inf.name}</li></Link>
+                        <Link key={i} to={inf.link}><li className="hover:bg-blue-900 text-blue-800 font-bold p-2 rounded-md transition-all duration-300 dark:text-cyan-900 dark:hover:text-blue-100 hover:text-blue-100">{inf.name}</li></Link>
                     )}
                 </ul>
             </div>
             <div className="flex justify-between w-[20%] items-center transition-all duration-300">
                 <div className="me-20">
 
-                    {!isDark ? <MdDarkMode size={25} className="cursor-pointer text-blue-900 dark:text-[#FFFFFF]" onClick={setDark} /> : <MdOutlineLightMode size={25} className="cursor-pointer text-white" onClick={setDark} />}
+                    { !theme ? <MdDarkMode size={25} className="cursor-pointer text-blue-900 dark:text-[#FFFFFF]" onClick={setDark} /> : <MdOutlineLightMode size={25} className="cursor-pointer text-white" onClick={setDark} />}
 
                 </div>
                 <ul className="flex justify-between w-full">
