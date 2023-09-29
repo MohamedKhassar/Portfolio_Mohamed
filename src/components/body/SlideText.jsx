@@ -38,7 +38,7 @@ const SlideText = () => {
                 className="dark:text-white grid gap-y-10"
             >
                 <div className="w-fit">
-                    <h1 className="text-blue-800 dark:text-cyan-900 text-4xl font-extrabold">Mohamed Khassar</h1>
+                    <h1 className="text-blue-800 dark:text-cyan-900 text-4xl font-extrabold text-center">Mohamed Khassar</h1>
                     <p className="text-center dark:text-gray-500 font-semibold">Full-Stack Web Developer</p>
                 </div>
                 <div className="w-[400px]">
@@ -49,7 +49,7 @@ const SlideText = () => {
                 </div>
                 <div className="flex gap-16">
                     <a href={cv} download={true}  className="flex items-center gap-4 border rounded-md p-3 bg-blue-900 text-white dark:bg-cyan-900 border-none">Download<HiDownload /></a>
-                    <Link to="#contactMe"><button className="flex items-center gap-4 rounded-md p-3 hover:bg-blue-900 text-blue-800 font-semibold dark:hover:text-white hover:text-white dark:text-cyan-900 hover:dark:bg-cyan-900 border border-cyan-900 transition-all duration-300 capitalize">contact me<AiOutlineMessage size={20}/></button></Link>
+                    <Link to="#contactMe"><button className="flex items-center gap-4 rounded-md p-3 hover:bg-blue-900 text-blue-800 font-semibold dark:hover:text-white hover:text-white dark:text-cyan-900 hover:dark:bg-cyan-900 border-2 border-cyan-900 transition-all duration-300 capitalize">contact me<AiOutlineMessage size={20}/></button></Link>
                 </div>
             </motion.div>
         </div>

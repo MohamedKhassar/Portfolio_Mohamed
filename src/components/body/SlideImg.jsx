@@ -27,8 +27,8 @@ const SlideImg = () => {
         variants={variants}
         transition={{ duration: 1 }}
         style={{
-          width: '200px',
-          height: '200px',
+          width: '300px',
+          height: '300px',
           translate:"200px 200px"          
         }}
         className="dark:border-cyan-900 rounded-full border-blue-900 border-8"

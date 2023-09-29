@@ -21,23 +21,19 @@ const Navbar = () => {
     const link = [
         {
             icon: <BsLinkedin className="dark:text-white " size={20} />,
-            link: "/#Home",
-            color: "blue"
+            link: "https://www.linkedin.com/in/mohamed-khassar-374845253/",
         },
         {
             icon: <BsGithub className="dark:text-white " size={20} />,
-            link: "/#AboutMe",
-            color: "black"
+            link: "https://github.com/khassarMohamed/",
         },
         {
             icon: <BsWhatsapp className="dark:text-white " size={20} />,
-            link: "/#ContactMe",
-            color: "green"
+            link: "https://wa.me/+212664945127",
         },
         {
             icon: <FaXTwitter className="dark:text-white " size={20} />,
-            link: "/#ContactMe",
-            color: "black"
+            link: "https://twitter.com/MohamedKhassar",
         },
     ]
    
@@ -79,7 +75,7 @@ console.log(theme);
                 </div>
                 <ul className="flex justify-between w-full">
                     {link.map((l, i) =>
-                        <li key={i}>{l.icon}</li>
+                        <li key={i}><a href={l.link} target="_blank" rel="noopener noreferrer">{l.icon}</a></li>
                     )}
                 </ul>
 

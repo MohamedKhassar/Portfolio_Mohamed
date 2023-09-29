@@ -6,7 +6,12 @@ export default {
   ],
   darkMode:"class",
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        'bg': "url('/src/assets/dark-blue-memphis-blog-banner-template_53876-98946.jpg')",
+        
+      },
+    },
     container:{
       center:"true"
     },
