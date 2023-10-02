@@ -39,9 +39,9 @@ const SlideText = () => {
             >
                 <div className="w-fit">
                     <h1 className="text-blue-800 dark:text-cyan-900 text-4xl font-extrabold text-center">Mohamed Khassar</h1>
-                    <p className="text-center dark:text-gray-500 font-semibold">Full-Stack Web Developer</p>
+                    <p className="text-center dark:text-gray-500 font-semibold">Jr.Full-Stack Web Developer</p>
                 </div>
-                <div className="w-[400px]">
+                <div className="w-[350px]">
                     <p className="text-justify font-bold dark:text-gray-400">I am a competent web developer
                         excited about the Developer position
                         Web you. With a mastery of <b className="text-orange-400">HTML</b>, <b className="text-blue-600">CSS</b>, <b className="text-yellow-400">JavaScript</b>, <b className="text-[#787CB5]">PHP</b>, <b className="text-[#61DBFB] ">ReactJs</b>, <b className="text-[#3c873a]">NodeJs</b>,

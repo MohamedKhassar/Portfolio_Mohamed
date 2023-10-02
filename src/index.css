@@ -16,6 +16,11 @@ body{
     height: .2em;
 }
 
-body{
-    overflow: hidden;
+html{
+
+    scroll-behavior: smooth;
 }
+body{
+    overflow-x: hidden;
+}
+

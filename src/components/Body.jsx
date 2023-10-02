@@ -1,6 +1,7 @@
 import { BiMouse } from "react-icons/bi";
 import SlideImg from "./body/SlideImg";
 import SlideText from "./body/SlideText";
+import Skills from "./body/Skills";
 const Body = () => {
     return (
         <div className="">
@@ -9,8 +10,10 @@ const Body = () => {
                 <SlideText />
             </div>
             <span className="flex items-center justify-center translate-y-96">
-                <hr  className="w-[300px] border-black dark:border-white"/><BiMouse className="dark:fill-white" size={30}/><hr className="w-[300px] border-black dark:border-white"/>
+                <hr  className="w-[300px] border-black dark:border-white"/><a href="#skills" target="_self"><BiMouse className="dark:fill-white" size={30}/></a><hr className="w-[300px] border-black dark:border-white"/>
             </span>
+            
+                <Skills />
         </div>
     );
 }
