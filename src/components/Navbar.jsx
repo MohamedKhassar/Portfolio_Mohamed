@@ -56,7 +56,7 @@ const Navbar = () => {
 console.log(theme);
     
     return (
-        <nav className="p-5 px-16 shadow-lg dark:shadow-lg flex justify-between items-center ">
+        <nav className="bg-white dark:bg-[#202124] z-10 p-5 px-16 shadow-lg dark:shadow-lg flex justify-between items-center w-full fixed">
             <div>
                 <h1 className="dark:text-cyan-900  text-blue-800 text-2xl font-extrabold"><Link to="/">Mohamed Khassar</Link></h1>
             </div>
