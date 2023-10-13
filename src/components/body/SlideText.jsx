@@ -1,5 +1,3 @@
-import { motion, useAnimation } from "framer-motion";
-import { useEffect, useState } from "react";
 import {HiDownload} from "react-icons/hi"
 import {AiOutlineMessage} from "react-icons/ai"
 import { Link } from "react-router-dom";
@@ -7,36 +5,8 @@ import cv from "../../assets/cv.pdf"
 const SlideText = () => {
 
 
-    const controls = useAnimation();
-    const [animationCompleted, setAnimationCompleted] = useState(false);
-
-    useEffect(() => {
-        if (!animationCompleted) {
-            controls.start('animate').then(() => {
-                setAnimationCompleted(true);
-            });
-        }
-    }, [controls, animationCompleted]);
-
-    const variants = {
-        initial: { x: '0' },
-        animate: { x: 0 },
-    };
-
-
     return (
-        <div className="">
-            <motion.div
-                initial="initial"
-                animate={controls}
-                variants={variants}
-                transition={{ duration: 1 }}
-                style={{
-
-                    translate: "200px 200px"
-                }}
-                className="dark:text-white grid gap-y-10"
-            >
+        <div  className="grid gap-y-6 translate-x-[200px] translate-y-[300px]">
                 <div className="w-fit">
                     <h1 className="text-blue-800 dark:text-cyan-900 text-4xl font-extrabold text-center">Mohamed Khassar</h1>
                     <p className="text-center dark:text-gray-500 font-semibold">Jr.Full-Stack Web Developer</p>
@@ -51,7 +21,6 @@ const SlideText = () => {
                     <a href={cv} download={true}  className="flex items-center gap-4 border rounded-md p-3 bg-blue-900 text-white dark:bg-cyan-900 border-none">Download<HiDownload /></a>
                     <Link to="#contactMe"><button className="flex items-center gap-4 rounded-md p-3 hover:bg-blue-900 text-blue-800 font-semibold dark:hover:text-white hover:text-white dark:text-cyan-900 hover:dark:bg-cyan-900 border-2 border-cyan-900 transition-all duration-300 capitalize">contact me<AiOutlineMessage size={20}/></button></Link>
                 </div>
-            </motion.div>
         </div>
     );
 }

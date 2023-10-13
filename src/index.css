@@ -22,5 +22,7 @@ html{
 }
 body{
     overflow-x: hidden;
-}
 
+    background: url(/src/assets/grunge-dots-and-points-texture-background-abstract-grainy-overlay-graphic-illustration-with-transparent-background-png.webp) no-repeat;
+    background-size: cover;
+}

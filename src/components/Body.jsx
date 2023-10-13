@@ -4,7 +4,7 @@ import SlideText from "./body/SlideText";
 import Skills from "./body/Skills";
 const Body = () => {
     return (
-        <div className="">
+        <div className="grid gap-y-5 bg">
             <div className="flex justify-between flex-row-reverse items-center">
                 <SlideImg />
                 <SlideText />
