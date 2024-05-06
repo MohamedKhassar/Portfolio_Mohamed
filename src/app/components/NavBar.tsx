@@ -1,13 +1,25 @@
+"use client"
 import { Home, MailCheck, PanelsTopLeft, UserRoundSearch } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import Tooltip from './Tooltip'
-import DarkMode from './DarkMode'
-
+import { ModeToggle } from './ModeToggle'
+import { motion } from "framer-motion"
 const NavBar = () => {
     return (
-        <nav className='flex justify-center w-full items-center'>
-            <div className='flex shadow-md hover:shadow-lg duration-200 w-fit px-8 py-2 gap-x-10 rounded-full fixed bottom-10 shadow-sky-700  hover:shadow-sky-700 dark:text-white'>
+        <motion.nav className='m-3 flex justify-center w-full items-center'
+            initial={{
+                opacity: 0,
+            }}
+            animate={{
+                opacity: 1,
+            }}
+            transition={{
+                duration: 1.5,
+                ease: "easeInOut"
+            }}
+        >
+            <div className='z-50 flex items-center shadow-md hover:shadow-lg duration-200 w-fit px-8 py-2 gap-x-10 rounded-full lg:fixed lg:bottom-10 backdrop-blur-md shadow-sky-700  hover:shadow-sky-700 dark:text-white'>
                 <div>
                     <Tooltip text="home">
                         <Link href={"/"} data-tooltip-target="tooltip-default">
@@ -36,8 +48,13 @@ const NavBar = () => {
                         </Link>
                     </Tooltip>
                 </div>
+                <div>
+                    <Tooltip text="Mode">
+                        <ModeToggle />
+                    </Tooltip>
+                </div>
             </div>
-        </nav >
+        </motion.nav>
     )
 }
 
