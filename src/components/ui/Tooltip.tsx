@@ -13,7 +13,7 @@ const Tooltip = ({ text, children }: any) => {
         {children}
       </span>
       {showTooltip && (
-        <div className="duration-300 absolute bottom-10 text-nowrap z-10 px-2 py-1 capitalize text-white bg-gray-800 rounded shadow text-lg">
+        <div className="duration-300 absolute right-12 text-nowrap z-10 px-2 py-1 capitalize text-white bg-gray-800 rounded shadow text-lg">
           {text}
         </div>
       )}
