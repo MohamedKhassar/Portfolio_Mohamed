@@ -4,11 +4,9 @@ import React from 'react'
 
 const page = () => {
   return (
-    <div className='flex flex-col lg:gap-y-10 gap-y-48'>
+    <div className='grid grid-cols-1 place-items-center lg:gap-y-4 items-center'>
       <Home />
-      <div className='flex justify-center'>
-        <hr className='border-gray-700 dark:border-white w-[70%] rounded-md' />
-      </div>
+      <hr className='my-28 mt-64 lg:my-0 border-gray-700 dark:border-white w-[70%] rounded-md' />
       <About />
     </div>
   )

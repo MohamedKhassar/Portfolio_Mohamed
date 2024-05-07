@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const About = () => {
     return (
-        <motion.div id='about' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className='flex justify-center flex-col items-center gap-10'>
+        <motion.div id='about' initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1.5 }} className='h-[90vh] flex justify-center flex-col items-center gap-10'>
             <h1 className='text-4xl capitalize text-center font-medium'>about <span className='text-sky-600'>me</span></h1>
             <div className='rounded-full border-double border-8 border-sky-800 w-fit'>
                 <Image src={Mohamed_bg} className='rounded-full w-56 m-2' alt='Mohamed' />
