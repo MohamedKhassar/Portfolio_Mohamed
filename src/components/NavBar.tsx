@@ -1,5 +1,5 @@
 "use client"
-import { Home, MailCheck, PanelsTopLeft, UserRoundSearch } from 'lucide-react'
+import { Home, MailCheck, PanelsTopLeft, UserRoundSearch, Wand } from 'lucide-react'
 import Link from 'next/link'
 import React from 'react'
 import Tooltip from './ui/Tooltip'
@@ -37,17 +37,18 @@ const NavBar = () => {
                     </Tooltip>
                 </div>
                 <div className='cursor-pointer'>
+                    <Tooltip text="skills">
+                        <Wand onClick={() => scrollToSection("skills")} />
+                    </Tooltip>
+                </div>
+                <div className='cursor-pointer'>
                     <Tooltip text="projects">
-                        <Link href={"/projects"}>
-                            <PanelsTopLeft />
-                        </Link>
+                        <PanelsTopLeft onClick={() => scrollToSection("projects")} />
                     </Tooltip>
                 </div>
                 <div className='cursor-pointer'>
                     <Tooltip text="contact us">
-                        <Link href={"/contact-us"}>
-                            <MailCheck />
-                        </Link>
+                        <MailCheck onClick={() => scrollToSection("contact")} />
                     </Tooltip>
                 </div>
                 <div>
