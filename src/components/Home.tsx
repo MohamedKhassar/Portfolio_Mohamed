@@ -1,15 +1,40 @@
 "use client"
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from '@radix-ui/react-dropdown-menu'
 import { ArrowDown } from 'lucide-react'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { Typewriter } from 'react-simple-typewriter'
 import Flag from 'react-world-flags'
 import { motion } from 'framer-motion';
 import { cn } from '@/lib/utils'
 import Image from 'next/image'
 import Mohamed_bg from "../../public/assets/imgs/Mohamed.png"
+import { useRouter } from 'next/navigation'
 
 const Home = () => {
+    const handleDownload = (lng: string) => {
+        var downloadUrl;
+        if (lng == "fr") {
+            downloadUrl = '../../public/assets/files/Mohamed_Khassar(fr).pdf';
+        } else {
+            downloadUrl = '../../public/assets/files/Mohamed_Khassar(eng).pdf';
+
+        }
+
+
+        const link = document.createElement('a');
+        link.href = downloadUrl;
+        link.setAttribute('download', downloadUrl.replace("../../public/assets/files/", ""));
+        link.setAttribute('target', '_blank');
+
+
+        document.body.appendChild(link);
+
+
+        link.click();
+
+
+        document.body.removeChild(link);
+    };
     return (
         <motion.div id='home' className="grid lg:grid-cols-2 gap-y-16 place-items-center px-8 w-full h-[90vh]"
             initial={{
@@ -50,9 +75,9 @@ const Home = () => {
                     Passionate MERN/Full Stack Developer adept at crafting robust and scalable web applications. With a keen eye for detail and a commitment to clean, efficient code, I specialize in creating dynamic user experiences that elevate brands and exceed expectations. Continuously exploring new technologies and methodologies to stay at the forefront of the ever-evolving tech landscape, I bring innovation and expertise to every project I undertake.</p>
                 <DropdownMenu>
                     <DropdownMenuTrigger className='hover:text-white dark:hover:text-black capitalize border-2 outline-none border-sky-700 p-3 rounded-md hover:bg-sky-700 active:bg-sky-700 duration-300 flex gap-x-3 items-center font-medium order-last'>download cv <ArrowDown className='animate-bounce' /> </DropdownMenuTrigger>
-                    <DropdownMenuContent className='mt-3 w-[160px] bg-black/15 backdrop-blur-md p-2 rounded-md'>
-                        <DropdownMenuItem className='flex gap-x-3 items-center hover:cursor-pointer p-3 outline-none hover:bg-sky-700 rounded-md'>Français <Flag code='fr' height="20" width="20" /></DropdownMenuItem>
-                        <DropdownMenuItem className='flex gap-x-3 items-center hover:cursor-pointer p-3 outline-none hover:bg-sky-700 rounded-md'>English <Flag code='us' height="20" width="20" /></DropdownMenuItem>
+                    <DropdownMenuContent className='mt-3 w-[160px] backdrop-blur-md p-2 rounded-md'>
+                        <DropdownMenuItem className='flex gap-x-3 items-center hover:cursor-pointer p-3 outline-none hover:bg-sky-700 rounded-md' onClick={() => handleDownload("fr")}>Français <Flag code='fr' height="20" width="20" /></DropdownMenuItem>
+                        <DropdownMenuItem className='flex gap-x-3 items-center hover:cursor-pointer p-3 outline-none hover:bg-sky-700 rounded-md' onClick={() => handleDownload("eng")}>English <Flag code='us' height="20" width="20" /></DropdownMenuItem>
                     </DropdownMenuContent>
                 </DropdownMenu>
             </div>
