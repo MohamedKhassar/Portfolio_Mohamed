@@ -1,63 +1,41 @@
 "use client"
-import { Home, MailCheck, PanelsTopLeft, UserRoundSearch, Wand } from 'lucide-react'
-import Link from 'next/link'
-import React from 'react'
-import Tooltip from './ui/Tooltip'
-import { ModeToggle } from './ui/ModeToggle'
-import { motion } from "framer-motion"
+import React, { useState } from 'react'
+import { Menu, MessageSquareText, X } from "lucide-react"
+import { cn } from '@/lib/utils'
+import { motion } from 'framer-motion'
 const NavBar = () => {
-    const scrollToSection = (sectionId: string) => {
-        const section = document.getElementById(sectionId);
-        if (section) {
-            section.scrollIntoView({ behavior: 'smooth' });
-        }
-    }
+    const [isHover, setIsHover] = useState(false)
+    const [isOpened, setIsOpened] = useState(false)
+
     return (
-        <motion.nav className='m-3 flex justify-center w-full items-center'
-            initial={{
-                opacity: 0,
-            }}
-            animate={{
-                opacity: 1,
-            }}
-            transition={{
-                duration: 1.5,
-                ease: "easeInOut"
-            }}
-        >
-            <div className='z-50 flex flex-col items-center shadow-md hover:shadow-lg duration-200 w-fit lg:py-8 p-5 lg:px-2 px-1 lg:gap-y-10 gap-y-5 rounded-full fixed bottom-56 lg:right-10 right-5 backdrop-blur-md shadow-sky-700  hover:shadow-sky-700 dark:text-white'>
-                <div className='cursor-pointer'>
-                    <Tooltip text="home">
-                        <Home onClick={() => scrollToSection("home")} />
-                    </Tooltip>
-                </div>
-                <div className='cursor-pointer'>
-                    <Tooltip text="about me">
-                        <UserRoundSearch onClick={() => scrollToSection("about")} />
-                    </Tooltip>
-                </div>
-                <div className='cursor-pointer'>
-                    <Tooltip text="skills">
-                        <Wand onClick={() => scrollToSection("skills")} />
-                    </Tooltip>
-                </div>
-                <div className='cursor-pointer'>
-                    <Tooltip text="projects">
-                        <PanelsTopLeft onClick={() => scrollToSection("projects")} />
-                    </Tooltip>
-                </div>
-                <div className='cursor-pointer'>
-                    <Tooltip text="contact us">
-                        <MailCheck onClick={() => scrollToSection("contact")} />
-                    </Tooltip>
-                </div>
-                <div>
-                    <Tooltip text="Mode">
-                        <ModeToggle />
-                    </Tooltip>
-                </div>
-            </div>
-        </motion.nav>
+        <div className='py-3 lg:shadow-2xl lg:shadow-[#6c06f2]/20 fixed w-full top-0 flex justify-between lg:gap-0 gap-10 items-center px-14 font-Poppins'>
+            <h1 className='capitalize font-semibold text-2xl flex items-center'>mohamed khassar<span className='text-5xl font-bold text-[#6e06f2]'>.</span></h1>
+            <button className={cn('lg:hidden absolute right-5 z-20 w-fit',
+                isOpened && "top-20"
+            )} onClick={() => setIsOpened(!isOpened)}>
+                {!isOpened ? <Menu size={28} stroke='#6c06f2' /> : <X size={28} stroke='white' />}
+            </button>
+            <motion.ul className={cn('flex lg:flex-row lg:static top-16 absolute justify-center items-center lg:bg-transparent bg-[#6c06f2]/50 backdrop-blur-md text-white lg:text-center gap-10 font-semibold lg:w-fit w-full right-0 lg:h-fit h-screen lg:text-[#6F7589] font-Poppins text-lg capitalize duration-300',
+                isOpened ? "flex-col navbar-animation" : "lg:flex hidden"
+            )}>
+                <li className="hover:text-[#6e06f2] duration-300 cursor-pointer">home</li>
+                <li className="hover:text-[#6e06f2] duration-300 cursor-pointer">projects</li>
+                <li className="hover:text-[#6e06f2] duration-300 cursor-pointer">about</li>
+                <li className="hover:text-[#6e06f2] duration-300 cursor-pointer">skills</li>
+                <li className="lg:hidden"><button onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className='bg-[#24262F] duration-1000 hover:bg-[#6e06f2] relative p-3 rounded-full flex flex-col items-center'>
+                    <MessageSquareText stroke='white' size={20} />
+                    <span className={cn('bg-[#6c06f29a] py-2 px-3 absolute top-12 rounded-md font-Poppins capitalize text-white transition duration-300',
+                        !isHover && "opacity-0"
+                    )}>contact</span>
+                </button></li>
+            </motion.ul>
+            <button onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className='bg-[#24262F] duration-1000 hover:bg-[#6e06f2] relative p-3 rounded-full lg:flex hidden flex-col items-center  border border-white'>
+                <MessageSquareText stroke='white' size={20} />
+                <span className={cn('bg-[#6c06f29a] py-2 px-3 absolute top-12 rounded-md font-Poppins capitalize text-white transition duration-300',
+                    !isHover && "opacity-0"
+                )}>contact</span>
+            </button>
+        </div >
     )
 }
 
