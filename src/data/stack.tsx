@@ -14,7 +14,7 @@ import {
 import { RiNextjsFill } from 'react-icons/ri';
 import { SiCplusplus, SiRuby, SiGo, SiSwift, SiDjango, SiFlask, SiSpring, SiRubyonrails, SiLaravel, SiSymfony, SiExpress, SiTailwindcss, SiMongodb } from 'react-icons/si';
 import { TbBrandFramerMotion } from 'react-icons/tb';
-const generateId = () => `${Math.random().toString(36).substr(2, 9)}-${Date.now()}`;
+const generateId = () => Number(Math.random() - Date.now());
 
 const technologies = [
   {
