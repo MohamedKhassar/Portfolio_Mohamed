@@ -20,7 +20,7 @@ const NavBar = () => {
             )}>
                 <li className="hover:text-[#6e06f2] duration-300 cursor-pointer">home</li>
                 <li className="hover:text-[#6e06f2] duration-300 cursor-pointer">projects</li>
-                <li className="hover:text-[#6e06f2] duration-300 cursor-pointer">about</li>
+                <li className="hover:text-[#6e06f2] duration-300 cursor-pointer">education</li>
                 <li className="hover:text-[#6e06f2] duration-300 cursor-pointer">skills</li>
                 <li className="lg:hidden"><button onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className='bg-[#24262F] duration-1000 hover:bg-[#6e06f2] relative p-3 rounded-full flex flex-col items-center'>
                     <MessageSquareText stroke='white' size={20} />

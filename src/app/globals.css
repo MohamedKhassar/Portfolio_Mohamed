@@ -30,3 +30,19 @@ html {
     left: 0;
   }
 }
+
+.certif-animation {
+  animation: navbar-animation .5s linear;
+  -webkit-animation: navbar-animation .5s linear;
+}
+
+
+@keyframes navbar-animation {
+  0% {
+    opacity:0;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}

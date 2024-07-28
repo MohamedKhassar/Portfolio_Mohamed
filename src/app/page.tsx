@@ -1,3 +1,4 @@
+import Education from "@/components/Education"
 import HomePage from "@/components/HomePage"
 import ProjectsSection from "@/components/ProjectsSection"
 
@@ -6,6 +7,7 @@ const page = () => {
     <>
       <HomePage />
       <ProjectsSection />
+      <Education />
     </>
   )
 }
