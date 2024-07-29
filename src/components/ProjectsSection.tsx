@@ -22,7 +22,7 @@ const ProjectsSection = () => {
         }
     };
     return (
-        <div className="lg:mx-20 lg:my-44 my-20 space-y-10">
+        <div id="projects" className="lg:mx-20 lg:my-44 my-20 space-y-10">
             <Fade direction="left">
                 <h1 className='capitalize font-bold font-Poppins text-5xl lg:text-8xl flex items-center text-nowrap mx-3'>projects<span className='lg:text-9xl text-6xl font-bold text-[#6e06f2]'>.</span></h1>
             </Fade>

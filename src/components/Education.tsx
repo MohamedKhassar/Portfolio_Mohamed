@@ -8,6 +8,7 @@ import { Fade } from "react-awesome-reveal"
 const Education = () => {
     const [index, setIndex] = useState(0)
     const [isAnimated, setIsAnimated] = useState(false)
+    const [prevIndex, setPreviousIndex] = useState<number | null>(null)
     const education = {
         uni: "OFPPT",
         description: "OFPPT is a public institution in Morocco focused on vocational training and employment promotion.",
@@ -34,7 +35,16 @@ const Education = () => {
             }
         ]
 
-    useEffect(() => {
+    const handleItemClick = (i: number) => {
+        if (i === index) {
+            setIsAnimated(false); // Reset animation if the same item is clicked
+        } else {
+            setIsAnimated(true); // Trigger animation for different items
+        }
+        setPreviousIndex(index); // Update the previous index
+        setIndex(i); // Update the current index
+    }
+    certificates.some((cer, cerIndex) => cer.title === certificates[index].title && cerIndex !== index); useEffect(() => {
         let interval: NodeJS.Timeout | undefined;
 
         if (isAnimated) {
@@ -48,7 +58,7 @@ const Education = () => {
         };
     }, [isAnimated, setIsAnimated]);
     return (
-        <div className="lg:space-y-32 space-y-16 my-10">
+        <div id="education" className="lg:space-y-32 space-y-16 my-10">
             <div className="lg:mx-20 lg:space-y-20 space-y-8">
                 <Fade direction="left">
                     <h1 className='capitalize font-bold font-Poppins text-5xl lg:text-8xl flex items-center text-nowrap mx-3'>Education<span className='lg:text-9xl text-6xl font-bold text-[#6e06f2]'>.</span></h1>
@@ -77,12 +87,11 @@ const Education = () => {
                         <div className="lg:text-2xl text-lg flex flex-row lg:flex-col font-Poppins font-semibold">
                             {certificates.map((cer, i) =>
                                 <h1 className={cn("lg:p-10 p-6 lg:border-b-0 border-l-0 lg:border-r-0 cursor-pointer text-nowrap lg:border-l-4 border-b-4",
-                                    i !== index ? "border-[#4E525A] text-[#4E525A]" : "border-[#6e06f2] text-[#6e06f2]")} onClick={() => { setIndex(i); setIsAnimated(true) }} >{cer.uni}</h1>
+                                    i !== index ? "border-[#4E525A] text-[#4E525A]" : "border-[#6e06f2] text-[#6e06f2]")} onClick={() => handleItemClick(i)} >{cer.uni}</h1>
                             )}
                         </div>
                         <div className={cn("space-y-6",
-                            isAnimated && "certif-animation"
-                        )}>
+                            isAnimated && "certif-animation")}>
                             <div>
                                 <h1 className="lg:text-2xl text-xl font-Poppins font-bold capitalize">{certificates[index].title}</h1>
                                 <small className="text-[#4E525A] capitalize font-semibold">{certificates[index].date}</small>

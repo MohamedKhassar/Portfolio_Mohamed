@@ -6,7 +6,7 @@ import Image from "next/image"
 
 const HomePage = () => {
     return (
-        <div className="flex lg:flex-row flex-col-reverse lg:gap-x-[38rem] gap-y-20 items-center justify-center lg:my-40 my-20 lg:mx-20 mx-8 -z-10">
+        <div id="home" className="flex lg:flex-row flex-col-reverse lg:gap-x-[38rem] gap-y-20 items-center justify-center lg:my-40 my-20 lg:mx-20 mx-8 -z-10">
             <Fade cascade>
                 <div className="text-left flex flex-col lg:gap-y-8 gap-y-6">
                     <h1 className="font-Poppins font-medium lg:text-3xl text-xl capitalize">hey, I'm <span className="text-[#6e06f2] font-semibold">mohamed</span> 👋🏻</h1>
