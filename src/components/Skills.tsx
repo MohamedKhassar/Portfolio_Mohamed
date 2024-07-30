@@ -4,14 +4,14 @@ import Image from "next/image";
 import { useRef } from "react";
 import { Fade } from "react-awesome-reveal"
 import Collaboration from "/public/assets/imgs/partners.png"
-import Leadership from "/public/assets/imgs/Leadership.png"
+import leadership from "/public/assets/imgs/leadership.png"
 import Effective_communication from "/public/assets/imgs/effective-communication.png"
 import commitment from "/public/assets/imgs/commitment.png"
 
 const Skills = () => {
     const softSkills = [
         { image: Collaboration, title: "Collaboration" },
-        { image: Leadership, title: "Leadership" },
+        { image: leadership, title: "Leadership" },
         { image: Effective_communication, title: "Effective communication" },
         { image: commitment, title: "commitment" },]
     const refs = useRef<{ [key: string]: HTMLSpanElement | null }>({});
