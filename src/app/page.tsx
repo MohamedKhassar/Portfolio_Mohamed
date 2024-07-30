@@ -1,6 +1,7 @@
 import Education from "@/components/Education"
 import HomePage from "@/components/HomePage"
 import ProjectsSection from "@/components/ProjectsSection"
+import Skills from "@/components/Skills"
 
 const page = () => {
   return (
@@ -8,6 +9,7 @@ const page = () => {
       <HomePage />
       <ProjectsSection />
       <Education />
+      <Skills />
     </>
   )
 }

@@ -46,20 +46,20 @@ const ProjectsSection = () => {
                                         <div
                                             key={index}
                                             className="relative flex flex-col justify-end items-center"
-                                            onMouseEnter={() => handleHover(Number(item.id + s.id))}
-                                            onMouseLeave={() => handleMouseLeave(Number(item.id + s.id))}
+                                            onMouseEnter={() => handleHover(Number(item.id + s!.id))}
+                                            onMouseLeave={() => handleMouseLeave(Number(item.id + s!.id))}
                                         >
-                                            <li>{s.icon()}</li>
+                                            <li>{s?.icon()}</li>
                                             <span
                                                 ref={(el) => {
                                                     if (el) {
-                                                        refs.current[item.id + s.id] = el;
+                                                        refs.current[item.id + s!.id] = el;
                                                     }
                                                 }}
-                                                id={`title-${Number(item.id + s.id)}`}
+                                                id={`title-${Number(item.id + s!.id)}`}
                                                 className="absolute text-nowrap -bottom-12 rounded-md text-white font-Poppins p-2 opacity-0 duration-300 bg-[#6e06f2]"
                                             >
-                                                {s.title}
+                                                {s!.title}
                                             </span>
                                         </div>
                                     ))}

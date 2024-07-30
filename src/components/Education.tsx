@@ -18,7 +18,7 @@ const Education = () => {
     const certificates: {
         uni: string,
         title: string,
-        description: string | (() => JSX.Element),
+        description: (() => JSX.Element),
         date: string
     }[] = [
             {
@@ -86,7 +86,7 @@ const Education = () => {
                     <div className="flex lg:flex-row flex-col lg:space-y-0 space-y-10 lg:space-x-28 items-center lg:mx-16 mx-3">
                         <div className="lg:text-2xl text-lg flex flex-row lg:flex-col font-Poppins font-semibold">
                             {certificates.map((cer, i) =>
-                                <h1 className={cn("lg:p-10 p-6 lg:border-b-0 border-l-0 lg:border-r-0 cursor-pointer text-nowrap lg:border-l-4 border-b-4",
+                                <h1 key={i} className={cn("lg:p-10 p-6 lg:border-b-0 border-l-0 lg:border-r-0 cursor-pointer text-nowrap lg:border-l-4 border-b-4",
                                     i !== index ? "border-[#4E525A] text-[#4E525A]" : "border-[#6e06f2] text-[#6e06f2]")} onClick={() => handleItemClick(i)} >{cer.uni}</h1>
                             )}
                         </div>
