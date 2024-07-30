@@ -15,7 +15,7 @@ const projects = [
         description: "A simple and user-friendly to-do list application allowing users to add, view, and manage tasks. Features include task input validation and a clean interface.",
         link: "https://to-do-med.netlify.app/",
         image: todo.src,
-        stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech.title.toLowerCase()))
+        stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech!.title.toLowerCase()))
     },
     {
         id: generateId(),
@@ -23,7 +23,7 @@ const projects = [
         description: "An interactive age calculator where users input their birth date to calculate their age in years, months, and days. The interface is straightforward and easy to use.",
         link: "https://age-med.netlify.app/",
         image: age.src,
-        stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech.title.toLowerCase()))
+        stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech!.title.toLowerCase()))
     },
     {
         id: generateId(),
@@ -31,7 +31,7 @@ const projects = [
         description: "A versatile password generator allowing users to create secure passwords by selecting desired length and character types, including uppercase, lowercase, numbers, and symbols. The design is minimalistic and efficient.",
         link: "https://pass-gen-med.netlify.app/",
         image: pass.src,
-        stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech.title.toLowerCase()))
+        stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech!.title.toLowerCase()))
     },
     {
         id: generateId(),
@@ -39,7 +39,7 @@ const projects = [
         description: "An engaging quiz application designed to test developers' knowledge with randomly generated questions. The interface is clean and user-friendly, making it easy to start and navigate through quizzes.",
         link: "https://quiz-med.netlify.app/",
         image: quiz.src,
-        stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech.title.toLowerCase()))
+        stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech!.title.toLowerCase()))
     },
     {
         id: generateId(),
@@ -47,7 +47,7 @@ const projects = [
         description: "Task Pulse is a project management app designed to help users organize, track, and collaborate on tasks. It features a clean and intuitive interface suitable for both development teams and independent professionals.",
         link: "https://task-pulse-rho.vercel.app/",
         image: task.src,
-        stack: technologies.filter(tech => ["next.js", "tailwind css", "typescript", "mongodb"].includes(tech.title.toLowerCase()))
+        stack: technologies.filter(tech => ["next.js", "tailwind css", "typescript", "mongodb"].includes(tech!.title.toLowerCase()))
     },
     {
         id: generateId(),
@@ -55,7 +55,7 @@ const projects = [
         description: "RSTKASSAR is a visually appealing landing page for a restaurant. It features sections for the menu,greeting and reviews. The design is elegant and user-friendly, providing a seamless experience for visitors looking to explore the restaurant's offerings.",
         link: "https://rstkhassar.netlify.app/",
         image: rst.src,
-        stack: technologies.filter(tech => ["react", "tailwind css", "typescript", "framer motion"].includes(tech.title.toLowerCase()))
+        stack: technologies.filter(tech => ["react", "tailwind css", "typescript", "framer motion"].includes(tech!.title.toLowerCase()))
     },
 ]
 

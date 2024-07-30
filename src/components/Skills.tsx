@@ -3,10 +3,10 @@ import technologies from "@/data/stack"
 import Image from "next/image";
 import { useRef } from "react";
 import { Fade } from "react-awesome-reveal"
-import Collaboration from "../../public/assets/imgs/partners.png"
-import Leadership from "../../public/assets/imgs/Leadership.png"
-import Effective_communication from "../../public/assets/imgs/effective-communication.png"
-import commitment from "../../public/assets/imgs/commitment.png"
+import Collaboration from "/public/assets/imgs/partners.png"
+import Leadership from "/public/assets/imgs/Leadership.png"
+import Effective_communication from "/public/assets/imgs/effective-communication.png"
+import commitment from "/public/assets/imgs/commitment.png"
 
 const Skills = () => {
     const softSkills = [
