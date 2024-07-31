@@ -89,7 +89,7 @@ const Skills = () => {
                     </div>
                     <div className="flex flex-col justify-center gap-10">
                         <h1 className='capitalize font-semibold font-Poppins text-3xl lg:text-5xl flex items-center text-nowrap'>soft skills<span className='lg:text-6xl text-3xl font-semibold text-[#6e06f2]'>.</span></h1>
-                        <ul className="grid grid-cols-2 place-items-center lg:ms-0 ms-5 gap-10 text-xl font-Poppins font-medium">
+                        <ul className="grid grid-cols-2 place-items-center lg:ms-0 ms-5 gap-10 lg:text-xl text-sm font-Poppins font-medium">
                             {softSkills.map((item, i) =>
                                 <div className="relative flex justify-center" key={i}
                                     onMouseEnter={() => handleHover(i)}
