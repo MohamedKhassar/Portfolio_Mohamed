@@ -6,16 +6,19 @@ import { SiGmail } from "react-icons/si"
 import axios from "axios"
 import { FormEvent, useState } from "react"
 import { ToastContainer, toast } from 'react-toastify';
+import { BiLoader } from "react-icons/bi"
 const ContactUs = () => {
     const [message, setMessage] = useState({
         name: "",
-        email: "",
+        from: "",
         subject: "",
         content: "",
     })
+    const [loading, setLoading] = useState(false)
     const sendMessage = async (e: FormEvent) => {
         e.preventDefault()
-        if (message.name && message.email && message.subject && message.content) {
+        if (message.name && message.from && message.subject && message.content) {
+            setLoading(true)
             await axios.post("/api/contact", message)
             toast.success("message sent successfully", {
                 theme: "colored",
@@ -25,6 +28,13 @@ const ContactUs = () => {
                 pauseOnFocusLoss: false,
                 pauseOnHover: false,
             });
+            setMessage({
+                name: "",
+                from: "",
+                subject: "",
+                content: "",
+            })
+            setLoading(false)
         } else {
             toast.error("please fill out all the required fields", {
                 theme: "colored",
@@ -44,11 +54,11 @@ const ContactUs = () => {
             </Fade>
             <Fade cascade>
                 <form onSubmit={sendMessage} className="grid place-items-center gap-10">
-                    <input className="outline-none border-2 border-[#6e06f2] rounded-md p-3 lg:w-1/2 w-[90%]" type="text" placeholder="Name*" onChange={(e) => setMessage({ ...message, name: e.target.value })} />
-                    <input className="outline-none border-2 border-[#6e06f2] rounded-md p-3 lg:w-1/2 w-[90%]" type="email" placeholder="Email*" onChange={(e) => setMessage({ ...message, email: e.target.value })} />
-                    <input className="outline-none border-2 border-[#6e06f2] rounded-md p-3 lg:w-1/2 w-[90%]" type="text" placeholder="Subject*" onChange={(e) => setMessage({ ...message, subject: e.target.value })} />
-                    <textarea className="outline-none border-2 border-[#6e06f2] rounded-md p-3 lg:w-1/2 w-[90%]" placeholder="Message*" onChange={(e) => setMessage({ ...message, content: e.target.value })} />
-                    <button className="bg-[#6e06f2] text-white px-6 py-3 rounded-md lg:w-1/2 w-[90%]" type="submit">Send</button>
+                    <input className="outline-none border-2 border-[#6e06f2] rounded-md p-3 lg:w-1/2 w-[90%]" type="text" placeholder="Name*" value={message.name} onChange={(e) => setMessage({ ...message, name: e.target.value })} />
+                    <input className="outline-none border-2 border-[#6e06f2] rounded-md p-3 lg:w-1/2 w-[90%]" type="email" placeholder="Email*" value={message.from} onChange={(e) => setMessage({ ...message, from: e.target.value })} />
+                    <input className="outline-none border-2 border-[#6e06f2] rounded-md p-3 lg:w-1/2 w-[90%]" type="text" placeholder="Subject*" value={message.subject} onChange={(e) => setMessage({ ...message, subject: e.target.value })} />
+                    <textarea className="outline-none border-2 border-[#6e06f2] rounded-md p-3 lg:w-1/2 w-[90%]" placeholder="Message*" value={message.content} onChange={(e) => setMessage({ ...message, content: e.target.value })} />
+                    <button className="bg-[#6e06f2] flex justify-center text-white px-6 py-3 rounded-md lg:w-1/2 w-[90%]" type="submit" disabled={loading}>{loading ? <BiLoader className="animate-spin size-8" /> : "Send"}</button>
                 </form>
                 <div className="flex lg:flex-row flex-col justify-around items-center gap-6 w-full">
                     <ul className="flex gap-10">
