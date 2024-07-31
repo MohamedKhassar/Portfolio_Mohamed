@@ -17,26 +17,37 @@ const ContactUs = () => {
     const [loading, setLoading] = useState(false)
     const sendMessage = async (e: FormEvent) => {
         e.preventDefault()
-        if (message.name && message.from && message.subject && message.content) {
-            setLoading(true)
-            await axios.post("/api/contact", message)
-            toast.success("message sent successfully", {
-                theme: "colored",
-                autoClose: 1500,
-                closeButton: false,
-                closeOnClick: true,
-                pauseOnFocusLoss: false,
-                pauseOnHover: false,
-            });
-            setMessage({
-                name: "",
-                from: "",
-                subject: "",
-                content: "",
-            })
-            setLoading(false)
-        } else {
-            toast.error("please fill out all the required fields", {
+        try {
+            if (message.name && message.from && message.subject && message.content) {
+                setLoading(true)
+                await axios.post("/api/contact", message)
+                toast.success("message sent successfully", {
+                    theme: "colored",
+                    autoClose: 1500,
+                    closeButton: false,
+                    closeOnClick: true,
+                    pauseOnFocusLoss: false,
+                    pauseOnHover: false,
+                });
+                setMessage({
+                    name: "",
+                    from: "",
+                    subject: "",
+                    content: "",
+                })
+                setLoading(false)
+            } else {
+                toast.error("please fill out all the required fields", {
+                    theme: "colored",
+                    autoClose: 1500,
+                    closeButton: false,
+                    closeOnClick: true,
+                    pauseOnFocusLoss: false,
+                    pauseOnHover: false,
+                });
+            }
+        } catch (error) {
+            toast.error("something's wrong", {
                 theme: "colored",
                 autoClose: 1500,
                 closeButton: false,
