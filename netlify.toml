@@ -1,0 +1,51 @@
+[[redirects]]
+from = '/_next/image/*'
+query = { q = ':quality', url = ':url', w = ':width' }
+to = '/.netlify/images?url=:url&w=:width&q=:quality'
+status = 200
+force = true
+
+  [redirects.query]
+  url = ":url"
+  w = ":width"
+  q = ":quality"
+
+[[redirects]]
+from = "/_ipx/*"
+to = "/.netlify/images?url=:url&w=:width&q=:quality"
+status = 200
+
+  [redirects.query]
+  url = ":url"
+  w = ":width"
+  q = ":quality"
+
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[[headers]]
+for = "/*.js"
+  [headers.values]
+    Content-Type = "application/javascript"
+
+[[headers]]
+for = "/*.css"
+  [headers.values]
+    Content-Type = "text/css"
+
+[[headers]]
+for = "/assets/files/*"
+  [headers.values]
+    Content-Type = "application/pdf"
+
+[[headers]]
+for = "/images/*"
+  [headers.values]
+    Content-Type = "image/png"
+
+[context.production]
+  command = "npm run build"
+
+[context.main]
+  command = "npm run build"
