@@ -5,11 +5,6 @@ to = '/.netlify/images?url=:url&w=:width&q=:quality'
 status = 200
 force = true
 
-  [redirects.query]
-  url = ":url"
-  w = ":width"
-  q = ":quality"
-
 [[redirects]]
 from = "/_ipx/*"
 to = "/.netlify/images?url=:url&w=:width&q=:quality"
