@@ -25,14 +25,14 @@ const NavBar = () => {
                     <li key={nav} className={`${navId == nav && "text-[#6e06f2]"} hover:text-[#6e06f2] duration-300 cursor-pointer`} onClick={() => scrollToById(nav)}>{nav}</li>
                 )
                 }
-                <li className="lg:hidden"><button onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className='bg-[#24262F] duration-1000 hover:bg-[#6e06f2] relative p-3 rounded-full flex flex-col items-center'>
+                <li className="lg:hidden"><button onClick={() => scrollToById("contact")} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className='bg-[#24262F] duration-1000 hover:bg-[#6e06f2] relative p-3 rounded-full flex flex-col items-center'>
                     <MessageSquareText stroke='white' size={20} />
                     <span className={cn('bg-[#6c06f29a] py-2 px-3 absolute top-12 rounded-md font-Poppins capitalize text-white transition duration-300',
                         !isHover && "opacity-0"
                     )}>contact</span>
                 </button></li>
             </motion.ul>
-            <button onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className='bg-[#24262F] duration-1000 hover:bg-[#6e06f2] relative p-3 rounded-full lg:flex hidden flex-col items-center  border border-white'>
+            <button onClick={() => scrollToById("contact")} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className='bg-[#24262F] duration-1000 hover:bg-[#6e06f2] relative p-3 rounded-full lg:flex hidden flex-col items-center  border border-white'>
                 <MessageSquareText stroke='white' size={20} />
                 <span className={cn('bg-[#6c06f29a] py-2 px-3 absolute top-12 rounded-md font-Poppins capitalize text-white transition duration-300',
                     !isHover && "opacity-0"
