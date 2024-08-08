@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import { Menu, MessageSquareText, X } from "lucide-react"
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
+import Link from 'next/link'
 const NavBar = () => {
     const [isHover, setIsHover] = useState(false)
     const [isOpened, setIsOpened] = useState(false)
@@ -14,7 +15,7 @@ const NavBar = () => {
     }
     return (
         <div className='z-50 py-3 shadow-2xl shadow-[#6c06f2]/20 w-full sticky top-0 flex lg:justify-between justify-center lg:gap-0 gap-10 items-center px-14 font-Poppins bg-white'>
-            <h1 className='capitalize font-semibold text-2xl flex items-center text-nowrap mx-3'>mohamed khassar<span className='text-5xl font-bold text-[#6e06f2]'>.</span></h1>
+            <h1 className='capitalize font-semibold text-2xl flex items-center text-nowrap mx-3'><Link href={"/"} className='flex justify-center items-center'>mohamed khassar<span className='text-5xl font-bold text-[#6e06f2]'>.</span></Link></h1>
             <button className={cn('lg:hidden absolute right-5 z-20 w-fit', isOpened && "top-20")} onClick={() => setIsOpened(!isOpened)}>
                 {!isOpened ? <Menu key={"menu"} size={28} stroke='#6c06f2' /> : <X key={"close"} size={28} stroke='white' />}
             </button>

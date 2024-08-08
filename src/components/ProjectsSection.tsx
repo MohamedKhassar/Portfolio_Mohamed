@@ -33,7 +33,7 @@ const ProjectsSection = () => {
                         <div className="rounded-3xl lg:w-fit w-72 p-5 shadow-2xl lg:flex flex-col justify-between hover:shadow-[#6e06f2]/70 duration-300 hover:scale-105 lg:h-[42rem] lg:space-y-0 space-y-10" key={item.id}>
                             <Image className="rounded-md lg:w-[60rem] lg:h-80 object-cover w-72 h-56" src={item.image} width={1000} height={1000} alt={item.image} />
                             <div className="space-y-3">
-                                <Link className="flex items-center gap-x-5 w-fit" href={item.link} target="_blank">
+                                <Link className="flex items-center gap-x-5 w-fit" href={item.title}>
                                     <h2 className="uppercase font-extrabold font-Poppins text-xl">{item.title}</h2>
                                     <ArrowRightCircle className="border border-[#6e06f2] rounded-full text-[#6e06f2] hover:bg-[#6e06f2] duration-300 transform -rotate-45 hover:text-white" size={27} />
                                 </Link>
