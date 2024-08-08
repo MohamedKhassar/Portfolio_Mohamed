@@ -31,11 +31,11 @@ const ProjectsSection = () => {
 
                     {projects.map((item, i) =>
                         <div className="rounded-3xl lg:w-fit w-72 p-5 shadow-2xl lg:flex flex-col justify-between hover:shadow-[#6e06f2]/70 duration-300 hover:scale-105 lg:h-[42rem] lg:space-y-0 space-y-10" key={item.id}>
-                            <Image className="rounded-md lg:w-[60rem] lg:h-80 object-cover w-72 h-56" src={item.image} width={1000} height={1000} alt={item.image} />
+                            <Image className="rounded-md lg:h-64 object-cover w-full h-[8.5rem]" src={item.image} width={1000} height={1000} alt={item.image} />
                             <div className="space-y-3">
                                 <Link className="flex items-center gap-x-5 w-fit" href={item.title}>
-                                    <h2 className="uppercase font-extrabold font-Poppins text-xl">{item.title}</h2>
-                                    <ArrowRightCircle className="border border-[#6e06f2] rounded-full text-[#6e06f2] hover:bg-[#6e06f2] duration-300 transform -rotate-45 hover:text-white" size={27} />
+                                    <h2 className="uppercase font-extrabold font-Poppins lg:text-xl">{item.title}</h2>
+                                    <ArrowRightCircle className="border border-[#6e06f2] rounded-full text-[#6e06f2] hover:bg-[#6e06f2] duration-300 transform -rotate-45 hover:text-white lg:size-6 size-5" />
                                 </Link>
                                 <p className="lg:text-lg text-sm text-[#6F7589] w-full">{item.description}</p>
                             </div>
@@ -57,7 +57,7 @@ const ProjectsSection = () => {
                                                     }
                                                 }}
                                                 id={`title-${Number(item.id + s!.id)}`}
-                                                className="absolute text-nowrap -bottom-12 rounded-md text-white font-Poppins p-2 opacity-0 duration-300 bg-[#6e06f2]"
+                                                className="capitalize absolute text-nowrap -bottom-12 rounded-md text-white font-Poppins p-2 opacity-0 duration-300 bg-[#6e06f2]"
                                             >
                                                 {s!.title}
                                             </span>

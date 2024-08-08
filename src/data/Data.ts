@@ -3,6 +3,7 @@ import quiz from "/public/assets/imgs/quiz.png"
 import pass from "/public/assets/imgs/pass.png"
 import age from "/public/assets/imgs/age.png"
 import task from "/public/assets/imgs/task.png"
+import port from "/public/assets/imgs/port.png"
 import todo from "/public/assets/imgs/todo.png"
 import technologies from "./stack"
 
@@ -62,6 +63,15 @@ const projects = [
         image: rst.src,
         stack: technologies.filter(tech => ["react", "tailwind css", "typescript", "framer motion"].includes(tech!.title.toLowerCase())),
         github: "https://github.com/MohamedKhassar/RSTKhassar-ReactJs"
+    },
+    {
+        id: generateId(),
+        title: "portfolio",
+        description: "RSTKASSAR is a visually appealing landing page for a restaurant. It features sections for the menu,greeting and reviews. The design is elegant and user-friendly, providing a seamless experience for visitors looking to explore the restaurant's offerings.",
+        link: "https://mohamed-khassar.vercel.app/",
+        image: port.src,
+        stack: technologies.filter(tech => ["next.js", "tailwind css", "typescript", "framer motion"].includes(tech!.title.toLowerCase())),
+        github: "https://github.com/MohamedKhassar/Portfolio_Mohamed"
     },
 ]
 
