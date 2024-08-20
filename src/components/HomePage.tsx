@@ -7,7 +7,7 @@ import Link from "next/link"
 
 const HomePage = () => {
     return (
-        <div id="home" className="flex lg:flex-row flex-col-reverse lg:gap-x-[38rem] gap-y-20 items-center justify-center lg:my-40 my-20 lg:mx-20 mx-8 -z-10">
+        <div id="home" className="flex lg:flex-row flex-col-reverse gap-y-20 items-center lg:justify-between lg:my-40 my-20 lg:mx-20 mx-8 -z-10">
             <Fade cascade>
                 <div className="text-left flex flex-col lg:gap-y-8 gap-y-6">
                     <h1 className="font-Poppins font-medium lg:text-3xl text-xl capitalize">hey, I'm <span className="text-[#6e06f2] font-semibold">mohamed</span> 👋🏻</h1>
@@ -22,7 +22,7 @@ const HomePage = () => {
                 <div className="flex w-full">
                     <div className="border-[#6e06f2]/50 border-2 rounded-full">
                         <div className="rounded-full overflow-hidden lg:m-10 m-5">
-                            <Image className="lg:min-w-96 w-72 scale-150 rounded-full" src={moh.src} width={1000} height={1000} alt="" />
+                            <Image className="lg:min-w-80 w-96 scale-150 rounded-full" src={moh.src} width={1000} height={1000} alt="" />
                         </div>
                     </div>
                 </div>
