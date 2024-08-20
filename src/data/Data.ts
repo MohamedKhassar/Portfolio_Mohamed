@@ -17,7 +17,8 @@ const projects = [
         link: "https://to-do-med.netlify.app/",
         image: todo.src,
         stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech!.title.toLowerCase())),
-        github: "https://github.com/MohamedKhassar/To-Do-List-App_HTML_CSS_JS"
+        github: "https://github.com/MohamedKhassar/To-Do-List-App_HTML_CSS_JS",
+        video: "/assets/videos/todo.mp4"
     },
     {
         id: generateId(),
@@ -26,7 +27,8 @@ const projects = [
         link: "https://age-med.netlify.app/",
         image: age.src,
         stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech!.title.toLowerCase())),
-        github: "https://github.com/MohamedKhassar/Age-Calculator-HTML-CSS-JS"
+        github: "https://github.com/MohamedKhassar/Age-Calculator-HTML-CSS-JS",
+        video: "/assets/videos/age-cal.mp4"
     },
     {
         id: generateId(),
@@ -35,7 +37,8 @@ const projects = [
         link: "https://pass-gen-med.netlify.app/",
         image: pass.src,
         stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech!.title.toLowerCase())),
-        github: "https://github.com/MohamedKhassar/Password-Generator-HTML_CSS_JS"
+        github: "https://github.com/MohamedKhassar/Password-Generator-HTML_CSS_JS",
+        video: "/assets/videos/pass-gen.mp4"
     },
     {
         id: generateId(),
@@ -44,7 +47,8 @@ const projects = [
         link: "https://quiz-med.netlify.app/",
         image: quiz.src,
         stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech!.title.toLowerCase())),
-        github: "https://github.com/MohamedKhassar/Quiz-App-HTML_CSS_JS"
+        github: "https://github.com/MohamedKhassar/Quiz-App-HTML_CSS_JS",
+        video: "/assets/videos/quiz-app.mp4"
     },
     {
         id: generateId(),
@@ -53,7 +57,8 @@ const projects = [
         link: "https://task-pulse-rho.vercel.app/",
         image: task.src,
         stack: technologies.filter(tech => ["next.js", "tailwind css", "typescript", "mongodb"].includes(tech!.title.toLowerCase())),
-        github: "https://github.com/MohamedKhassar/TaskPulse"
+        github: "https://github.com/MohamedKhassar/TaskPulse",
+        video: ""
     },
     {
         id: generateId(),
@@ -62,16 +67,18 @@ const projects = [
         link: "https://rstkhassar.netlify.app/",
         image: rst.src,
         stack: technologies.filter(tech => ["react", "tailwind css", "typescript", "framer motion"].includes(tech!.title.toLowerCase())),
-        github: "https://github.com/MohamedKhassar/RSTKhassar-ReactJs"
+        github: "https://github.com/MohamedKhassar/RSTKhassar-ReactJs",
+        video: "/assets/videos/rst.mp4"
     },
     {
         id: generateId(),
         title: "portfolio",
-        description: "RSTKASSAR is a visually appealing landing page for a restaurant. It features sections for the menu,greeting and reviews. The design is elegant and user-friendly, providing a seamless experience for visitors looking to explore the restaurant's offerings.",
+        description: "Mohamed Khassar's portfolio showcases my full-stack development skills, featuring projects like RSTKHASSAR, Task Pulse, Quiz App, Pass-gen, Age Calculator, and To-do List. The site includes sections on his skills, projects, and contact information, all presented in a clean, professional design.",
         link: "https://mohamed-khassar.vercel.app/",
         image: port.src,
         stack: technologies.filter(tech => ["next.js", "tailwind css", "typescript", "framer motion"].includes(tech!.title.toLowerCase())),
-        github: "https://github.com/MohamedKhassar/Portfolio_Mohamed"
+        github: "https://github.com/MohamedKhassar/Portfolio_Mohamed",
+        video: "/assets/videos/portfolio.mp4"
     },
 ]
 

@@ -30,10 +30,10 @@ const ProjectsSection = () => {
                 <Fade>
 
                     {projects.map((item, i) =>
-                        <div className="rounded-3xl lg:w-fit w-72 p-5 shadow-2xl lg:flex flex-col justify-between hover:shadow-[#6e06f2]/70 duration-300 hover:scale-105 lg:h-[42rem] lg:space-y-0 space-y-10" key={item.id}>
-                            <Image className="rounded-md lg:h-64 object-cover w-full h-[8.5rem]" src={item.image} width={1000} height={1000} alt={item.image} />
+                        <div className="rounded-3xl lg:w-fit mx-5 p-5 shadow-2xl lg:flex flex-col justify-between md:shadow-black/50  shadow-[#6e06f2]/70 md:hover:shadow-[#6e06f2]/70 duration-300 md:hover:scale-105 lg:h-[42rem] lg:space-y-0 space-y-10" key={item.id}>
+                            <Image className="rounded-md lg:h-64 object-cover w-full h-full object-center" src={item.image} width={1000} height={1000} alt={item.image} />
                             <div className="space-y-3">
-                                <Link className="flex items-center gap-x-5 w-fit" href={item.title}>
+                                <Link className="flex items-center gap-x-5 w-fit" href={`/project/${item.title}`}>
                                     <h2 className="uppercase font-extrabold font-Poppins lg:text-xl">{item.title}</h2>
                                     <ArrowRightCircle className="border border-[#6e06f2] rounded-full text-[#6e06f2] hover:bg-[#6e06f2] duration-300 transform -rotate-45 hover:text-white lg:size-6 size-5" />
                                 </Link>
