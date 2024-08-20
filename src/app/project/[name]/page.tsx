@@ -17,7 +17,7 @@ const page = ({ params: { name } }: { params: { name: string } }) => {
     return (
         <div className="h-[90vh] flex flex-col justify-center items-center gap-8">
             <div>
-                <RiArrowGoBackFill onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className="absolute left-5 top-5 text-[#6e06f2] size-8 cursor-pointer" onClick={() => router.push("/")} />
+                <RiArrowGoBackFill onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className="absolute left-5 top-5 text-[#6e06f2] size-8 cursor-pointer" onClick={() => router.back()} />
                 <span className={cn('bg-[#6c06f29a] py-2 px-3 absolute left-1 top-14 rounded-md font-Poppins capitalize text-white transition duration-300',
                     !isHover && "opacity-0"
                 )}>

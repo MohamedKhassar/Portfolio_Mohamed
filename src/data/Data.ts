@@ -78,7 +78,7 @@ const projects = [
         image: port.src,
         stack: technologies.filter(tech => ["next.js", "tailwind css", "typescript", "framer motion"].includes(tech!.title.toLowerCase())),
         github: "https://github.com/MohamedKhassar/Portfolio_Mohamed",
-        video: "/assets/videos/portfolio.mp4"
+        video: "/assets/videos/Portfolio.mp4"
     },
 ]
 

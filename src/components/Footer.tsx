@@ -7,7 +7,6 @@ import { SiGmail } from "react-icons/si"
 const Footer = () => {
     const router = useParams()
     const pathname = usePathname()
-    console.log()
     return (
         <div className={`${router.name || ["/not-found"].includes(pathname) ? "hidden" : "flex"} relative bottom-0 flex-col justify-center items-center lg:gap-10 gap-5 shadow-2xl p-5`}>
             <h1 className='capitalize font-semibold lg:text-4xl text-2xl flex items-center text-nowrap mx-3 font-Poppins'>mohamed khassar<span className='text-5xl font-bold text-[#6e06f2]'>.</span></h1>
