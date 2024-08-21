@@ -35,8 +35,8 @@ const HomePage = () => {
                     <div className="lg:space-x-8 space-x-5 flex lg:justify-start text-nowrap justify-center">
                         <div ref={ref} className="relative">
                             <button onClick={() => setIsDropDown(!isDropDown)} className="outline-none shadow-2xl shadow-[#6e06f2]/8 py-3 px-5 lg:text-xl bg-[#6e06f2] text-white capitalize font-bold rounded-md flex gap-x-3 text-sm items-center justify-center z-50">my resume <ChevronDown className={cn("duration-300", isDropDown && "rotate-180")} /></button>
-                            <div className={cn("absolute opacity-0 gap-x-8 gap-y-4 left-0 lg:w-full flex-nowrap w-56 my-5 -z-30",
-                                isDropDown ? "animate-dropdown flex-row lg:flex-col" : "hide-dropdown"
+                            <div className={cn("absolute opacity-0 gap-x-8 lg:flex-col gap-y-4 left-0 w-full my-5 -z-30",
+                                isDropDown ? "animate-dropdown flex" : "hide-dropdown flex"
                             )}>
                                 {Array("en français", "in english").map((item, i) => (
                                     <Link key={i} target="_blank" rel="noopener noreferrer" href={`/assets/files/Mohamed_Khassar_CV(${item.includes("français") ? "FR" : "ENG"}).pdf`} className="flex items-center justify-between p-3 border rounded-md text-center w-full font-Poppins lg:text-xl text-sm font-semibold capitalize gap-x-5 text-[#6e06f2] border-[#6e06f2] hover:text-white link hover:bg-[#6c06f2]/80 duration-300">{item}<ArrowDown className="lg:size-max size-5" /> </Link>

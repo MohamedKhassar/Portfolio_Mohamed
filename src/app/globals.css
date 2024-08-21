@@ -51,7 +51,6 @@ html {
 }
 
 .animate-dropdown {
-  display: flex;
   animation: animate-dropdown .5s both;
   -webkit-animation: animate-dropdown .5s both;
 }
@@ -82,7 +81,7 @@ html {
 
 @keyframes hide-dropdown {
   0% {
-    opacity: 1;
+    opacity: .8;
   }
 
   50% {
