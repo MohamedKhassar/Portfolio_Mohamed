@@ -6,15 +6,18 @@
 html {
   scroll-behavior: smooth;
 }
+
 ::-webkit-scrollbar {
   width: 5px;
   -webkit-border-radius: 20px;
 }
+
 ::-webkit-scrollbar-thumb {
   /* Customize the scrollbar thumb */
   border-radius: 20px;
   @apply bg-slate-700
 }
+
 .navbar-animation {
   animation: animate-navbar .5s ease;
   -webkit-animation: animate-navbar .5s ease;
@@ -39,10 +42,75 @@ html {
 
 @keyframes navbar-animation {
   0% {
-    opacity:0;
+    opacity: 0;
   }
 
   100% {
     opacity: 1;
+  }
+}
+
+.animate-dropdown {
+  display: block;
+  animation: animate-dropdown .5s both;
+  -webkit-animation: animate-dropdown .5s both;
+}
+
+@keyframes animate-dropdown {
+  0% {
+    transform: translateY(-60px);
+    -webkit-transform: translateY(-60px);
+    -moz-transform: translateY(-60px);
+    -ms-transform: translateY(-60px);
+    -o-transform: translateY(-60px);
+  }
+
+  100% {
+    transform: translateY(none);
+    -webkit-transform: translateY(none);
+    -moz-transform: translateY(none);
+    -ms-transform: translateY(none);
+    -o-transform: translateY(none);
+    opacity: 1;
+  }
+}
+
+.hide-dropdown {
+  animation: hide-dropdown .5s both;
+  -webkit-animation: hide-dropdown .5s both;
+}
+
+@keyframes hide-dropdown {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  100% {
+    display: none;
+  }
+}
+
+.link:hover svg {
+  @apply animate-bounce;
+}
+
+.animate-desc {
+  animation: animate-desc .7s linear;
+  -webkit-animation: animate-desc .7s linear;
+}
+
+@keyframes animate-desc {
+  0% {
+    height: 1.25rem;
+  }
+50%{
+ @apply h-56
+}
+  100% {
+    @apply h-full
   }
 }
