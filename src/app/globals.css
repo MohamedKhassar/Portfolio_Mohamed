@@ -108,7 +108,7 @@ html {
     height: 1.25rem;
   }
 50%{
- @apply h-56
+ @apply h-32
 }
   100% {
     @apply h-full

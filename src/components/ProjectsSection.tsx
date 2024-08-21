@@ -56,8 +56,8 @@ const ProjectsSection = () => {
                                         <ArrowRightCircle className="border border-[#6e06f2] rounded-full text-[#6e06f2] hover:bg-[#6e06f2] duration-300 transform -rotate-45 hover:text-white lg:size-6 size-5" />
                                     </Link>
                                     <div
-                                        className={cn("size-8 bg-[#6e06f2]/50 flex justify-center items-center rounded-full cursor-pointer",
-                                            isDropDownId === i && "rotate-180 duration-300")}
+                                        className={cn("size-8 bg-[#6e06f2]/50  duration-300 flex justify-center items-center rounded-full cursor-pointer",
+                                            isDropDownId === i && "rotate-180")}
                                         ref={(el) => { iconRefs.current[i] = el }}
                                         onClick={() => setIsDropDownId(prev => prev !== i ? i : null)}
                                     >
