@@ -41,7 +41,7 @@ const page = ({ params: { name } }: { params: { name: string } }) => {
                                     :
                                     <div className="flex flex-col items-center gap-y-3 w-fit hover:text-black duration-300 text-[#6e06f2]">
                                         <FaGithub className="md:size-8 size-5" />
-                                        <p className="lg:text-base font-medium text-xs w-full capitalize flex gap-3">code on github<IoLockClosed /></p>
+                                        <p className="lg:text-base font-medium text-xs w-full capitalize flex gap-3">code on github(Private)<IoLockClosed /></p>
                                     </div>
                             }
                             {project.title !== "portfolio" && project.link && <Link target="_blank" className="flex flex-col items-center gap-y-3 w-fit" href={project.link}>

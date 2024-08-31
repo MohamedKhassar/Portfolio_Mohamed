@@ -46,7 +46,7 @@ const ProjectsSection = () => {
             <Fade direction="left">
                 <h1 className='capitalize font-bold font-Poppins text-5xl lg:text-8xl flex items-center text-nowrap md:mx-14 mx-5'>projects<span className='lg:text-9xl text-6xl font-bold text-[#6e06f2]'>.</span></h1>
             </Fade>
-            <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-16 gap-10 md:mx-16 place-items-center">
+            <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-16 gap-10 md:mx-16 md:place-items-start place-items-center">
                 <Fade>
                     {projects && projects.map((item, i) =>
                         <div className="rounded-3xl lg:w-full md:w-[90%] w-80 col-span-1 p-5 shadow-2xl lg:flex flex-col justify-between gap-y-5 md:shadow-black/50 shadow-[#6e06f2]/70 md:hover:shadow-[#6e06f2]/70 duration-300 md:hover:scale-105 lg:h-fit lg:space-y-0 space-y-10" key={item.id}>

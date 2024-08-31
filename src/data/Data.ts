@@ -86,10 +86,10 @@ const projects = [
     {
         id: generateId(),
         title: "E-commerce",
-        description: "Developed a user-friendly e-commerce platform with a team, featuring cash on delivery, responsive design, and efficient product management. My contributions included frontend work with React.js and backend integration using Node.js.",
+        description: "Developed a user-friendly e-commerce platform with a team, featuring cash on delivery, responsive design, and efficient product management. My contributions included frontend work with Next.Js and backend integration using Node.Js and Express.Js.",
         image: nature.src,
         link: "https://www.naturemane.ma/",
-        stack: technologies.filter(tech => ["react", "tailwind css", "javascript", "mongodb", "jwt", "postman", "node.js", "express"].includes(tech!.title.toLowerCase())),
+        stack: technologies.filter(tech => ["next.js", "tailwind css", "javascript", "mongodb", "jwt", "postman", "node.js", "express"].includes(tech!.title.toLowerCase())),
     },
 ]
 
