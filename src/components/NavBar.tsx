@@ -4,14 +4,19 @@ import { Menu, MessageSquareText, X } from "lucide-react"
 import { cn } from '@/lib/utils'
 import { motion } from 'framer-motion'
 import Link from 'next/link'
-import { useParams, usePathname } from 'next/navigation'
+import { useParams, usePathname, useRouter } from 'next/navigation'
 const NavBar = () => {
     const router = useParams()
+    const route = useRouter()
     const pathname = usePathname()
     const [isHover, setIsHover] = useState(false)
     const [isOpened, setIsOpened] = useState(false)
     const [navId, setId] = useState<string>("home")
     const scrollToById = (id: string) => {
+        if (id == "projects") {
+            route.push("projects")
+            return
+        }
         scrollTo(0, Number(document.getElementById(id)?.offsetTop) - 200)
         setId(id)
         setIsOpened(false)
@@ -26,7 +31,9 @@ const NavBar = () => {
                 isOpened ? "flex-col navbar-animation" : "lg:flex hidden"
             )}>
                 {["home", "projects", "education", "skills"].map(nav =>
-                    <li key={nav} className={`${navId == nav && "text-[#6e06f2]"} hover:text-[#6e06f2] duration-300 cursor-pointer`} onClick={() => scrollToById(nav)}>{nav}</li>
+                    <li key={nav} className={cn("hover:text-[#6e06f2] duration-300 cursor-pointer",
+                        navId == nav && "text-[#6e06f2]",
+                    )} onClick={() => scrollToById(nav)}>{nav}</li>
                 )
                 }
                 <li className="lg:hidden"><button onClick={() => scrollToById("contact")} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className='bg-[#24262F] duration-1000 hover:bg-[#6e06f2] relative p-3 rounded-full flex flex-col items-center'>
@@ -36,7 +43,10 @@ const NavBar = () => {
                     )}>contact</span>
                 </button></li>
             </motion.ul>
-            <button onClick={() => scrollToById("contact")} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className='bg-[#24262F] duration-1000 hover:bg-[#6e06f2] relative p-3 rounded-full lg:flex hidden flex-col items-center  border border-white'>
+
+            <button onClick={() => scrollToById("contact")} onMouseEnter={() => setIsHover(true)} onMouseLeave={() => setIsHover(false)} className={cn('bg-[#24262F] duration-1000 hover:bg-[#6e06f2] relative p-3 rounded-full lg:flex hidden flex-col items-center  border border-white',
+                ["/projects"].includes(pathname) && "hidden"
+            )}>
                 <MessageSquareText stroke='white' size={20} />
                 <span className={cn('bg-[#6c06f29a] py-2 px-3 absolute top-12 rounded-md font-Poppins capitalize text-white transition duration-300',
                     !isHover && "opacity-0"

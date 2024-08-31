@@ -20,6 +20,10 @@ const config = {
         "2xl": "1400px",
       },
     },
+    screens: {
+      lg: "1450px",
+      md: "765px"
+    },
     extend: {},
   },
   plugins: [require("tailwindcss-animate")],

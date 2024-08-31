@@ -63,7 +63,7 @@ const Skills = () => {
                     <div className="flex flex-col justify-center gap-10">
                         <h1 className='capitalize font-semibold font-Poppins text-3xl lg:text-5xl flex items-center text-nowrap'>back-end<span className='lg:text-6xl text-3xl font-semibold text-[#6e06f2]'>.</span></h1>
                         <ul className="grid grid-cols-3 gap-10 lg:ms-0 ms-5">
-                            {technologies.filter(tech => ["php", "node.js", "python", "django", "docker", "express", "laravel", "mongodb", "mysql", "postman", "next.js", "jwt"].includes(tech!.title.toLowerCase()))
+                            {technologies.filter(tech => ["php", "node.js", "python", "django", "docker", "express", "laravel", "mongodb", "mysql", "postgresql", "postman", "next.js", "jwt"].includes(tech!.title.toLowerCase()))
                                 .map(tech =>
                                     <div className="relative flex justify-center" key={tech?.title} onMouseEnter={() => handleHover(Number(tech!.id) + Number(Math.ceil(Math.random())))}
                                         onMouseLeave={() => handleMouseLeave(Number(tech!.id) + Number(Math.ceil(Math.random())))}>

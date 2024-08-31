@@ -5,6 +5,8 @@ import age from "/public/assets/imgs/age.png"
 import task from "/public/assets/imgs/task.png"
 import port from "/public/assets/imgs/port.png"
 import todo from "/public/assets/imgs/todo.png"
+import todoL from "/public/assets/imgs/todoL.png"
+import nature from "/public/assets/imgs/nature.png"
 import technologies from "./stack"
 
 const generateId = () => Date.now() + Math.floor(Math.random() * 1000);
@@ -18,7 +20,6 @@ const projects = [
         image: todo.src,
         stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech!.title.toLowerCase())),
         github: "https://github.com/MohamedKhassar/To-Do-List-App_HTML_CSS_JS",
-        video: "/assets/videos/todo.mp4"
     },
     {
         id: generateId(),
@@ -28,7 +29,6 @@ const projects = [
         image: age.src,
         stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech!.title.toLowerCase())),
         github: "https://github.com/MohamedKhassar/Age-Calculator-HTML-CSS-JS",
-        video: "/assets/videos/age-cal.mp4"
     },
     {
         id: generateId(),
@@ -38,7 +38,6 @@ const projects = [
         image: pass.src,
         stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech!.title.toLowerCase())),
         github: "https://github.com/MohamedKhassar/Password-Generator-HTML_CSS_JS",
-        video: "/assets/videos/pass-gen.mp4"
     },
     {
         id: generateId(),
@@ -48,7 +47,6 @@ const projects = [
         image: quiz.src,
         stack: technologies.filter(tech => ["html", "css", "javascript"].includes(tech!.title.toLowerCase())),
         github: "https://github.com/MohamedKhassar/Quiz-App-HTML_CSS_JS",
-        video: "/assets/videos/quiz-app.mp4"
     },
     {
         id: generateId(),
@@ -58,7 +56,6 @@ const projects = [
         image: task.src,
         stack: technologies.filter(tech => ["next.js", "tailwind css", "typescript", "mongodb"].includes(tech!.title.toLowerCase())),
         github: "https://github.com/MohamedKhassar/TaskPulse",
-        video: ""
     },
     {
         id: generateId(),
@@ -68,7 +65,6 @@ const projects = [
         image: rst.src,
         stack: technologies.filter(tech => ["react", "tailwind css", "typescript", "framer motion"].includes(tech!.title.toLowerCase())),
         github: "https://github.com/MohamedKhassar/RSTKhassar-ReactJs",
-        video: "/assets/videos/rst.mp4"
     },
     {
         id: generateId(),
@@ -78,7 +74,22 @@ const projects = [
         image: port.src,
         stack: technologies.filter(tech => ["next.js", "tailwind css", "typescript", "framer motion"].includes(tech!.title.toLowerCase())),
         github: "https://github.com/MohamedKhassar/Portfolio_Mohamed",
-        video: "/assets/videos/Portfolio.mp4"
+    },
+    {
+        id: generateId(),
+        title: "todo-list full-stack",
+        description: "A simple and user-friendly to-do list application to practice Postgresql using PERN(Postgresql, ExpressJs, ReactJs, NodeJs) Stack",
+        image: todoL.src,
+        stack: technologies.filter(tech => ["react", "tailwind css", "typescript", "postgresql", "node.js", "express"].includes(tech!.title.toLowerCase())),
+        github: "https://github.com/MohamedKhassar/Todo-PERN-Stack",
+    },
+    {
+        id: generateId(),
+        title: "E-commerce",
+        description: "Developed a user-friendly e-commerce platform with a team, featuring cash on delivery, responsive design, and efficient product management. My contributions included frontend work with React.js and backend integration using Node.js.",
+        image: nature.src,
+        link: "https://www.naturemane.ma/",
+        stack: technologies.filter(tech => ["react", "tailwind css", "javascript", "mongodb", "jwt", "postman", "node.js", "express"].includes(tech!.title.toLowerCase())),
     },
 ]
 
