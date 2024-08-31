@@ -29,7 +29,7 @@ const page = ({ params: { name } }: { params: { name: string } }) => {
                 <>
                     <h1 className='text-wrap capitalize font-bold font-Poppins text-3xl md:text-5xl flex items-center mx-3'>{project.title}<span className='lg:text-6xl text-4xl font-bold text-[#6e06f2]'>.</span></h1>
                     <div className="rounded-3xl md:w-[55%] w-[95%] p-5 shadow-2xl flex flex-col gap-5 hover:shadow-[#6e06f2]/70 duration-300 hover:scale-105 lg:space-y-0 space-y-6 h-fit" key={project.id}>
-                        <Image className="rounded-md lg:h-full object-cover lg:w-full h-80" src={project.image} width={800} height={800} alt={project.image} />
+                        <Image className="rounded-md lg:h-full object-cover lg:w-full h-80" src={project.image} width={2000} height={2000} alt={project.image} />
                         <div className="flex justify-around items-center">
                             {
                                 project.github ?
