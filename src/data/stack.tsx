@@ -14,8 +14,9 @@ import {
 } from 'react-icons/fa';
 import { BsBootstrapFill } from "react-icons/bs";
 import { RiNextjsFill } from 'react-icons/ri';
-import { SiCplusplus, SiRuby, SiGo, SiSwift, SiDjango, SiFlask, SiSpring, SiRubyonrails, SiLaravel, SiSymfony, SiExpress, SiTailwindcss, SiMongodb, SiMysql, SiPostman, SiJsonwebtokens } from 'react-icons/si';
+import { SiCplusplus, SiRuby, SiGo, SiSwift, SiDjango, SiFlask, SiSpring, SiRubyonrails, SiLaravel, SiSymfony, SiExpress, SiTailwindcss, SiMongodb, SiMysql, SiPostman, SiJsonwebtokens, SiPandas } from 'react-icons/si';
 import { TbBrandFramerMotion } from 'react-icons/tb';
+import { HiMiniCommandLine } from "react-icons/hi2";
 const generateId = () => Number(Math.random() - Date.now());
 
 const technologies = [
@@ -193,6 +194,17 @@ const technologies = [
     id: generateId(),
     title: "postgresql",
     icon: function () { return <BiLogoPostgresql color="#008bb9" className='md:size-8 size-7' /> }
+  }
+  ,
+  {
+    id: generateId(),
+    title: "cmd",
+    icon: function () { return <HiMiniCommandLine className='md:size-8 size-7' /> }
+  },
+  {
+    id: generateId(),
+    title: "pandas",
+    icon: function () { return <SiPandas className='md:size-8 size-7' /> }
   }
 ];
 

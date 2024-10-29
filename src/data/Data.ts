@@ -7,6 +7,8 @@ import port from "/public/assets/imgs/port.png"
 import todo from "/public/assets/imgs/todo.png"
 import todoL from "/public/assets/imgs/todoL.png"
 import nature from "/public/assets/imgs/nature.png"
+import DevFlow from "/public/assets/imgs/DevFlow1.png"
+import python from "/public/assets/imgs/python.jpeg"
 import technologies from "./stack"
 
 const generateId = () => Date.now() + Math.floor(Math.random() * 1000);
@@ -91,6 +93,25 @@ const projects = [
         link: "https://www.naturemane.ma/",
         stack: technologies.filter(tech => ["next.js", "tailwind css", "javascript", "mongodb", "jwt", "postman", "node.js", "express"].includes(tech!.title.toLowerCase())),
     },
+    {
+        id: generateId(),
+        title: "Python Projects",
+        description: "Developing programs with levels,beginner, intermediate and hard.",
+        image: python.src,
+        github: "https://github.com/MohamedKhassar/Practice-Python",
+        stack: technologies.filter(tech => ["python", "pandas"].includes(tech!.title.toLowerCase())),
+    },
+    {
+        id: generateId(),
+        title: "DevFlow Blog App",
+        description: "Building a blog platform, featuring responsive design, efficient content management, and a clean and modern user interface. DevFlow allows you to Share your thoughts and connect with others by creating posts and interacting with the DevFlow community.",
+        image: DevFlow.src,
+        github: {
+            front: "https://github.com/MohamedKhassar/DevFlow-Blog-App-Frontend",
+            back: "https://github.com/MohamedKhassar/DevFlow-Blog-App-Backend"
+        },
+        stack: technologies.filter(tech => ["react", "tailwind css", "typescript", "postman", "jwt", "postgresql", "node.js", "express"].includes(tech!.title.toLowerCase())),
+    }
 ]
 
 export default projects

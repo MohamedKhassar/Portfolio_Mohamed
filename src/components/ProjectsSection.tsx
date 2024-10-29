@@ -50,7 +50,7 @@ const ProjectsSection = () => {
                 <Fade>
                     {projects && projects.map((item, i) =>
                         <div className="rounded-3xl lg:w-full md:w-[90%] w-80 col-span-1 p-5 shadow-2xl lg:flex flex-col justify-between gap-y-5 md:shadow-black/50 shadow-[#6e06f2]/70 md:hover:shadow-[#6e06f2]/70 duration-300 md:hover:scale-105 lg:h-fit lg:space-y-0 space-y-10" key={item.id}>
-                            <Image className="rounded-md lg:h-64 object-cover w-full h-full object-center" src={item.image} width={1000} height={1000} alt={item.image} />
+                            <Image draggable={false} className="rounded-md lg:h-64 object-cover w-full h-full object-center" src={item.image} width={1000} height={1000} alt={item.image} />
                             <div className="space-y-3">
                                 <div className="flex justify-between items-center">
                                     <Link className="flex items-center gap-x-5 w-fit" href={`/project/${item.title}`}>
