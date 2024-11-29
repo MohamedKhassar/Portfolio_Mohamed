@@ -8,6 +8,7 @@ import todo from "/public/assets/imgs/todo.png"
 import todoL from "/public/assets/imgs/todoL.png"
 import nature from "/public/assets/imgs/nature.png"
 import DevFlow from "/public/assets/imgs/DevFlow1.png"
+import php from "/public/assets/imgs/php.png"
 import python from "/public/assets/imgs/python.jpeg"
 import technologies from "./stack"
 
@@ -111,6 +112,14 @@ const projects = [
             back: "https://github.com/MohamedKhassar/DevFlow-Blog-App-Backend"
         },
         stack: technologies.filter(tech => ["react", "tailwind css", "typescript", "postman", "jwt", "postgresql", "node.js", "express"].includes(tech!.title.toLowerCase())),
+    },
+    {
+        id: generateId(),
+        title: "CRUD App using PHP",
+        description: "Building a CRUD APP using PHP and MySQL",
+        image: php.src,
+        github: "https://github.com/MohamedKhassar/My_Shop",
+        stack: technologies.filter(tech => ["php", "html", "bootstrap", "mysql"].includes(tech!.title.toLowerCase())),
     }
 ]
 
