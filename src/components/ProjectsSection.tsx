@@ -102,7 +102,7 @@ const ProjectsSection = () => {
                 </Fade>
                 <div className="flex justify-center items-center w-full lg:col-span-3 md:col-span-2 mt-14">
 
-                    <button onClick={() => router.push("projects")} className="px-5 py-3  bg-[#6e06f2] text-white font-semibold md:text-lg rounded-md capitalize">see more</button>
+                    <button onClick={() => router.push("projects")} className="px-5 py-3  bg-[#6e06f2] text-white font-semibold md:text-lg rounded-md capitalize">see all ({projects.length})</button>
                 </div>
             </div>
         </div>
