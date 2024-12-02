@@ -49,7 +49,7 @@ const ProjectsSection = () => {
             <div className="grid lg:grid-cols-3 md:grid-cols-2 lg:gap-16 gap-10 md:mx-16 md:place-items-start place-items-center">
                 <Fade>
                     {projects && projects.map((item, i) =>
-                        <div className="rounded-3xl lg:w-full md:w-[90%] w-80 col-span-1 p-5 shadow-2xl lg:flex flex-col justify-between gap-y-5 md:shadow-black/50 shadow-[#6e06f2]/70 md:hover:shadow-[#6e06f2]/70 duration-300 md:hover:scale-105 lg:h-fit lg:space-y-0 space-y-10" key={item.id}>
+                        <div className="rounded-3xl lg:w-full md:w-[90%] w-80 min-h-max max-h-min col-span-1 p-5 shadow-2xl lg:flex flex-col justify-between md:shadow-black/50 shadow-[#6e06f2]/70 md:hover:shadow-[#6e06f2]/70 duration-300 md:hover:scale-105 lg:space-y-5 space-y-5" key={item.id}>
                             <Image draggable={false} className="rounded-md lg:h-64 object-cover w-full h-full object-center" src={item.image} width={1000} height={1000} alt={item.image} />
                             <div className="space-y-3">
                                 <div className="flex justify-between items-center">
@@ -66,8 +66,8 @@ const ProjectsSection = () => {
                                         <ChevronDown />
                                     </div>
                                 </div>
-                                <div className={cn("overflow-hidden", isDropDownId === i ? "animate-desc" : "h-7")}>
-                                    <p className="lg:text-lg text-sm text-[#6F7589]">{item.description}</p>
+                                <div className={cn("overflow-hidden h-fit")}>
+                                    <p className={cn("lg:text-lg text-sm text-[#6F7589]", isDropDownId === i ? "animate-desc" : "max-h-fit h-36")}>{item.description}</p>
                                 </div>
                             </div>
                             <div className="space-y-5 bg-white py-5">

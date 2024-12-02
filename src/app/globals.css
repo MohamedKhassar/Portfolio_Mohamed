@@ -99,17 +99,17 @@ html {
 
 .animate-desc {
   animation: animate-desc .7s linear;
-  -webkit-animation: animate-desc .7s linear;
+  -webkit-animation: animate-desc 1s linear;
 }
 
 @keyframes animate-desc {
   0% {
-    height: 1.25rem;
+@apply h-7
   }
 50%{
- @apply h-32
+ @apply h-36
 }
   100% {
-    @apply h-full
+    @apply h-fit
   }
 }

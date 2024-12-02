@@ -9,6 +9,7 @@ import todoL from "/public/assets/imgs/todoL.png"
 import nature from "/public/assets/imgs/nature.png"
 import DevFlow from "/public/assets/imgs/DevFlow1.png"
 import php from "/public/assets/imgs/php.png"
+import auth_php from "/public/assets/imgs/auth_php.png"
 import python from "/public/assets/imgs/python.jpeg"
 import technologies from "./stack"
 
@@ -80,6 +81,14 @@ const projects = [
     },
     {
         id: generateId(),
+        title: "CRUD App using PHP",
+        description: "Building a CRUD APP using PHP and MySQL",
+        image: php.src,
+        github: "https://github.com/MohamedKhassar/My_Shop",
+        stack: technologies.filter(tech => ["php", "html", "bootstrap", "mysql"].includes(tech!.title.toLowerCase())),
+    },
+    {
+        id: generateId(),
         title: "todo-list full-stack",
         description: "A simple and user-friendly to-do list application to practice Postgresql using PERN(Postgresql, ExpressJs, ReactJs, NodeJs) Stack",
         image: todoL.src,
@@ -88,19 +97,27 @@ const projects = [
     },
     {
         id: generateId(),
-        title: "E-commerce",
-        description: "Developed a user-friendly e-commerce platform with a team, featuring cash on delivery, responsive design, and efficient product management. My contributions included frontend work with Next.Js and backend integration using Node.Js and Express.Js.",
-        image: nature.src,
-        link: "https://www.naturemane.ma/",
-        stack: technologies.filter(tech => ["next.js", "tailwind css", "javascript", "mongodb", "jwt", "postman", "node.js", "express"].includes(tech!.title.toLowerCase())),
-    },
-    {
-        id: generateId(),
         title: "Python Projects",
         description: "Developing programs with levels,beginner, intermediate and hard.",
         image: python.src,
         github: "https://github.com/MohamedKhassar/Practice-Python",
         stack: technologies.filter(tech => ["python", "pandas"].includes(tech!.title.toLowerCase())),
+    },
+    {
+        id: generateId(),
+        title: "Auth App using PHP & MySQL",
+        description: "Building a Auth APP using PHP and MySQL",
+        image: auth_php.src,
+        github: "https://github.com/MohamedKhassar/Auth_with_PHP",
+        stack: technologies.filter(tech => ["php", "html", "bootstrap", "mysql"].includes(tech!.title.toLowerCase())),
+    },
+    {
+        id: generateId(),
+        title: "E-commerce",
+        description: "Developed a user-friendly e-commerce platform with a team, featuring cash on delivery, responsive design, and efficient product management. My contributions included frontend work with Next.Js and backend integration using Node.Js and Express.Js.",
+        image: nature.src,
+        link: "https://www.naturemane.ma/",
+        stack: technologies.filter(tech => ["next.js", "tailwind css", "javascript", "mongodb", "jwt", "postman", "node.js", "express"].includes(tech!.title.toLowerCase())),
     },
     {
         id: generateId(),
@@ -113,14 +130,6 @@ const projects = [
         },
         stack: technologies.filter(tech => ["react", "tailwind css", "typescript", "postman", "jwt", "postgresql", "node.js", "express"].includes(tech!.title.toLowerCase())),
     },
-    {
-        id: generateId(),
-        title: "CRUD App using PHP",
-        description: "Building a CRUD APP using PHP and MySQL",
-        image: php.src,
-        github: "https://github.com/MohamedKhassar/My_Shop",
-        stack: technologies.filter(tech => ["php", "html", "bootstrap", "mysql"].includes(tech!.title.toLowerCase())),
-    }
 ]
 
 export default projects
