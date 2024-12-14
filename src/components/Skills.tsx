@@ -37,8 +37,8 @@ const Skills = () => {
                 <div className="flex lg:flex-row flex-col lg:justify-around lg:items-start lg:mx-0 mx-8 gap-20">
                     <div className="flex flex-col justify-center gap-10">
                         <h1 className='capitalize font-semibold font-Poppins text-3xl lg:text-5xl flex items-center text-nowrap'>front-end<span className='lg:text-6xl text-3xl font-semibold text-[#6e06f2]'>.</span></h1>
-                        <ul className="grid grid-cols-3 gap-10 place-items-center">
-                            {technologies.filter(tech => ["html", "css", "javascript", "typescript", "react", "next.js", "tailwind css", "bootstrap", "framer motion", "cmd"].includes(tech!.title.toLowerCase()))
+                        <ul className="grid grid-cols-4 gap-x-4 gap-y-8">
+                            {technologies.filter(tech => ["html", "css", "javascript", "typescript", "react", "next.js", "tailwind css", "bootstrap", "framer motion"].includes(tech!.title.toLowerCase()))
                                 .map(tech =>
                                     <div className="relative flex justify-center" key={tech?.title} onMouseEnter={() => handleHover(Number(tech!.id))}
                                         onMouseLeave={() => handleMouseLeave(Number(tech!.id))}>
@@ -62,8 +62,35 @@ const Skills = () => {
                     </div>
                     <div className="flex flex-col justify-center gap-10">
                         <h1 className='capitalize font-semibold font-Poppins text-3xl lg:text-5xl flex items-center text-nowrap'>back-end<span className='lg:text-6xl text-3xl font-semibold text-[#6e06f2]'>.</span></h1>
-                        <ul className="grid grid-cols-3 gap-10 lg:ms-0 ms-5">
-                            {technologies.filter(tech => ["php", "node.js", "python", "django", "docker", "express", "laravel", "mongodb", "mysql", "postgresql", "postman", "next.js", "jwt", "cmd"].includes(tech!.title.toLowerCase()))
+                        <ul className="grid grid-cols-4 gap-x-4 gap-y-8 lg:ms-0 ms-5">
+                            {technologies.filter(tech => ["php", "node.js", "python", "express", "mongodb", "mysql", "postgresql", "next.js", "jwt", "symfony"].includes(tech!.title.toLowerCase()))
+                                .map(tech =>
+                                    <div className="relative flex justify-center" key={tech?.title} onMouseEnter={() => handleHover(Number(tech!.id) + Number(Math.ceil(Math.random())))}
+                                        onMouseLeave={() => handleMouseLeave(Number(tech!.id) + Number(Math.ceil(Math.random())))}>
+                                        <li
+                                        >
+                                            {tech?.icon()}
+
+                                        </li>
+                                        <span
+                                            ref={(el) => {
+                                                if (el) {
+                                                    refs.current[Number(tech!.id) + Number(Math.ceil(Math.random()))] = el;
+                                                }
+                                            }}
+                                            id={`title-${Number(tech!.id) + Number(Math.ceil(Math.random()))}`}
+                                            className="capitalize z-10 absolute text-nowrap -bottom-12 rounded-md text-white font-Poppins p-2 opacity-0 duration-300 bg-[#6e06f2]"
+                                        >
+                                            {tech!.title}
+                                        </span>
+                                    </div>
+                                )}
+                        </ul>
+                    </div>
+                    <div className="flex flex-col justify-center gap-10">
+                        <h1 className='capitalize font-semibold font-Poppins text-3xl lg:text-5xl flex items-center text-nowrap'>tools<span className='lg:text-6xl text-3xl font-semibold text-[#6e06f2]'>.</span></h1>
+                        <ul className="grid grid-cols-4 gap-x-4 gap-y-8 lg:ms-0 ms-5">
+                            {technologies.filter(tech => ["cmd", "docker", "xampp", "git", "github", "postman"].includes(tech!.title.toLowerCase()))
                                 .map(tech =>
                                     <div className="relative flex justify-center" key={tech?.title} onMouseEnter={() => handleHover(Number(tech!.id) + Number(Math.ceil(Math.random())))}
                                         onMouseLeave={() => handleMouseLeave(Number(tech!.id) + Number(Math.ceil(Math.random())))}>

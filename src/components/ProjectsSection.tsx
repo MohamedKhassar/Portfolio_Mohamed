@@ -67,7 +67,7 @@ const ProjectsSection = () => {
                                     </div>
                                 </div>
                                 <div className={cn("overflow-hidden h-fit")}>
-                                    <p className={cn("lg:text-lg text-sm text-[#6F7589]", isDropDownId === i ? "animate-desc" : "max-h-fit h-36")}>{item.description}</p>
+                                    <p className={cn("lg:text-lg text-sm text-[#6F7589]", isDropDownId === i ? "animate-desc" : "h-4")}>{item.description}</p>
                                 </div>
                             </div>
                             <div className="space-y-5 bg-white py-5">

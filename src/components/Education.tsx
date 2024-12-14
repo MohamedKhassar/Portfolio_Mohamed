@@ -25,13 +25,13 @@ const Education = () => {
                 uni: "JobInTech",
                 title: "Full Stack JS Development",
                 description: () => <><Check color="#6e06f2" className="lg:size-9 size-16" /><p className="lg:text-base text-xs">JobInTech is a Moroccan digital skills training program focused on hands- on, project - based learning to teach coding and enhance employability in the tech sector.</p></>,
-                date: "december 2023 - mai 2024"
+                date: "december 2023 - may 2024"
             },
             {
                 uni: "Coursera & IBM",
                 title: "Full Stack Web Development",
                 description: () => <><Check color="#6e06f2" className="lg:size-9 size-16" /><p className="lg:text-base text-xs">Coursera and IBM provide comprehensive training on various web development technologies, including <Link className="text-[#6e06f2] text-nowrap" href={"https://www.coursera.org/account/accomplishments/records/WTTR33FZU33C"}>HTML, CSS, JavaScript</Link> & <Link className="text-[#6e06f2] text-nowrap" href={"https://www.coursera.org/account/accomplishments/records/V8YTV7L38JMW"}>ReactJS</Link> & <Link className="text-[#6e06f2] text-nowrap" href={"https://www.coursera.org/account/accomplishments/records/5B8NG2T9C2K8"}>NodeJS , ExpressJS</Link> and more.</p></>,
-                date: "mai 2024"
+                date: "may 2024"
             }
         ]
 

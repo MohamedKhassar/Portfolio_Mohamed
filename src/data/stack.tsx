@@ -14,7 +14,7 @@ import {
 } from 'react-icons/fa';
 import { BsBootstrapFill } from "react-icons/bs";
 import { RiNextjsFill } from 'react-icons/ri';
-import { SiCplusplus, SiRuby, SiGo, SiSwift, SiDjango, SiFlask, SiSpring, SiRubyonrails, SiLaravel, SiSymfony, SiExpress, SiTailwindcss, SiMongodb, SiMysql, SiPostman, SiJsonwebtokens, SiPandas } from 'react-icons/si';
+import { SiCplusplus, SiRuby, SiGo, SiSwift, SiDjango, SiFlask, SiSpring, SiRubyonrails, SiLaravel, SiSymfony, SiExpress, SiTailwindcss, SiMongodb, SiMysql, SiPostman, SiJsonwebtokens, SiPandas, SiXampp, SiGit, SiGithub } from 'react-icons/si';
 import { TbBrandFramerMotion } from 'react-icons/tb';
 import { HiMiniCommandLine } from "react-icons/hi2";
 const generateId = () => Number(Math.random() - Date.now());
@@ -205,8 +205,26 @@ const technologies = [
     id: generateId(),
     title: "pandas",
     icon: function () { return <SiPandas className='md:size-8 size-7' /> }
+  },
+  {
+    id: generateId(),
+    title: "xampp",
+    icon: function () {
+      return <SiXampp color="#F37623" className='md:size-8 size-7' />
+
+    }
+  },
+  {
+    id: generateId(),
+    title: "git",
+    icon: function () { return <SiGit color="#F37623" className='md:size-8 size-7' /> }
+  },
+  {
+    id: generateId(),
+    title: "github",
+    icon: function () { return <SiGithub color="#181717" className='md:size-8 size-7' /> }
   }
-];
+]
 
 
 export default technologies;

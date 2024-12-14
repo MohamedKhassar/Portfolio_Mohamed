@@ -24,10 +24,10 @@ export const POST = async (req: Request, res: Response) => {
       
       <div style="display: grid; place-items: center; gap: 20px;">
     <p style="text-align: justify; width: 50%; max-width: 500px; margin: 0 auto;">
-        ${from}
+        Email: ${from}
     </p>
     <p style="text-align: justify; width: 50%; max-width: 500px; margin: 0 auto;">
-        ${content}
+        Message: ${content}
     </p>
 </div>
 </div>

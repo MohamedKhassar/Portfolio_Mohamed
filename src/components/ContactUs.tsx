@@ -21,7 +21,7 @@ const ContactUs = () => {
             if (message.name && message.from && message.subject && message.content) {
                 setLoading(true)
                 await axios.post("/api/contact", message)
-                toast.success("message sent successfully", {
+                toast.success("Message sent successfully", {
                     theme: "colored",
                     autoClose: 1500,
                     closeButton: false,
@@ -37,7 +37,7 @@ const ContactUs = () => {
                 })
                 setLoading(false)
             } else {
-                toast.error("please fill out all the required fields", {
+                toast.error("Please fill out all the required fields", {
                     theme: "colored",
                     autoClose: 1500,
                     closeButton: false,
@@ -47,7 +47,7 @@ const ContactUs = () => {
                 });
             }
         } catch (error) {
-            toast.error("something's wrong", {
+            toast.error("Something's wrong", {
                 theme: "colored",
                 autoClose: 1500,
                 closeButton: false,
@@ -80,7 +80,7 @@ const ContactUs = () => {
                     </ul>
                 </div>
             </Fade>
-            <ToastContainer className="capitalize" />
+            <ToastContainer />
         </div>
     )
 }
