@@ -12,6 +12,7 @@ const Hero = () => {
                                 width={40}
                                 height={40}
                                 alt=""
+                                loading="lazy"
                                 className="img-cover"
                             />
                         </figure>
@@ -36,6 +37,7 @@ const Hero = () => {
                         <img
                             src="/assets/imgs/hero-banner.png"
                             alt=""
+                            loading="lazy"
                             width={656}
                             height={800}
                             className="w-full"
