@@ -11,6 +11,7 @@ const SkillCard = ({ imgSrc,
                     src={imgSrc}
                     width={32}
                     height={32}
+                    loading="lazy"
                     alt="" />
             </figure>
             <div>

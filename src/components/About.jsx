@@ -4,10 +4,6 @@ const About = () => {
       label: 'Project done',
       number: 35
     },
-    // {
-    //   label: 'Years of experience',
-    //   number: 10
-    // }
   ];
   return (
     <section id="about" className="section">

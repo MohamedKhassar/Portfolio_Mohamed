@@ -49,7 +49,11 @@ const Navbar = ({ navOpen }) => {
     selectActiveBox()
   }
   useEffect(selectActiveBox, [])
-  window.addEventListener('resize', selectActiveBox)
+  useEffect(()=>{
+    window.addEventListener('resize', selectActiveBox)
+    return () => {
+      document.removeEventListener('resize', selectActiveBox);
+  };  })
 
   return (
     <nav className={`navbar ${navOpen ? "active" : ""}`}>
