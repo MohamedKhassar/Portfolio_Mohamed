@@ -20,8 +20,8 @@ export const works = [
     {
       imgSrc: '/assets/imgs/e-learning.png',
       title: 'E-learning Website',
-      tags: ['Web-design', 'Web-Development',"Framer motion"],
-      projectLink: 'https://med-learning.netlify.app/'
+      tags: ['Web-design', 'Web-Development',"Framer motion","NextJS"],
+      projectLink: 'https://e-learning-landing-page-assignment.vercel.app/'
     },
     {
       imgSrc: '/assets/imgs/rst.png',
