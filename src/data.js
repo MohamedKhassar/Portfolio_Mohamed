@@ -12,12 +12,6 @@ export const works = [
       projectLink: 'https://khassar-porfolio.netlify.app/'
     },
     {
-      imgSrc: '/assets/imgs/dashboard.png',
-      title: 'Admin Dashboard',
-      tags: [ 'Animation', 'Web Development',"Web Design","React-Charts"],
-      projectLink: 'https://v1admin-dashboard.netlify.app/'
-    },
-    {
       imgSrc: '/assets/imgs/e-learning.png',
       title: 'E-learning Website',
       tags: ['Web-design', 'Web-Development',"Framer motion","NextJS"],
@@ -28,6 +22,12 @@ export const works = [
       title: 'Restaurant Landing Page',
       tags: ['Web-design', 'Web-Development',"Framer motion"],
       projectLink: 'https://rstkhassar.netlify.app/'
+    },
+    {
+      imgSrc: '/assets/imgs/dashboard.png',
+      title: 'Admin Dashboard',
+      tags: [ 'Animation', 'Web Development',"Web Design","React-Charts"],
+      projectLink: 'https://v1admin-dashboard.netlify.app/'
     },
     {
       imgSrc: '/assets/imgs/NotePulse.png',
