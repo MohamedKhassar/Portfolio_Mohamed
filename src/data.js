@@ -42,3 +42,29 @@ export const works = [
       projectLink: 'https://github.com/MohamedKhassar/Note-App-React-TailwindCss-TS'
     },
   ];
+export const certificates = [
+    {
+      imgSrc: '/assets/imgs/swe.png',
+      title: 'Software Engineering Essentials',
+      tags: ['Software Development Lifecycle', 'Software Engineering'],
+      certificateLink: 'https://www.credly.com/badges/44cb86e7-9d00-42ab-afb4-7bcbbad5514c/public_url'
+    },
+    {
+      imgSrc: '/assets/imgs/frontend.png',
+      title: 'Front-end Development with React',
+      tags: ['Front-End', 'React',"Redux","JSX","Component Lifecycle"],
+      certificateLink: 'https://www.credly.com/badges/5b4ad1a8-edcd-4060-a14e-49950940a01b/public_url'
+    },
+    {
+      imgSrc: '/assets/imgs/backend.png',
+      title: 'Node and Express Essentials',
+      tags: ['Express', 'Node.js',"Node Package Manager (NPM)"],
+      certificateLink: 'https://www.credly.com/badges/6e4fcc5e-8e8c-4cc4-8bfe-b2dd009801b1/public_url'
+    },
+    {
+      imgSrc: '/assets/imgs/Git.png',
+      title: 'Git and GitHub Essentials',
+      tags: ['Git', 'GitHub',"Collaboration"],
+      certificateLink: 'https://www.credly.com/badges/b545d47a-984b-455e-b88d-9a76c20734b8/public_url'
+    },
+  ];

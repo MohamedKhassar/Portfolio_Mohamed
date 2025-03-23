@@ -11,6 +11,7 @@ import gsap from 'gsap';
 import { useGSAP } from '@gsap/react';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Analytics } from "@vercel/analytics/react"
+import Certificates from "./components/Certificates"
 gsap.registerPlugin(useGSAP,ScrollTrigger);
 
 
@@ -41,8 +42,8 @@ const App = () => {
         <Hero />
         <About />
         <Skills />
+        <Certificates />
         <Work />
-        {/* <Reviews /> */}
         <Contact />
       </main>
       <Footer />
