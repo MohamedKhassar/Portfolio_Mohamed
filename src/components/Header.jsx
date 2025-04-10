@@ -9,7 +9,7 @@ const Header = () => {
             <div className="flex items-center mx-auto justify-between w-full px-4 md:px-6 md:grid md:grid-cols-[1fr_3fr_1fr]">
                 <a href={"#"} >
                     <h1>
-                        <img src="assets/imgs/logo.svg" width={30} height={30} alt="" />
+                        <img src="assets/imgs/logo.svg" width={30} height={30} alt="Mohamed_Khassar_logo" />
                     </h1>
                 </a>
                 <div className="md:justify-self-center relative">

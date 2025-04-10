@@ -12,7 +12,7 @@ const SkillCard = ({ imgSrc,
                     width={32}
                     height={32}
                     loading="lazy"
-                    alt="" />
+                    alt="Mohamed_Khassar" />
             </figure>
             <div>
                 <h3>

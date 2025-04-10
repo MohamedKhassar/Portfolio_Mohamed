@@ -80,7 +80,8 @@ const Footer = () => {
         <div className="flex items-center justify-between pt-10 mb-8">
           <a href="/#" className="logo">
             <img src="assets/imgs/logo.svg"
-              width={40} alt=""
+              width={40} 
+              alt="Mohamed_Khassar_logo"
               height={40}
             />
           </a>

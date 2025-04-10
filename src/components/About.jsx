@@ -24,7 +24,9 @@ const About = () => {
                 </div>
               ))
             }
-            <img src="/assets/imgs/logo.svg" alt="logo"
+            <img src="/assets/imgs/logo.svg" 
+            alt="Mohamed_Khassar"
+            loading="lazy"
             width={30}
             height={30}
             className="ml-auto md:w-[40px] md:h-[40px]" />

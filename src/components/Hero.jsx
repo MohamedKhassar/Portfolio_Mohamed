@@ -12,7 +12,7 @@ const Hero = () => {
                                 src="/assets/imgs/avatar-1.jpg"
                                 width={40}
                                 height={40}
-                                alt=""
+                                alt="Mohamed_Khassar_avatar"
                                 loading="lazy"
                                 className="img-cover"
                             />
@@ -37,7 +37,7 @@ const Hero = () => {
                     <figure className="w-full ml-auto max-w-[480px] bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden">
                         <img
                             src="/assets/imgs/hero-banner.png"
-                            alt=""
+                            alt="Mohamed_Khassar_banner"
                             loading="lazy"
                             width={656}
                             height={800}
