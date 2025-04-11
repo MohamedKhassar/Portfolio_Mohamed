@@ -45,33 +45,33 @@ const Contact = () => {
                     method="POST"
                 >
                     <div className="md:grid md:items-center md:grid-cols-2 md:gap-2">
-                        <div className="mb-4">
+                        <div className="mb-4 flex flex-col-reverse">
+                            <input minLength={3} type="text" name="name" id="name" autoComplete="name" required placeholder="Mohamed Khassar" className="text-field reveal-up peer" />
                             <label
                                 htmlFor="name"
                                 className="label reveal-up"
                             >
                                 Name
                             </label>
-                            <input type="text" name="name" id="name" autoComplete="name" required placeholder="Mohamed Khassar" className="text-field reveal-up" />
                         </div>
-                        <div className="mb-4">
+                        <div className="mb-4 flex flex-col-reverse">
+                            <input type="email" name="email" id="email" autoComplete="email" required placeholder="email@example.com" className="text-field reveal-up peer" />
                             <label
                                 htmlFor="email"
                                 className="label reveal-up"
                             >
                                 Email
                             </label>
-                            <input type="email" name="email" id="email" autoComplete="email" required placeholder="email@example.com" className="text-field reveal-up" />
                         </div>
                     </div>
-                    <div className="mb-4">
+                    <div className="mb-4 flex flex-col-reverse">
+                        <textarea name="message" id="message" placeholder="Hi!" required className="text-field reveal-up peer resize-y min-h-32 max-h-80"></textarea>
                         <label
                             htmlFor="message"
                             className="label reveal-up"
                         >
                             Message
                         </label>
-                        <textarea name="message" id="message" placeholder="Hi!" required className="text-field reveal-up resize-y min-h-32 max-h-80"></textarea>
                     </div>
                     <button type="submit" className="btn btn-primary w-full cursor-pointer justify-center reveal-up">Submit</button>
                 </form>
