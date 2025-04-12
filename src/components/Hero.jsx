@@ -29,7 +29,7 @@ const Hero = () => {
                     </h2>
                     <div className="flex items-center gap-3 flex-wrap">
                         <ButtonPrimary label={"download cv"} icon={<FiDownload className="text-[18px]" />} href="/assets/file/Mohamed_Khassar_CV(ENG).pdf" target="_blank" classes={"capitalize group"} />
-                        <ButtonPrimary href="https://www.fiverr.com/s/YRx380q" classes={"capitalize !bg-green-900 !text-white hover:!bg-green-50 hover:!text-green-900 !duration-500"} target="_blank" icon={<SiFiverr className="md:size-14 size-12" />} />
+                        <ButtonPrimary href="https://www.fiverr.com/mohamedkhassar/create-a-stunning-responsive-and-seo-friendly-landing-page" classes={"capitalize !bg-green-900 !text-white hover:!bg-green-50 hover:!text-green-900 !duration-500"} target="_blank" icon={<SiFiverr className="md:size-14 size-12" />} />
                         <ButtonOutline href="#about" label={"scroll down"} classes={"capitalize"} icon={<FiArrowDown className="animate-bounce" />} />
                     </div>
                 </div>
