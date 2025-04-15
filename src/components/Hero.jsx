@@ -1,6 +1,7 @@
 import { FiArrowDown, FiDownload } from "react-icons/fi";
 import { ButtonPrimary, ButtonOutline } from "./Button"
-import { SiFiverr } from "react-icons/si";
+// import { SiFiverr } from "react-icons/si";
+import nsayblik_logo from "/assets/imgs/nsayblik_logo.png";
 const Hero = () => {
     return (
         <section className="pt-28 lg:pt-36" id="home">
@@ -28,8 +29,13 @@ const Hero = () => {
                         Building Scalable Modern Websites for the Future
                     </h2>
                     <div className="flex items-center gap-3 flex-wrap">
+                        {/* CV Button */}
                         <ButtonPrimary label={"download cv"} icon={<FiDownload className="text-[18px]" />} href="/assets/file/Mohamed_Khassar_CV(ENG).pdf" target="_blank" classes={"capitalize group"} />
-                        <ButtonPrimary href="https://www.fiverr.com/mohamedkhassar/create-a-stunning-responsive-and-seo-friendly-landing-page" classes={"capitalize !bg-green-900 !text-white hover:!bg-green-50 hover:!text-green-900 !duration-500"} target="_blank" icon={<SiFiverr className="md:size-14 size-12" />} />
+                        {/* NSAYBLIK Button */}
+                        <ButtonPrimary target={"_blank"} href="https://nsayblik.com/Mohamed_Khassar" classes={"capitalize !bg-white text-black !font-bold hover:!bg-gray-200 !duration-200"} icon={<img src={nsayblik_logo} loading="lazy" alt="nsayblik_logo" className="md:size-20 size-14 object-contain" />} />
+                        {/* Fiverr Button */}
+                        {/* <ButtonPrimary href="https://www.fiverr.com/mohamedkhassar/create-a-stunning-responsive-and-seo-friendly-landing-page" classes={"capitalize !bg-green-900 !text-white hover:!bg-green-50 hover:!text-green-900 !duration-500"} target="_blank" icon={<SiFiverr className="md:size-14 size-12" />} /> */}
+                        {/* Scroll Down Button */}
                         <ButtonOutline href="#about" label={"scroll down"} classes={"capitalize"} icon={<FiArrowDown className="animate-bounce" />} />
                     </div>
                 </div>
