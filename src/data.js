@@ -6,6 +6,12 @@ export const works = [
       projectLink: 'https://www.naturemane.ma/'
     },
     {
+      imgSrc: '/assets/imgs/InferaAI.png',
+      title: 'InferaAI Landing Page',
+      tags: ['Front-End', 'Web Development',"Web Design","Landing Page"],
+      projectLink: 'https://infera-ai-landing-page.vercel.app/'
+    },
+    {
       imgSrc: '/assets/imgs/warshati.png',
       title: 'Warshati Website',
       tags: ['Front-End', 'Web Development',"Web Design"],
