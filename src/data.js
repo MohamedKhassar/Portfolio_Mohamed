@@ -1,5 +1,11 @@
 export const works = [
     {
+      imgSrc: '/assets/imgs/popcornplay.png',
+      title: 'PopcornPlay (Movie App)',
+      tags: ['API', 'Web Development',"TMDB API"],
+      projectLink: 'https://popcornplay-lyart.vercel.app/'
+    },
+    {
       imgSrc: '/assets/imgs/nature.png',
       title: 'E-commerce Platform',
       tags: ['API', 'MVC', 'Development',"MERN-Stack","E-Commerce"],
