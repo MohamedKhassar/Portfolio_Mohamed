@@ -2,7 +2,7 @@ const About = () => {
   const aboutItems = [
     {
       label: 'Project done',
-      number: 35
+      number: 40
     },
   ];
   return (
