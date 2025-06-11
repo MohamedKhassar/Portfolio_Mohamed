@@ -2,7 +2,7 @@ export const works = [
     {
       imgSrc: '/assets/imgs/popcornplay.png',
       title: 'PopcornPlay (Movie App)',
-      tags: ['API', 'Web Development',"TMDB API"],
+      tags: ['API', 'Web Development',"TMDB API","React","Tailwind"],
       projectLink: 'https://popcornplay-lyart.vercel.app/'
     },
     {
@@ -55,6 +55,12 @@ export const works = [
     },
   ];
 export const certificates = [
+    {
+      imgSrc: '/assets/imgs/meta-frontend.png',
+      title: 'Meta Front-End Developer Professional Certificate',
+      tags: ['Coding Interview Skills', 'ReactJS','Version Control'],
+      certificateLink: 'https://www.credly.com/badges/d6307952-db76-46b8-b051-d3088702159d/public_url'
+    },
     {
       imgSrc: '/assets/imgs/swe.png',
       title: 'Software Engineering Essentials',

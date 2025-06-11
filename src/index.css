@@ -8,7 +8,7 @@ html{
     @apply scroll-smooth;
 }
 body{
-    @apply bg-zinc-900 text-zinc-50 font-Inter h-[200vh];
+    @apply bg-zinc-900 text-zinc-50 font-Inter;
 }
 
 ::-webkit-scrollbar {
@@ -62,7 +62,7 @@ body{
 }
 
 .container{
-    @apply px-4 mx-auto lg:px-8 xl:max-w-6xl
+    @apply px-4 mx-auto lg:px-8 xl:max-w-7xl
 }
 
 .img-box{
