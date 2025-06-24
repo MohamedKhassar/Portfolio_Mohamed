@@ -30,7 +30,7 @@ const Hero = () => {
                     </h2>
                     <div className="flex items-center gap-3 flex-wrap">
                         {/* CV Button */}
-                        <ButtonPrimary label={"download cv"} icon={<FiDownload className="text-[18px]" />} href="/assets/file/Mohamed_Khassar_CV(ENG).pdf" target="_blank" classes={"capitalize group"} />
+                        <ButtonPrimary label={"download cv"} icon={<FiDownload className="text-[18px]" />} href="/assets/file/Resume.pdf" target="_blank" classes={"capitalize group"} />
                         {/* NSAYBLIK Button */}
                         <ButtonPrimary target={"_blank"} href="https://nsayblik.com/Mohamed_Khassar" classes={"capitalize !bg-white text-black !font-bold hover:!bg-gray-200 !duration-200"} icon={<img src={nsayblik_logo} loading="lazy" alt="nsayblik_logo" className="md:size-20 size-14 object-contain" />} />
                         {/* Fiverr Button */}
