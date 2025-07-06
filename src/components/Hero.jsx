@@ -36,7 +36,7 @@ const Hero = () => {
                         {/* Fiverr Button */}
                         {/* <ButtonPrimary href="https://www.fiverr.com/mohamedkhassar/create-a-stunning-responsive-and-seo-friendly-landing-page" classes={"capitalize !bg-green-900 !text-white hover:!bg-green-50 hover:!text-green-900 !duration-500"} target="_blank" icon={<SiFiverr className="md:size-14 size-12" />} /> */}
                         {/* Khamsat Button */}
-                        <ButtonPrimary href="https://khamsat.com/user/mohamed_kh_25_08" classes={"capitalize !bg-gray-700 hover:!bg-gray-500 !text-white hover:!text-green-900 !duration-500"} target="_blank" icon={<img src={"https://khamsat.hsoubcdn.com/assets/images/logo-73045c76e830509d4dbe03ea6172d22f047c708fed5435e93ffd47f80ee5ffa4.png"} loading="lazy" alt="nsayblik_logo" className="md:size-20 size-14 object-contain" />} />
+                        <ButtonPrimary href="https://khamsat.com/programming/landing-page-development/3500772" classes={"capitalize !bg-gray-700 hover:!bg-gray-500 !text-white hover:!text-green-900 !duration-500"} target="_blank" icon={<img src={"https://khamsat.hsoubcdn.com/assets/images/logo-73045c76e830509d4dbe03ea6172d22f047c708fed5435e93ffd47f80ee5ffa4.png"} loading="lazy" alt="nsayblik_logo" className="md:size-20 size-14 object-contain" />} />
                         {/* Scroll Down Button */}
                         <ButtonOutline href="#about" label={"scroll down"} classes={"capitalize"} icon={<FiArrowDown className="animate-bounce" />} />
                     </div>
