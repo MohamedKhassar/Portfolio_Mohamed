@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
     return (
         <div className={classes+" relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors"}>
-            <figure className="img-box aspect-square rounded-lg mb-4">
+            <figure className="img-box aspect-video rounded-lg mb-4">
                 <img src={imgSrc} alt={title+"_Mohamed_Khassar"} loading="lazy" className="img-cover" />
             </figure>
             <div className="flex items-center justify-between gap-4">

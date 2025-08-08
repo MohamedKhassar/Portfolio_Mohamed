@@ -62,7 +62,7 @@ body{
 }
 
 .container{
-    @apply px-4 mx-auto lg:px-8 xl:max-w-7xl
+    @apply px-4 mx-auto lg:px-8 xl:max-w-screen-2xl;
 }
 
 .img-box{
