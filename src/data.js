@@ -1,6 +1,6 @@
 export const works = [
   {
-    imgSrc: "/assets/imgs/mineverse.png",
+    imgSrc: "/assets/imgs/mineverse.jpg",
     title: "MineVers Web3 Landing Page",
     tags: ["Front-End", "Web Development", "Web Design", "Landing Page"],
     projectLink: "https://mineverse-landing-page.vercel.app/",
@@ -12,7 +12,7 @@ export const works = [
     projectLink: "https://github.com/MohamedKhassar/Beginners-Python-Projects",
   },
   {
-    imgSrc: "/assets/imgs/popcornplay.png",
+    imgSrc: "/assets/imgs/popcornplay.jpg",
     title: "PopcornPlay (Movie App)",
     tags: ["API", "Web Development", "TMDB API", "React", "Tailwind"],
     projectLink: "https://popcornplay-lyart.vercel.app/",
@@ -24,7 +24,7 @@ export const works = [
     projectLink: "https://www.naturemane.ma/",
   },
   {
-    imgSrc: "/assets/imgs/InferaAI.png",
+    imgSrc: "/assets/imgs/InferaAI.jpg",
     title: "InferaAI Landing Page",
     tags: ["Front-End", "Web Development", "Web Design", "Landing Page"],
     projectLink: "https://infera-ai-landing-page.vercel.app/",
@@ -36,7 +36,7 @@ export const works = [
     projectLink: "https://warshati-landing-page.vercel.app/",
   },
   {
-    imgSrc: "/assets/imgs/e-learning.png",
+    imgSrc: "/assets/imgs/e-learning.jpg",
     title: "E-learning Website",
     tags: ["Web-design", "Web-Development", "Framer motion", "NextJS"],
     projectLink: "https://e-learning-landing-page-assignment.vercel.app/",
