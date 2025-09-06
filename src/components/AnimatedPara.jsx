@@ -11,6 +11,6 @@ const AnimatedPara = ({ children, className, delay = .4 }) => {
 AnimatedPara.propTypes = {
     children: PropTypes.node,
     className: PropTypes.string,
-    delay: PropTypes.number.isRequired
+    delay: PropTypes.number
 }
 export default AnimatedPara

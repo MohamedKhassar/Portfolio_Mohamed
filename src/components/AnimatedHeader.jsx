@@ -11,6 +11,6 @@ const AnimatedHeader = ({ children, className, delay = 0.3 }) => {
 AnimatedHeader.propTypes = {
   children: PropTypes.node,
   className: PropTypes.string,
-  delay: PropTypes.number.isRequired
+  delay: PropTypes.number
 }
 export default AnimatedHeader

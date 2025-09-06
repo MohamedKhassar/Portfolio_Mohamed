@@ -1,11 +1,16 @@
 import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { LuLoaderCircle } from "react-icons/lu";
 const About = () => {
-  const aboutItems = [
-    {
-      label: 'Project done',
-      number: 40
-    },
-  ];
+  const [repoCount, setRepoCount] = useState(null);
+  const username = "mohamedkhassar";
+
+  useEffect(() => {
+    fetch(`https://api.github.com/users/${username}`)
+      .then((response) => response.json())
+      .then((data) => setRepoCount(Math.floor(data.public_repos / 10) * 10))
+      .catch((error) => console.error("Error fetching data:", error));
+  }, []);
   return (
     <motion.section
       initial={{ opacity: 0, y: -100 }}
@@ -17,17 +22,16 @@ const About = () => {
             Welcome! I&apos;m Mohamed, a professional web developer with a knack for crafting visually stunning and highly functional websites. Combining creativity and technical expertise. I transform your vision into digital masterpiece that excels in both appearance and performance.
           </p>
           <div className="flex flex-wrap gap-4 items-center md:gap-7">
-            {
-              aboutItems.map(({ label, number }, key) => (
-                <div key={key}>
-                  <div className="flex items-center md:mb-2">
-                    <span className="text-2xl font-semibold md:text-4xl">{number}</span>
-                    <span className="text-sky-400 font-semibold md:text-3xl">+</span>
-                  </div>
-                  <p className="text-sm text-zinc-400">{label}</p>
+            {repoCount !== null ?
+              <div>
+                <div className="flex items-center md:mb-2">
+                  <span className="text-2xl font-semibold md:text-4xl">{repoCount}</span>
+                  <span className="text-sky-400 font-semibold md:text-3xl">+</span>
                 </div>
-              ))
-            }
+                <p className="text-sm text-zinc-400">Projects Done</p>
+              </div>
+              :
+              <LuLoaderCircle className="animate-spin size-8" />}
             <img src="/assets/imgs/logo.svg"
               alt="Mohamed_Khassar"
               loading="lazy"

@@ -36,7 +36,7 @@ const Work = () => {
             <span onClick={() => handelFilterWork(item)} key={i} className={`px-3 py-1.5  hover:!bg-slate-500/40 duration-300 cursor-pointer active:!bg-slate-400/40 !backdrop-blur-2xl rounded-lg mx-1 border !border-gray-600 text-gray-200 text-sm ${item.toLowerCase()==tag.toLowerCase()?"!bg-slate-400/40":"!bg-slate-600/40"}`}>{item}</span>
           )}
         </AnimatedPara>
-        <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(400px,_1fr))]">
+        <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(357px,_1fr))]">
           {filteredWorks.map(({ imgSrc, title, tags, projectLink }, key) => (
             <ProjectCard imgSrc={imgSrc}
               title={title}
