@@ -1,20 +1,20 @@
 import { certificates } from '../data'
+import AnimatedHeader from './AnimatedHeader'
 import CertificateCard from './CertificateCard'
 
 const Certificates = () => {
     return (
         <section id="certificates" className="section">
-            <div className="container">
-                <h2 className="headline-2 mb-8 reveal-up capitalize">
+            <div className="container space-y-8">
+                <AnimatedHeader className={"headline-2 capitalize"}>
                     My certificates
-                </h2>
-                <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(380px,_1fr))]">
+                </AnimatedHeader>
+                <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(350px,_1fr))]">
                     {certificates.map(({ imgSrc, title, tags, certificateLink }, key) => (
                         <CertificateCard imgSrc={imgSrc}
                             title={title}
                             tags={tags}
-                            classes={"reveal-up"}
-                            certificateLink={certificateLink} key={key} />
+                            certificateLink={certificateLink} key={key} index={key} />
                     ))}
                 </div>
             </div>

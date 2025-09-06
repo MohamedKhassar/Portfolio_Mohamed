@@ -1,3 +1,5 @@
+import AnimatedHeader from "./AnimatedHeader";
+import AnimatedPara from "./AnimatedPara";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
@@ -61,18 +63,18 @@ const Skills = () => {
     return (
         <div id="skills" className="section">
             <div className="container">
-                <h2 className="headline-2 reveal-up">
+                <AnimatedHeader className="headline-2">
                     Essential Tools I use
-                </h2>
-                <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] reveal-up">
+                </AnimatedHeader>
+                <AnimatedPara className="text-zinc-400 mt-3 mb-8 max-w-[50ch]" delay={.4}>
                     Discover the powerful tools and technologies I use to create exceptional, high-performing websites & applications.
-                </p>
+                </AnimatedPara>
                 <div className="grid gap-3 grid-cols-[repeat(auto-fill,_minmax(250px,_3fr))]">
                     {skillItem.map(({ imgSrc, label, desc }, key) => (
-                    <SkillCard imgSrc={imgSrc}
-                    label={label}
-                    desc={desc} key={key}
-                    classes="reveal-up" />
+                        <SkillCard imgSrc={imgSrc}
+                            label={label}
+                            desc={desc} key={key}
+                            index={key} />
                     ))}
                 </div>
             </div>

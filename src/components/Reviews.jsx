@@ -42,7 +42,7 @@ const Reviews = () => {
     return (
         <section id="reviews" className="section overflow-hidden">
             <div className="container">
-                <h2 className="headline-2 mb-8 reveal-up">
+                <h2 className="headline-2 mb-8 ">
                     What our customers say
                 </h2>
                 <div className="flex items-stretch gap-3 w-fit scrub-slide">

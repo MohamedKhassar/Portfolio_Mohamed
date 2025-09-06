@@ -1,11 +1,14 @@
 import { FiMenu, FiX } from "react-icons/fi"
 import Navbar from "./Navbar"
 import { useState } from "react"
-
+import { motion } from "framer-motion"
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
     return (
-        <header id="#" className="h-20 fixed top-0 left-0 w-full flex items-center bg-gradient-to-b from-stone-900 to-stone-900/0 z-40">
+        <motion.header
+            initial={{ opacity: 0, y: -100 }}
+            animate={{ opacity: 1, y: 0, transition: { duration: .3, delay: .2 } }}
+            id="#" className="h-20 fixed top-0 left-0 w-full flex items-center bg-gradient-to-b from-stone-900 to-stone-900/0 z-40">
             <div className="flex items-center mx-auto justify-between w-full px-4 md:px-6 md:grid md:grid-cols-[1fr_3fr_1fr]">
                 <a href={"#"} >
                     <h1>
@@ -27,7 +30,7 @@ const Header = () => {
                     contact me
                 </a>
             </div>
-        </header>
+        </motion.header>
     )
 }
 

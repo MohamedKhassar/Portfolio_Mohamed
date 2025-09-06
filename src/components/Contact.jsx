@@ -1,3 +1,6 @@
+import AnimatedHeader from "./AnimatedHeader";
+import AnimatedPara from "./AnimatedPara";
+import { motion } from "framer-motion";
 const Contact = () => {
     const socialLinks = [
         {
@@ -25,56 +28,62 @@ const Contact = () => {
     return (
         <section id="contact" className="section">
             <div className="container lg:grid lg:grid-cols-2 lg:items-stretch">
-                <div className="mb-12 lg:mb-0 lg:flex lg:flex-col">
-                    <h2 className="headline-2 lg:max-w-[12ch] reveal-up">
+                <div className="mb-12 space-y-4 lg:mb-0 lg:flex lg:flex-col">
+                    <AnimatedHeader className="headline-2 lg:max-w-[12ch] ">
                         Contact me for collaboration
-                    </h2>
-                    <p className="text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] reveal-up">
+                    </AnimatedHeader>
+                    <AnimatedPara className="text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] ">
                         Reach out today to discuss your project needs and start collaborating on something amazing!
-                    </p>
+                    </AnimatedPara>
                     <div className="flex items-center gap-2 mt-auto">
                         {socialLinks.map(({ href,
                             icon }, key) => (
-                            <a href={href} key={key} target="_blank" className="w-12 h-12 grid place-items-center ring-inset ring-2 ring-zinc-50/5 rounded-lg transition-[background-color,color] hover:bg-zinc-50 hover:text-zinc-950 duration-300 active:bg-zinc-50/80 reveal-up">{icon}</a>
+                            <motion.a
+                                initial={{ opacity: 0 }}
+                                whileInView={{ opacity: 1, transition: { duration: .5, delay: (.1 * key) + .1 } }}
+                                href={href} key={key} target="_blank" className="w-12 h-12 grid place-items-center ring-inset ring-2 ring-zinc-50/5 rounded-lg transition-[background-color,color] hover:bg-zinc-50 hover:text-zinc-950 duration-300 active:bg-zinc-50/80 ">{icon}</motion.a>
                         ))}
                     </div>
                 </div>
-                <form
+                <motion.form
+                    initial={{ opacity: 0, y: -10 }}
+                    whileInView={{ opacity: 1, y: 0, transition: { duration: .3, delay: .3 } }}
+
                     action="https://getform.io/f/axoomdlb"
                     className="xl:pl-10 2xl:pl-20"
                     method="POST"
                 >
                     <div className="md:grid md:items-center md:grid-cols-2 md:gap-2">
                         <div className="mb-4 flex flex-col-reverse">
-                            <input minLength={3} type="text" name="name" id="name" autoComplete="name" required placeholder="Mohamed Khassar" className="text-field reveal-up peer" />
+                            <input minLength={3} type="text" name="name" id="name" autoComplete="name" required placeholder="Mohamed Khassar" className="text-field  peer" />
                             <label
                                 htmlFor="name"
-                                className="label reveal-up"
+                                className="label "
                             >
                                 Name
                             </label>
                         </div>
                         <div className="mb-4 flex flex-col-reverse">
-                            <input type="email" name="email" id="email" autoComplete="email" required placeholder="email@example.com" className="text-field reveal-up peer" />
+                            <input type="email" name="email" id="email" autoComplete="email" required placeholder="email@example.com" className="text-field  peer" />
                             <label
                                 htmlFor="email"
-                                className="label reveal-up"
+                                className="label "
                             >
                                 Email
                             </label>
                         </div>
                     </div>
                     <div className="mb-4 flex flex-col-reverse">
-                        <textarea name="message" id="message" placeholder="Hi!" required className="text-field reveal-up peer resize-y min-h-32 max-h-80"></textarea>
+                        <textarea name="message" id="message" placeholder="Hi!" required className="text-field  peer resize-y min-h-32 max-h-80"></textarea>
                         <label
                             htmlFor="message"
-                            className="label reveal-up"
+                            className="label "
                         >
                             Message
                         </label>
                     </div>
-                    <button type="submit" className="btn btn-primary w-full cursor-pointer justify-center reveal-up">Submit</button>
-                </form>
+                    <button type="submit" className="btn btn-primary w-full cursor-pointer justify-center ">Submit</button>
+                </motion.form>
             </div>
         </section>
     )

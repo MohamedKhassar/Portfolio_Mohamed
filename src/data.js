@@ -1,57 +1,64 @@
 export const works = [
   {
+    imgSrc: "/assets/imgs/taskify.jpg",
+    title: "Taskify (Task Manager)",
+    tags: ["MERN", "Web Development", "API", "Full-Stack"],
+    projectLink: "https://mineverse-landing-page.vercel.app/",
+  },
+  {
     imgSrc: "/assets/imgs/mineverse.jpg",
     title: "MineVers Web3 Landing Page",
-    tags: ["Front-End", "Web Development", "Web Design", "Landing Page"],
+    tags: ["Frontend", "Web Development", "Web Design", "Landing Page"],
     projectLink: "https://mineverse-landing-page.vercel.app/",
   },
   {
     imgSrc: "/assets/imgs/python.png",
     title: "Beginners Python Projects",
-    tags: ["Python", "Data Structures", "Algorithms", "Projects"],
+    tags: ["Python", "Data Structures", "Algorithms", "Projects", "Backend"],
     projectLink: "https://github.com/MohamedKhassar/Beginners-Python-Projects",
   },
   {
     imgSrc: "/assets/imgs/popcornplay.jpg",
     title: "PopcornPlay (Movie App)",
-    tags: ["API", "Web Development", "TMDB API", "React", "Tailwind"],
+    tags: ["Frontend", "Web Development", "API", "React", "Tailwind"],
     projectLink: "https://popcornplay-lyart.vercel.app/",
   },
   {
     imgSrc: "/assets/imgs/nature.png",
     title: "E-commerce Platform",
-    tags: ["API", "MVC", "Development", "MERN-Stack", "E-Commerce"],
+    tags: ["MERN", "Full-Stack", "API", "MVC", "E-Commerce"],
     projectLink: "https://www.naturemane.ma/",
   },
   {
     imgSrc: "/assets/imgs/InferaAI.jpg",
     title: "InferaAI Landing Page",
-    tags: ["Front-End", "Web Development", "Web Design", "Landing Page"],
+    tags: ["Frontend", "Web Development", "Web Design", "Landing Page"],
     projectLink: "https://infera-ai-landing-page.vercel.app/",
   },
   {
     imgSrc: "/assets/imgs/warshati.png",
     title: "Warshati Website",
-    tags: ["Front-End", "Web Development", "Web Design"],
+    tags: ["Frontend", "Web Development", "Web Design"],
     projectLink: "https://warshati-landing-page.vercel.app/",
   },
   {
     imgSrc: "/assets/imgs/e-learning.jpg",
     title: "E-learning Website",
-    tags: ["Web-design", "Web-Development", "Framer motion", "NextJS"],
+    tags: ["Frontend", "Web Development", "Framer Motion", "NextJS"],
     projectLink: "https://e-learning-landing-page-assignment.vercel.app/",
   },
   {
     imgSrc: "/assets/imgs/rst.png",
     title: "Restaurant Landing Page",
-    tags: ["Web-design", "Web-Development", "Framer motion"],
+    tags: ["Frontend", "Web Development", "Framer Motion"],
     projectLink: "https://rstkhassar.netlify.app/",
   },
 ];
+
 export const certificates = [
   {
     imgSrc: "/assets/imgs/meta-frontend.png",
-    title: "Meta Front-End Developer Professional Certificate",
+    title: "Front-End Developer",
     tags: ["Coding Interview Skills", "ReactJS", "Version Control"],
     certificateLink:
       "https://www.credly.com/badges/d6307952-db76-46b8-b051-d3088702159d/public_url",
@@ -83,5 +90,45 @@ export const certificates = [
     tags: ["Git", "GitHub", "Collaboration"],
     certificateLink:
       "https://www.credly.com/badges/b545d47a-984b-455e-b88d-9a76c20734b8/public_url",
+  },
+];
+
+export const tags = ["Frontend", "Backend", "Full-Stack"];
+
+export const sitemap = [
+  {
+    label: "Home",
+    href: "#home",
+  },
+  {
+    label: "About",
+    href: "#about",
+  },
+  {
+    label: "Skills",
+    href: "#skills",
+  },
+  {
+    label: "Work",
+    href: "#work",
+  },
+  {
+    label: "Contact me",
+    href: "#contact",
+  },
+];
+
+export const socials = [
+  {
+    label: "GitHub",
+    href: "https://github.com/mohamedkhassar",
+  },
+  {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/mohamedkhassar",
+  },
+  {
+    label: "Instagram",
+    href: "https://www.instagram.com/mohamed_khassar",
   },
 ];

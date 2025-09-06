@@ -1,12 +1,15 @@
 import PropTypes from "prop-types"
 import { MdArrowOutward } from "react-icons/md"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
 
-const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
+const ProjectCard = ({ imgSrc, title, tags, classes, projectLink, index }) => {
     return (
-        <div className={classes+" relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors"}>
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { duration: .8, delay: .15 * index } }} className={classes + " relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors"}>
             <figure className="img-box aspect-video rounded-lg mb-4">
-                <img src={imgSrc} alt={title+"_Mohamed_Khassar"} loading="lazy" className="img-cover" />
+                <img src={imgSrc} alt={title + "_Mohamed_Khassar"} loading="lazy" className="img-cover" />
             </figure>
             <div className="flex items-center justify-between gap-4">
                 <div>
@@ -21,13 +24,13 @@ const ProjectCard = ({ imgSrc, title, tags, projectLink, classes }) => {
                     </div>
                 </div>
                 <div className="w-11 h-11 rounded-lg grid place-items-center bg-sky-400 text-zinc-950 shrink-0">
-                    <MdArrowOutward aria-hidden="true"  className="text-[18px]" />
+                    <MdArrowOutward aria-hidden="true" className="text-[18px]" />
                 </div>
             </div>
             <Link to={projectLink} target="_blank" className="absolute inset-0">
 
             </Link>
-        </div>
+        </motion.div>
     )
 }
 
@@ -36,7 +39,8 @@ ProjectCard.propTypes = {
     title: PropTypes.string.isRequired,
     tags: PropTypes.array.isRequired,
     projectLink: PropTypes.string,
-    classes: PropTypes.string
+    classes: PropTypes.string,
+    index:PropTypes.number.isRequired
 
 }
 

@@ -1,6 +1,5 @@
 import PropTypes from "prop-types";
 import { useEffect, useRef } from "react";
-
 const Navbar = ({ navOpen }) => {
   const lastActiveLink = useRef()
   const activeBox = useRef()
@@ -54,14 +53,16 @@ const Navbar = ({ navOpen }) => {
     selectActiveBox()
   }
   useEffect(selectActiveBox, [])
-  useEffect(()=>{
+  useEffect(() => {
     window.addEventListener('resize', selectActiveBox)
     return () => {
       document.removeEventListener('resize', selectActiveBox);
-  };  })
+    };
+  })
 
   return (
-    <nav className={`navbar ${navOpen ? "active" : ""}`}>
+    <nav
+      className={`navbar ${navOpen ? "active" : ""}`}>
       {
         navItems.map(({ className, label, link, ref }, i) => (
           <a

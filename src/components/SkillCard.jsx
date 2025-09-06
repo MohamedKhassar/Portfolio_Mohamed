@@ -1,11 +1,15 @@
 import PropTypes from "prop-types"
-
+import { motion } from "framer-motion"
 const SkillCard = ({ imgSrc,
     label,
     desc,
-    classes }) => {
+    classes,
+    index }) => {
     return (
-        <div className={"flex items-center gap-3 ring-2 ring-inset  ring-zinc-50/10 rounded-2xl p-3 hover:bg-zinc-800 transition-colors group cursor-pointer "+classes}>
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { duration: .8, delay: .1 * index } }}
+            className={"flex items-center gap-3 ring-2 ring-inset  ring-zinc-50/10 rounded-2xl p-3 hover:bg-zinc-800 transition-colors group cursor-pointer " + classes}>
             <figure className="bg-zinc-700/50 rounded-lg overflow-hidden w-12 h-12 p-2 group-hover:bg-zinc-900 transition-colors">
                 <img
                     src={imgSrc}
@@ -22,13 +26,14 @@ const SkillCard = ({ imgSrc,
                     {desc}
                 </p>
             </div>
-        </div>
+        </motion.div>
     )
 }
 SkillCard.propTypes = {
     imgSrc: PropTypes.string.isRequired,
     label: PropTypes.string.isRequired,
     desc: PropTypes.string.isRequired,
-    classes: PropTypes.string.isRequired,
+    classes: PropTypes.string,
+    index: PropTypes.number.isRequired,
 }
 export default SkillCard

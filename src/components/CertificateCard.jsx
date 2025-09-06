@@ -1,10 +1,14 @@
 import PropTypes from "prop-types"
 import { MdArrowOutward } from "react-icons/md"
 import { Link } from "react-router-dom"
+import { motion } from "framer-motion"
 
-const CertificateCard = ({ imgSrc, title, tags, classes, certificateLink }) => {
+const CertificateCard = ({ imgSrc, title, tags, classes, certificateLink,index }) => {
     return (
-        <div className={classes + " relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors"}>
+        <motion.div
+            initial={{ opacity: 0 }}
+            whileInView={{ opacity: 1, transition: { duration: .8, delay: .15 * index } }}
+             className={classes + " relative p-4 rounded-2xl bg-zinc-800 hover:bg-zinc-700/50 active:bg-zinc-700/60 ring-1 ring-inset ring-zinc-50/5 transition-colors"}>
             <figure className="img-box aspect-square rounded-lg mb-4">
                 <img src={imgSrc} alt={title + "_Mohamed_Khassar"} loading="lazy" className="img-cover" />
             </figure>
@@ -27,7 +31,7 @@ const CertificateCard = ({ imgSrc, title, tags, classes, certificateLink }) => {
             <Link to={certificateLink} target="_blank" className="absolute inset-0">
 
             </Link>
-        </div>
+        </motion.div>
     )
 }
 
@@ -36,7 +40,8 @@ CertificateCard.propTypes = {
     title: PropTypes.string.isRequired,
     tags: PropTypes.array.isRequired,
     certificateLink: PropTypes.string,
-    classes: PropTypes.string
+    classes: PropTypes.string,
+    index: PropTypes.number.isRequired
 
 }
 
