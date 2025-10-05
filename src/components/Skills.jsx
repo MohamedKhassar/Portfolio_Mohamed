@@ -1,65 +1,10 @@
+import { skillItem } from "../data";
 import AnimatedHeader from "./AnimatedHeader";
 import AnimatedPara from "./AnimatedPara";
 import SkillCard from "./SkillCard";
 
 const Skills = () => {
-    const skillItem = [
-        {
-            imgSrc: '/assets/imgs/python.svg',
-            label: 'Python',
-            desc: 'Programming Language'
-        },
-        {
-            imgSrc: '/assets/imgs/css3.svg',
-            label: 'CSS',
-            desc: 'User Interface'
-        },
-        {
-            imgSrc: '/assets/imgs/javascript.svg',
-            label: 'JavaScript',
-            desc: 'Interaction'
-        },
-        {
-            imgSrc: '/assets/imgs/typescript.svg',
-            label: 'Typescript',
-            desc: 'Interaction'
-        },
-        {
-            imgSrc: '/assets/imgs/nodejs.svg',
-            label: 'NodeJS',
-            desc: 'Web Server'
-        },
-        {
-            imgSrc: '/assets/imgs/expressjs.svg',
-            label: 'ExpressJS',
-            desc: 'Node Framework'
-        },
-        {
-            imgSrc: '/assets/imgs/mongodb.svg',
-            label: 'MongoDB',
-            desc: 'Database'
-        },
-        {
-            imgSrc: '/assets/imgs/react.svg',
-            label: 'React',
-            desc: 'Framework'
-        },
-        {
-            imgSrc: '/assets/imgs/tailwindcss.svg',
-            label: 'TailwindCSS',
-            desc: 'User Interface'
-        },
-        {
-            imgSrc: '/assets/imgs/nextjs.svg',
-            label: 'NextJs',
-            desc: 'ReactJS Framework'
-        },
-        {
-            imgSrc: '/assets/imgs/postman.svg',
-            label: 'Postman',
-            desc: 'API Platform'
-        },
-    ];
+
     return (
         <div id="skills" className="section">
             <div className="container">

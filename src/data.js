@@ -132,3 +132,81 @@ export const socials = [
     href: "https://www.instagram.com/mohamed_khassar",
   },
 ];
+
+export const skillItem = [
+  {
+    imgSrc: "/assets/imgs/python.svg",
+    label: "Python",
+    desc: "Programming Language",
+  },
+  {
+    imgSrc: "/assets/imgs/css3.svg",
+    label: "CSS",
+    desc: "User Interface",
+  },
+  {
+    imgSrc: "/assets/imgs/javascript.svg",
+    label: "JavaScript",
+    desc: "Interaction",
+  },
+  {
+    imgSrc: "/assets/imgs/typescript.svg",
+    label: "Typescript",
+    desc: "Interaction",
+  },
+  {
+    imgSrc: "/assets/imgs/nodejs.svg",
+    label: "NodeJS",
+    desc: "Web Server",
+  },
+  {
+    imgSrc: "/assets/imgs/expressjs.svg",
+    label: "ExpressJS",
+    desc: "Node Framework",
+  },
+  {
+    imgSrc: "/assets/imgs/mongodb.png",
+    label: "MongoDB",
+    desc: "Database",
+  },
+  {
+    imgSrc: "/assets/imgs/mysql.png",
+    label: "MySQL",
+    desc: "Database",
+  },
+  {
+    imgSrc: "/assets/imgs/react.svg",
+    label: "React",
+    desc: "Framework",
+  },
+  {
+    imgSrc: "/assets/imgs/tailwindcss.svg",
+    label: "TailwindCSS",
+    desc: "User Interface",
+  },
+  {
+    imgSrc: "/assets/imgs/nextjs.svg",
+    label: "NextJs",
+    desc: "ReactJS Framework",
+  },
+  {
+    imgSrc: "/assets/imgs/postman.svg",
+    label: "Postman",
+    desc: "API Platform",
+  },
+  {
+    imgSrc: "/assets/imgs/wordpress.png",
+    label: "WordPress",
+    desc: "CMS",
+  },
+  {
+    imgSrc: "/assets/imgs/woocommerce.png",
+    label: "WooCommerce",
+    desc: "eCommerce",
+  },
+  {
+    imgSrc: "/assets/imgs/elementor.png",
+    label: "Elementor",
+    desc: "Page Builder",
+  },
+];
