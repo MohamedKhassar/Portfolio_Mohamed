@@ -4,7 +4,10 @@ import { ButtonPrimary, ButtonOutline } from "./Button"
 import nsayblik_logo from "/assets/imgs/nsayblik_logo.png";
 import { SiFiverr } from "react-icons/si";
 import { motion } from "framer-motion";
+import { useState } from "react";
 const Hero = () => {
+    const [loaded, setLoaded] = useState(false);
+
     return (
         <section className="pt-28 lg:pt-36" id="home">
             <div
@@ -55,7 +58,10 @@ const Hero = () => {
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, transition: { delay: .4, duration: .3 } }}
                     className="hidden lg:block">
-                    <figure className="w-full ml-auto max-w-[480px] bg-gradient-to-t from-sky-400 via-25% via-sky-400/40 to-65% rounded-[60px] overflow-hidden">
+                    <figure
+                        className={`w-full ml-auto max-w-[480px] bg-slate-800 rounded-[60px] overflow-hidden 
+        ${!loaded ? "animate-pulse" : ""}`}
+                    >
                         <img
                             src="/assets/imgs/hero-banner.png"
                             alt="Mohamed_Khassar_banner"
@@ -63,6 +69,7 @@ const Hero = () => {
                             width={656}
                             height={800}
                             className="w-full"
+                            onLoad={() => setLoaded(true)}
                         />
                     </figure>
                 </motion.div>
