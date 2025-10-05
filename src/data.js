@@ -215,4 +215,9 @@ export const skillItem = [
     label: "Elementor",
     desc: "Page Builder",
   },
+  {
+    imgSrc: "/assets/imgs/wpbaker.png",
+    label: "WPBaker",
+    desc: "Page Builder",
+  },
 ];
