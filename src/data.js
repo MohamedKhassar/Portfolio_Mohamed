@@ -1,9 +1,15 @@
 export const works = [
   {
+    imgSrc: "/assets/imgs/arty.jpg",
+    title: "Arty.ma (E-commerce Website)",
+    tags: ["WordPress", "WooCommerce", "Full-Stack", "cms", "eCommerce"],
+    projectLink: "http://arty.ma",
+  },
+  {
     imgSrc: "/assets/imgs/taskify.jpg",
     title: "Taskify (Task Manager)",
     tags: ["MERN", "Web Development", "API", "Full-Stack"],
-    projectLink: "https://mineverse-landing-page.vercel.app/",
+    projectLink: "https://taskify-khassar.vercel.app/",
   },
   {
     imgSrc: "/assets/imgs/mineverse.jpg",
