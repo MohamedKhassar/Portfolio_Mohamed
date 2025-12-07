@@ -1,8 +1,8 @@
 import { useState } from "react";
 import { tags, works } from "../data";
-import ProjectCard from "./ProjectCard";
-import AnimatedHeader from "./AnimatedHeader";
-import AnimatedPara from "./AnimatedPara";
+import ProjectCard from "../UI/ProjectCard";
+import AnimatedHeader from "../UI/AnimatedHeader";
+import AnimatedPara from "../UI/AnimatedPara";
 
 const Work = () => {
   const [tag, setTag] = useState("all")

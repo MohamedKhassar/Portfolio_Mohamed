@@ -1,7 +1,7 @@
 import { CgChevronRight } from "react-icons/cg";
-import { ButtonPrimary } from "./Button";
+import { ButtonPrimary } from "../UI/Button";
 import { Link } from "react-router-dom";
-import AnimatedHeader from "./AnimatedHeader";
+import AnimatedHeader from "../UI/AnimatedHeader";
 import { sitemap, socials } from "../data";
 import { motion } from "framer-motion";
 const Footer = () => {

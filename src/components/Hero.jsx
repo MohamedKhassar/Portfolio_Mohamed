@@ -1,5 +1,5 @@
 import { FiArrowDown, FiDownload } from "react-icons/fi";
-import { ButtonPrimary, ButtonOutline } from "./Button"
+import { ButtonPrimary, ButtonOutline } from "../UI/Button"
 // import { SiFiverr } from "react-icons/si";
 import nsayblik_logo from "/assets/imgs/nsayblik_logo.png";
 import { SiFiverr } from "react-icons/si";

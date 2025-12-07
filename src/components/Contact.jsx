@@ -1,5 +1,5 @@
-import AnimatedHeader from "./AnimatedHeader";
-import AnimatedPara from "./AnimatedPara";
+import AnimatedHeader from "../UI/AnimatedHeader";
+import AnimatedPara from "../UI/AnimatedPara";
 import { motion } from "framer-motion";
 const Contact = () => {
     const socialLinks = [

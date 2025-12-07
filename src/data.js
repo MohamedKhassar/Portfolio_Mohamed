@@ -1,60 +1,79 @@
 export const works = [
   {
-    imgSrc: "/assets/imgs/arty.jpg",
+    imgSrc: ["/assets/imgs/arty.jpg", 
+      "/assets/imgs/arty-mockup.png"
+    ],
     title: "Arty.ma (E-commerce Website)",
     tags: ["WordPress", "WooCommerce", "Full-Stack", "cms", "eCommerce"],
     projectLink: "http://arty.ma",
   },
   {
-    imgSrc: "/assets/imgs/taskify.jpg",
+    imgSrc: ["/assets/imgs/taskify.jpg", 
+      // "/assets/imgs/taskify-mockup.png"
+
+    ],
     title: "Taskify (Task Manager)",
     tags: ["MERN", "Web Development", "API", "Full-Stack"],
     projectLink: "https://taskify-khassar.vercel.app/",
   },
   {
-    imgSrc: "/assets/imgs/mineverse.jpg",
+    imgSrc: ["/assets/imgs/mineverse.jpg", "/assets/imgs/mineverse-mockup.png"],
     title: "MineVers Web3 Landing Page",
     tags: ["Frontend", "Web Development", "Web Design", "Landing Page"],
     projectLink: "https://mineverse-landing-page.vercel.app/",
   },
   {
-    imgSrc: "/assets/imgs/python.png",
+    imgSrc: ["/assets/imgs/python.png", 
+      // "/assets/imgs/python-mockup.png"
+
+
+    ],
     title: "Beginners Python Projects",
     tags: ["Python", "Data Structures", "Algorithms", "Projects", "Backend"],
     projectLink: "https://github.com/MohamedKhassar/Beginners-Python-Projects",
   },
   {
-    imgSrc: "/assets/imgs/popcornplay.jpg",
+    imgSrc: [
+      "/assets/imgs/popcornplay.jpg",
+      "/assets/imgs/popcornplay-mockup.png",
+    ],
     title: "PopcornPlay (Movie App)",
     tags: ["Frontend", "Web Development", "API", "React", "Tailwind"],
     projectLink: "https://popcornplay-lyart.vercel.app/",
   },
+  // {
+  //   imgSrc: [
+  //  "/assets/imgs/nature.png"],
+  //   title: "E-commerce Platform",
+  //   tags: ["MERN", "Full-Stack", "API", "MVC", "E-Commerce"],
+  //   projectLink: "https://www.naturemane.ma/",
+  // },
   {
-    imgSrc: "/assets/imgs/nature.png",
-    title: "E-commerce Platform",
-    tags: ["MERN", "Full-Stack", "API", "MVC", "E-Commerce"],
-    projectLink: "https://www.naturemane.ma/",
-  },
-  {
-    imgSrc: "/assets/imgs/InferaAI.jpg",
+    imgSrc: ["/assets/imgs/InferaAI.jpg", "/assets/imgs/InferaAI-mockup.png"],
     title: "InferaAI Landing Page",
     tags: ["Frontend", "Web Development", "Web Design", "Landing Page"],
     projectLink: "https://infera-ai-landing-page.vercel.app/",
   },
   {
-    imgSrc: "/assets/imgs/warshati.png",
+    imgSrc: ["/assets/imgs/warshati.png", "/assets/imgs/warshati-mockup.png"],
     title: "Warshati Website",
     tags: ["Frontend", "Web Development", "Web Design"],
     projectLink: "https://warshati-landing-page.vercel.app/",
   },
   {
-    imgSrc: "/assets/imgs/e-learning.jpg",
+    imgSrc: [
+      "/assets/imgs/e-learning.jpg",
+      "/assets/imgs/e-learning-mockup.png",
+    ],
     title: "E-learning Website",
     tags: ["Frontend", "Web Development", "Framer Motion", "NextJS"],
     projectLink: "https://e-learning-landing-page-assignment.vercel.app/",
   },
   {
-    imgSrc: "/assets/imgs/rst.png",
+    imgSrc: ["/assets/imgs/rst.png", 
+      "/assets/imgs/rst-mockup.png"
+
+    ],
     title: "Restaurant Landing Page",
     tags: ["Frontend", "Web Development", "Framer Motion"],
     projectLink: "https://rstkhassar.netlify.app/",

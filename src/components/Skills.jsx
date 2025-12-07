@@ -1,7 +1,7 @@
 import { skillItem } from "../data";
-import AnimatedHeader from "./AnimatedHeader";
-import AnimatedPara from "./AnimatedPara";
-import SkillCard from "./SkillCard";
+import AnimatedHeader from "../UI/AnimatedHeader";
+import AnimatedPara from "../UI/AnimatedPara";
+import SkillCard from "../UI/SkillCard";
 
 const Skills = () => {
 

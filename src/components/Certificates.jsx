@@ -1,6 +1,6 @@
 import { certificates } from '../data'
-import AnimatedHeader from './AnimatedHeader'
-import CertificateCard from './CertificateCard'
+import AnimatedHeader from '../UI/AnimatedHeader'
+import CertificateCard from '../UI/CertificateCard'
 
 const Certificates = () => {
     return (
