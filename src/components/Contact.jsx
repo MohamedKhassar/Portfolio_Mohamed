@@ -41,6 +41,7 @@ const Contact = () => {
                             <motion.a
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1, transition: { duration: .5, delay: (.1 * key) + .1 } }}
+                                viewport={{ once: true }}
                                 href={href} key={key} target="_blank" className="w-12 h-12 grid place-items-center ring-inset ring-2 ring-zinc-50/5 rounded-lg transition-[background-color,color] hover:bg-zinc-50 hover:text-zinc-950 duration-300 active:bg-zinc-50/80 ">{icon}</motion.a>
                         ))}
                     </div>
@@ -48,6 +49,7 @@ const Contact = () => {
                 <motion.form
                     initial={{ opacity: 0, y: -10 }}
                     whileInView={{ opacity: 1, y: 0, transition: { duration: .3, delay: .3 } }}
+                    viewport={{ once: true }}
 
                     action="https://getform.io/f/axoomdlb"
                     className="xl:pl-10 2xl:pl-20"

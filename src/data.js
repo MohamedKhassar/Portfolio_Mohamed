@@ -1,32 +1,32 @@
 export const works = [
   {
-    imgSrc: ["/assets/imgs/arty.jpg", 
-      "/assets/imgs/arty-mockup.png"
-    ],
+    imgSrc: ["/assets/imgs/mockups/arty.jpg", "/assets/imgs/mockups/arty-mockup.png"],
     title: "Arty.ma (E-commerce Website)",
     tags: ["WordPress", "WooCommerce", "Full-Stack", "cms", "eCommerce"],
     projectLink: "http://arty.ma",
   },
   {
-    imgSrc: ["/assets/imgs/taskify.jpg", 
-      // "/assets/imgs/taskify-mockup.png"
-
+    imgSrc: [
+      "/assets/imgs/mockups/taskify.jpg",
+      // "/assets/imgs/mockups/taskify-mockup.png"
     ],
     title: "Taskify (Task Manager)",
     tags: ["MERN", "Web Development", "API", "Full-Stack"],
     projectLink: "https://taskify-khassar.vercel.app/",
   },
   {
-    imgSrc: ["/assets/imgs/mineverse.jpg", "/assets/imgs/mineverse-mockup.png"],
+    imgSrc: [
+      "/assets/imgs/mockups/mineverse.jpg",
+      "/assets/imgs/mockups/mineverse-mockup.png",
+    ],
     title: "MineVers Web3 Landing Page",
     tags: ["Frontend", "Web Development", "Web Design", "Landing Page"],
     projectLink: "https://mineverse-landing-page.vercel.app/",
   },
   {
-    imgSrc: ["/assets/imgs/python.png", 
-      // "/assets/imgs/python-mockup.png"
-
-
+    imgSrc: [
+      "/assets/imgs/mockups/python.png",
+      // "/assets/imgs/mockups/python-mockup.png"
     ],
     title: "Beginners Python Projects",
     tags: ["Python", "Data Structures", "Algorithms", "Projects", "Backend"],
@@ -34,8 +34,8 @@ export const works = [
   },
   {
     imgSrc: [
-      "/assets/imgs/popcornplay.jpg",
-      "/assets/imgs/popcornplay-mockup.png",
+      "/assets/imgs/mockups/popcornplay.jpg",
+      "/assets/imgs/mockups/popcornplay-mockup.png",
     ],
     title: "PopcornPlay (Movie App)",
     tags: ["Frontend", "Web Development", "API", "React", "Tailwind"],
@@ -49,31 +49,34 @@ export const works = [
   //   projectLink: "https://www.naturemane.ma/",
   // },
   {
-    imgSrc: ["/assets/imgs/InferaAI.jpg", "/assets/imgs/InferaAI-mockup.png"],
+    imgSrc: [
+      "/assets/imgs/mockups/InferaAI.jpg",
+      "/assets/imgs/mockups/InferaAI-mockup.png",
+    ],
     title: "InferaAI Landing Page",
     tags: ["Frontend", "Web Development", "Web Design", "Landing Page"],
     projectLink: "https://infera-ai-landing-page.vercel.app/",
   },
   {
-    imgSrc: ["/assets/imgs/warshati.png", "/assets/imgs/warshati-mockup.png"],
+    imgSrc: [
+      "/assets/imgs/mockups/warshati.png",
+      "/assets/imgs/mockups/warshati-mockup.png",
+    ],
     title: "Warshati Website",
     tags: ["Frontend", "Web Development", "Web Design"],
     projectLink: "https://warshati-landing-page.vercel.app/",
   },
   {
     imgSrc: [
-      "/assets/imgs/e-learning.jpg",
-      "/assets/imgs/e-learning-mockup.png",
+      "/assets/imgs/mockups/e-learning.jpg",
+      "/assets/imgs/mockups/e-learning-mockup.png",
     ],
     title: "E-learning Website",
     tags: ["Frontend", "Web Development", "Framer Motion", "NextJS"],
     projectLink: "https://e-learning-landing-page-assignment.vercel.app/",
   },
   {
-    imgSrc: ["/assets/imgs/rst.png", 
-      "/assets/imgs/rst-mockup.png"
-
-    ],
+    imgSrc: ["/assets/imgs/mockups/rst.png", "/assets/imgs/mockups/rst-mockup.png"],
     title: "Restaurant Landing Page",
     tags: ["Frontend", "Web Development", "Framer Motion"],
     projectLink: "https://rstkhassar.netlify.app/",
@@ -178,6 +181,11 @@ export const skillItem = [
     imgSrc: "/assets/imgs/typescript.svg",
     label: "Typescript",
     desc: "Interaction",
+  },
+  {
+    imgSrc: "/assets/imgs/php.png",
+    label: "PHP",
+    desc: "Programming Language",
   },
   {
     imgSrc: "/assets/imgs/nodejs.svg",

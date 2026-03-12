@@ -45,9 +45,10 @@ const Footer = () => {
 
         </div>
         <motion.div
-        initial={{opacity:0,y:10}}
-        whileInView={{opacity:1,y:0,transition:{duration:.3,delay:.3}}}
-        className="flex items-center justify-between pt-10 mb-8">
+          initial={{ opacity: 0, y: 10 }}
+          whileInView={{ opacity: 1, y: 0, transition: { duration: .3, delay: .3 } }}
+          viewport={{ once: true }}
+          className="flex items-center justify-between pt-10 mb-8">
           <a href="/#" className="logo">
             <img src="assets/imgs/logo.svg"
               width={40}

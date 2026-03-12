@@ -10,7 +10,7 @@ const SkillCard = ({ imgSrc,
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { duration: .8, delay: .1 * index } }}
             className={"flex items-center gap-3 ring-2 ring-inset  ring-slate-50/10 rounded-2xl p-3 hover:bg-slate-800 transition-colors group cursor-pointer " + classes}>
-            <figure className="bg-slate-700/50 rounded-lg overflow-hidden w-12 h-12 p-2 group-hover:bg-slate-900 transition-colors">
+            <figure className="bg-slate-700/50 rounded-lg overflow-hidden w-12 h-12 p-2 group-hover:bg-slate-900 transition-colors flex items-center justify-center">
                 <img
                     src={imgSrc}
                     width={32}

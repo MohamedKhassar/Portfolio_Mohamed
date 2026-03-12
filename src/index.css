@@ -17,12 +17,12 @@ body{
 
 /* Track */
 ::-webkit-scrollbar-track {
-    @apply bg-slate-800
+    @apply bg-slate-500
 }
 
 /* Handle */
 ::-webkit-scrollbar-thumb {
-    @apply bg-slate-500 transition-colors duration-300
+    @apply bg-sky-950 transition-colors duration-300
 }
 
 .menu-btn{

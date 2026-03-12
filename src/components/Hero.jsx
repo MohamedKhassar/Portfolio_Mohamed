@@ -16,6 +16,7 @@ const Hero = () => {
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0, transition: { delay: .2, duration: .3, type: "spring", stiffness: 200 } }}
+                        viewport={{ once: true }}
                         className="flex items-center gap-3">
                         <figure className="img-box w-9 h-9 rounded-lg">
                             <img
@@ -37,12 +38,16 @@ const Hero = () => {
                     <motion.h2
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0, transition: { delay: .3, duration: .3, type: "spring", stiffness: 200 } }}
+                        viewport={{ once: true }}
+
                         className="headline-1 max-w-[15ch] sm:max-w-[20ch] mt-5 mb-8 lg:mb-10">
                         Building Scalable Modern Websites for the Future
                     </motion.h2>
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
                         whileInView={{ opacity: 1, y: 0, transition: { delay: .4, duration: .3, type: "spring", stiffness: 200 } }}
+                        viewport={{ once: true }}
+
                         className="flex items-center gap-3 flex-wrap">
                         {/* CV Button */}
                         <ButtonPrimary label={"download cv"} icon={<FiDownload className="text-[18px]" />} href="/assets/file/Resume-Frontend.pdf" target="_blank" classes={"capitalize group"} />
@@ -57,6 +62,7 @@ const Hero = () => {
                 <motion.div
                     initial={{ opacity: 0 }}
                     whileInView={{ opacity: 1, transition: { delay: .4, duration: .3 } }}
+                    viewport={{ once: true }}
                     className="hidden lg:block">
                     <figure
                         className={`w-full ml-auto max-w-[480px] bg-slate-800 rounded-[60px] overflow-hidden 

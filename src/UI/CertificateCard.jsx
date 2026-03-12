@@ -3,12 +3,13 @@ import { MdArrowOutward } from "react-icons/md"
 import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 
-const CertificateCard = ({ imgSrc, title, tags, classes, certificateLink,index }) => {
+const CertificateCard = ({ imgSrc, title, tags, classes, certificateLink, index }) => {
     return (
         <motion.div
             initial={{ opacity: 0 }}
             whileInView={{ opacity: 1, transition: { duration: .8, delay: .15 * index } }}
-             className={classes + " relative p-4 rounded-2xl bg-slate-800 hover:bg-slate-700/50 active:bg-slate-700/60 ring-1 ring-inset ring-slate-50/5 transition-colors"}>
+            viewport={{ once: true }}
+            className={classes + " relative p-4 rounded-2xl bg-slate-800 hover:bg-slate-700/50 active:bg-slate-700/60 ring-1 ring-inset ring-slate-50/5 transition-colors"}>
             <figure className="img-box aspect-square rounded-lg mb-4">
                 <img src={imgSrc} alt={title + "_Mohamed_Khassar"} loading="lazy" className="img-cover" />
             </figure>

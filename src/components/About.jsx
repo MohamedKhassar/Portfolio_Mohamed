@@ -15,6 +15,7 @@ const About = () => {
     <motion.section
       initial={{ opacity: 0, y: -100 }}
       whileInView={{ opacity: 1, y: 0, transition: { duration: .4, delay: .2 } }}
+      viewport={{ once: true }}
       id="about" className="section">
       <div className="container">
         <div className="bg-zinc-800/50 p-7 rounded-2xl md:p-12">
