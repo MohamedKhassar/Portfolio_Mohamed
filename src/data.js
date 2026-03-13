@@ -85,35 +85,35 @@ export const works = [
 
 export const certificates = [
   {
-    imgSrc: "/assets/imgs/meta-frontend.png",
+    imgSrc: "/assets/imgs/certificates/meta-frontend.png",
     title: "Front-End Developer",
     tags: ["Coding Interview Skills", "ReactJS", "Version Control"],
     certificateLink:
       "https://www.credly.com/badges/d6307952-db76-46b8-b051-d3088702159d/public_url",
   },
   {
-    imgSrc: "/assets/imgs/swe.png",
+    imgSrc: "/assets/imgs/certificates/swe.png",
     title: "Software Engineering Essentials",
     tags: ["Software Development Lifecycle", "Software Engineering"],
     certificateLink:
       "https://www.credly.com/badges/44cb86e7-9d00-42ab-afb4-7bcbbad5514c/public_url",
   },
   {
-    imgSrc: "/assets/imgs/frontend.png",
+    imgSrc: "/assets/imgs/certificates/frontend.png",
     title: "Front-end Development with React",
     tags: ["Front-End", "React", "Redux", "JSX", "Component Lifecycle"],
     certificateLink:
       "https://www.credly.com/badges/5b4ad1a8-edcd-4060-a14e-49950940a01b/public_url",
   },
   {
-    imgSrc: "/assets/imgs/backend.png",
+    imgSrc: "/assets/imgs/certificates/backend.png",
     title: "Node and Express Essentials",
     tags: ["Express", "Node.js", "Node Package Manager (NPM)"],
     certificateLink:
       "https://www.credly.com/badges/6e4fcc5e-8e8c-4cc4-8bfe-b2dd009801b1/public_url",
   },
   {
-    imgSrc: "/assets/imgs/Git.png",
+    imgSrc: "/assets/imgs/certificates/Git.png",
     title: "Git and GitHub Essentials",
     tags: ["Git", "GitHub", "Collaboration"],
     certificateLink:
@@ -141,6 +141,10 @@ export const sitemap = [
     href: "#work",
   },
   {
+    label: "Reviews",
+    href: "#reviews",
+  },
+  {
     label: "Contact me",
     href: "#contact",
   },
@@ -163,87 +167,87 @@ export const socials = [
 
 export const skillItem = [
   {
-    imgSrc: "/assets/imgs/python.svg",
+    imgSrc: "/assets/imgs/skills/python.svg",
     label: "Python",
     desc: "Programming Language",
   },
   {
-    imgSrc: "/assets/imgs/css3.svg",
+    imgSrc: "/assets/imgs/skills/css3.svg",
     label: "CSS",
     desc: "User Interface",
   },
   {
-    imgSrc: "/assets/imgs/javascript.svg",
+    imgSrc: "/assets/imgs/skills/javascript.svg",
     label: "JavaScript",
     desc: "Interaction",
   },
   {
-    imgSrc: "/assets/imgs/typescript.svg",
+    imgSrc: "/assets/imgs/skills/typescript.svg",
     label: "Typescript",
     desc: "Interaction",
   },
   {
-    imgSrc: "/assets/imgs/php.png",
+    imgSrc: "/assets/imgs/skills/php.png",
     label: "PHP",
     desc: "Programming Language",
   },
   {
-    imgSrc: "/assets/imgs/nodejs.svg",
+    imgSrc: "/assets/imgs/skills/nodejs.svg",
     label: "NodeJS",
     desc: "Web Server",
   },
   {
-    imgSrc: "/assets/imgs/expressjs.svg",
+    imgSrc: "/assets/imgs/skills/expressjs.svg",
     label: "ExpressJS",
     desc: "Node Framework",
   },
   {
-    imgSrc: "/assets/imgs/mongodb.png",
+    imgSrc: "/assets/imgs/skills/mongodb.png",
     label: "MongoDB",
     desc: "Database",
   },
   {
-    imgSrc: "/assets/imgs/mysql.png",
+    imgSrc: "/assets/imgs/skills/mysql.png",
     label: "MySQL",
     desc: "Database",
   },
   {
-    imgSrc: "/assets/imgs/react.svg",
+    imgSrc: "/assets/imgs/skills/react.svg",
     label: "React",
     desc: "Framework",
   },
   {
-    imgSrc: "/assets/imgs/tailwindcss.svg",
+    imgSrc: "/assets/imgs/skills/tailwindcss.svg",
     label: "TailwindCSS",
     desc: "User Interface",
   },
   {
-    imgSrc: "/assets/imgs/nextjs.svg",
+    imgSrc: "/assets/imgs/skills/nextjs.svg",
     label: "NextJs",
     desc: "ReactJS Framework",
   },
   {
-    imgSrc: "/assets/imgs/postman.svg",
+    imgSrc: "/assets/imgs/skills/postman.svg",
     label: "Postman",
     desc: "API Platform",
   },
   {
-    imgSrc: "/assets/imgs/wordpress.png",
+    imgSrc: "/assets/imgs/skills/wordpress.png",
     label: "WordPress",
     desc: "CMS",
   },
   {
-    imgSrc: "/assets/imgs/woocommerce.png",
+    imgSrc: "/assets/imgs/skills/woocommerce.png",
     label: "WooCommerce",
     desc: "eCommerce",
   },
   {
-    imgSrc: "/assets/imgs/elementor.png",
+    imgSrc: "/assets/imgs/skills/elementor.png",
     label: "Elementor",
     desc: "Page Builder",
   },
   {
-    imgSrc: "/assets/imgs/wpbaker.png",
+    imgSrc: "/assets/imgs/skills/wpbaker.png",
     label: "WPBaker",
     desc: "Page Builder",
   },
