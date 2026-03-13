@@ -39,12 +39,12 @@ html{
 }
 
 .menu-btn{
- @apply w-10 h-10 grid place-items-center rounded-xl bg-slate-500/40 backdrop-blur-2xl cursor-pointer hover:bg-slate-500/60 active:scale-75 outline-none ring-inset ring-1 ring-slate-500/20 transition-all duration-300 md:hidden;
+ @apply w-10 h-10 grid place-items-center rounded-xl bg-slate-700/40 backdrop-blur-2xl cursor-pointer hover:bg-slate-500/60 active:scale-75 outline-none ring-inset ring-1 ring-slate-500/20 transition-all duration-300 md:hidden;
 }
 
 .navbar{
-    @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-slate-50/10 rounded-2xl ring-1 ring-inset ring-slate-500/5 max-md:scale-90 isolate max-md:blur-sm max-md:opacity-0 max-md:invisible transition-[opacity,transform,filter]
-    md:flex md:static md:mt-0 md:items-center shadow-lg shadow-slate-400/20 backdrop-blur-2xl
+    @apply absolute top-full mt-2 right-0 min-w-40 p-2 bg-slate-950/50 rounded-2xl ring-1 ring-inset ring-slate-500/5 max-md:scale-90 isolate max-md:blur-sm max-md:opacity-0 max-md:invisible transition-[opacity,transform,filter]
+    md:flex md:static md:mt-0 md:items-center shadow-lg shadow-slate-200/20 backdrop-blur-2xl
 }
 
 .navbar.active{
@@ -55,10 +55,10 @@ html{
     @apply grid items-center h-9 px-4 text-sm font-medium tracking-wide text-slate-50/50 hover:text-slate-50 transition-colors
 }
 .nav-link.active{
-    @apply text-slate-900 duration-300
+    @apply text-slate-100 duration-300
 }
 .navbar .active-box{
-    @apply absolute top-2 left-2 right-2 bg-slate-50 rounded-lg h-9 -z-10 transition-[top,left,width,height] duration-500;
+    @apply absolute top-2 left-2 right-2 bg-slate-600/40 rounded-lg h-9 -z-10 transition-[top,left,width,height] duration-500;
 }
 
 .contact{

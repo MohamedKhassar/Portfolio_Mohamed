@@ -1,9 +1,21 @@
 import { FiMenu, FiX } from "react-icons/fi"
 import Navbar from "./Navbar"
-import { useState } from "react"
+import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
+    const navRef = useRef(null);
+
+    useEffect(() => {
+        const handleClickOutside = (e) => {
+            if (navRef.current && !navRef.current.contains(e.target)) {
+                setNavOpen(false);
+            }
+        };
+
+        document.addEventListener("mousedown", handleClickOutside);
+        return () => document.removeEventListener("mousedown", handleClickOutside);
+    }, []);
     return (
         <motion.header
             initial={{ opacity: 0, y: -100 }}
@@ -24,7 +36,7 @@ const Header = () => {
                                 <FiMenu className="size-5" />
                         }
                     </button>
-                    <Navbar navOpen={navOpen} />
+                    <Navbar navRef={navRef} navOpen={navOpen} />
                 </div>
                 <a href={"#contact"} className="btn btn-secondary md:justify-self-center capitalize">
                     contact me

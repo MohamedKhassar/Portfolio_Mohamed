@@ -1,6 +1,6 @@
 import PropTypes from "prop-types";
 import { useEffect, useRef } from "react";
-const Navbar = ({ navOpen }) => {
+const Navbar = ({ navOpen, navRef }) => {
   const lastActiveLink = useRef()
   const activeBox = useRef()
   const navItems = [
@@ -67,6 +67,7 @@ const Navbar = ({ navOpen }) => {
 
   return (
     <nav
+      ref={navRef}
       className={`navbar ${navOpen ? "active" : ""}`}>
       {
         navItems.map(({ className, label, link, ref }, i) => (
@@ -88,6 +89,7 @@ const Navbar = ({ navOpen }) => {
 }
 
 Navbar.propTypes = {
-  navOpen: PropTypes.bool.isRequired
+  navOpen: PropTypes.bool.isRequired,
+  navRef: PropTypes.object
 }
 export default Navbar
