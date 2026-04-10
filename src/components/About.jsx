@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 import { LuLoaderCircle } from "react-icons/lu";
 const About = () => {
   const [repoCount, setRepoCount] = useState(null);
@@ -11,6 +12,7 @@ const About = () => {
       .then((data) => setRepoCount(Math.floor(data.public_repos / 10) * 10))
       .catch((error) => console.error("Error fetching data:", error));
   }, []);
+  const {t}=useTranslation("about");
   return (
     <motion.section
       initial={{ opacity: 0, y: -100 }}
@@ -20,7 +22,7 @@ const About = () => {
       <div className="container">
         <div className="bg-slate-800/50 p-7 rounded-2xl md:p-12">
           <p className="text-slate-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
-            Welcome! I&apos;m Mohamed, a professional web developer with a knack for crafting visually stunning and highly functional websites. Combining creativity and technical expertise. I transform your vision into digital masterpiece that excels in both appearance and performance.
+            {t("text")}
           </p>
           <div className="flex flex-wrap gap-4 items-center md:gap-7">
             {repoCount !== null ?
@@ -29,7 +31,7 @@ const About = () => {
                   <span className="text-2xl font-semibold md:text-4xl">{repoCount}</span>
                   <span className="text-sky-400 font-semibold md:text-3xl">+</span>
                 </div>
-                <p className="text-sm text-slate-400">Projects Done</p>
+                <p className="text-sm text-slate-400">{t("projectsDone")}</p>
               </div>
               :
               <LuLoaderCircle className="animate-spin size-8" />}
