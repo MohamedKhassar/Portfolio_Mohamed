@@ -1,42 +1,45 @@
 import PropTypes from "prop-types";
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
 const Navbar = ({ navOpen, navRef }) => {
+    const { t } = useTranslation('navbar');
+
   const lastActiveLink = useRef()
   const activeBox = useRef()
   const navItems = [
     {
-      label: 'Home',
+      label: 'home',
       link: '#home',
       className: 'nav-link active',
       ref: lastActiveLink
     },
     {
-      label: 'About',
+      label: 'about',
       link: '#about',
       className: 'nav-link'
     },
     {
-      label: 'Skills',
+      label: 'skills',
       link: '#skills',
       className: 'nav-link'
     },
     {
-      label: 'Certificates',
+      label: 'certificates',
       link: '#certificates',
       className: 'nav-link'
     },
     {
-      label: 'Work',
+      label: 'work',
       link: '#work',
       className: 'nav-link'
     },
     {
-      label: 'Reviews',
+      label: 'reviews',
       link: '#reviews',
       className: 'nav-link'
     },
     {
-      label: 'Contact',
+      label: 'contact',
       link: '#contact',
       className: "nav-link contact",
     }
@@ -78,7 +81,7 @@ const Navbar = ({ navOpen, navRef }) => {
             className={className}
             key={i}
           >
-            {label}
+            {t(label)}
           </a>
 
         ))
