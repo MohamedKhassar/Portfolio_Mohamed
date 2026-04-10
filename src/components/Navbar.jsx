@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
 import { useEffect, useRef } from "react";
 import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
+import { useLanguage } from "../hooks/useLanguage";
 const Navbar = ({ navOpen, navRef }) => {
-    const { t } = useTranslation('navbar');
+  const { t } = useTranslation('navbar');
 
   const lastActiveLink = useRef()
   const activeBox = useRef()
@@ -53,6 +55,7 @@ const Navbar = ({ navOpen, navRef }) => {
     activeBox.current.style.height = lastActiveLink.current.offsetHeight + "px"
   }
 
+  const { language } = useLanguage();
 
   const handelSelectActive = (event) => {
     lastActiveLink.current?.classList.remove("active");
@@ -64,10 +67,14 @@ const Navbar = ({ navOpen, navRef }) => {
   useEffect(() => {
     window.addEventListener('resize', selectActiveBox)
     return () => {
+      i18n.off('languageChanged', selectActiveBox);
       document.removeEventListener('resize', selectActiveBox);
     };
   })
+  useEffect(() => {
+    selectActiveBox()
 
+  }, [language]);
   return (
     <nav
       ref={navRef}
