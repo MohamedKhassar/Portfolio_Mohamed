@@ -18,6 +18,8 @@ import enReviews from "./locales/en/reviews.json";
 import deReviews from "./locales/de/reviews.json";
 import enContact from "./locales/en/contact.json";
 import deContact from "./locales/de/contact.json";
+import enFooter from "./locales/en/footer.json";
+import deFooter from "./locales/de/footer.json";
 
 i18n
   .use(LanguageDetector) // 👈 detects navigator.language automatically
@@ -33,6 +35,7 @@ i18n
         projects: enProjects,
         reviews: enReviews,
         contact: enContact,
+        footer: enFooter,
       },
       de: {
         navbar: deNavbar,
@@ -43,6 +46,7 @@ i18n
         projects: deProjects,
         reviews: deReviews,
         contact: deContact,
+        footer: deFooter,
       },
     },
     fallbackLng: "en", // 👈 default when language not supported
