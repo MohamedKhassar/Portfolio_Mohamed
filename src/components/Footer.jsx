@@ -4,8 +4,9 @@ import { Link } from "react-router-dom";
 import AnimatedHeader from "../UI/AnimatedHeader";
 import { sitemap, socials } from "../data";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
-
+const {t}=useTranslation("navbar")
   return (
     <footer className="section">
       <div className="container">
@@ -23,7 +24,7 @@ const Footer = () => {
                 {sitemap.map(({ label, href }, key) => (
                   <li key={key}>
                     <a href={href}
-                      className="block text-sm text-zinc-400 py-1 transition-colors  hover:text-zinc-200 ">{label}</a>
+                      className="block text-sm text-zinc-400 py-1 transition-colors  hover:text-zinc-200 ">{t(label.toLowerCase())}</a>
                   </li>
                 ))}
               </ul>

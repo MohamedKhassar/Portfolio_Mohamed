@@ -1,0 +1,77 @@
+{
+  "title": "Was unsere Kunden sagen",
+  "reviews": [
+    {
+      "content": "Sehr professioneller Entwickler! Er hat eine schnelle und moderne Website mit einer tollen Benutzererfahrung erstellt.",
+      "name": "Daniel Weber",
+      "imgSrc": "https://randomuser.me/api/portraits/men/32.jpg",
+      "company": "TechSolutions GmbH"
+    },
+    {
+      "content": "Hervorragende Webentwicklung! Die Website ist schnell, responsiv und hat eine sehr gute Benutzererfahrung.",
+      "name": "Sophia Martinez",
+      "imgSrc": "https://randomuser.me/api/portraits/women/44.jpg",
+      "company": "PixelForge"
+    },
+    {
+      "content": "Ausgezeichnete Arbeit! Klare Kommunikation und schnelle Lieferung mit einem hochwertigen Ergebnis.",
+      "name": "Camille Laurent",
+      "imgSrc": "https://randomuser.me/api/portraits/women/68.jpg",
+      "company": "WebVision"
+    },
+    {
+      "content": "Top Entwickler! Er hat eine stabile Website mit perfekter Funktionalität gebaut. Sehr effizient und detailorientiert.",
+      "name": "Liam Bennett",
+      "imgSrc": "https://randomuser.me/api/portraits/men/75.jpg",
+      "company": "CodeCraft"
+    },
+    {
+      "content": "Sehr gute Arbeit und präzise Umsetzung. Die Kommunikation war super und das Ergebnis hat unsere Erwartungen übertroffen.",
+      "name": "Laura Schneider",
+      "imgSrc": "https://randomuser.me/api/portraits/women/25.jpg",
+      "company": "Digital Solutions"
+    },
+    {
+      "content": "Kreativ und kompetent! Er hat eine moderne und benutzerfreundliche Website erstellt, die unsere Erwartungen übertroffen hat.",
+      "name": "Noah Williams",
+      "imgSrc": "https://randomuser.me/api/portraits/men/41.jpg",
+      "company": "BrightWeb"
+    },
+    {
+      "content": "Sehr professioneller Entwickler! Die Website ist schnell, modern und perfekt optimiert.",
+      "name": "Lucas Martin",
+      "imgSrc": "https://randomuser.me/api/portraits/men/63.jpg",
+      "company": "StudioNova"
+    },
+    {
+      "content": "Beeindruckende Arbeit! Schnelle Ladezeiten, klares Design und eine saubere Backend-Integration.",
+      "name": "Ethan Caldwell",
+      "imgSrc": "https://randomuser.me/api/portraits/men/22.jpg",
+      "company": "NexaWave"
+    },
+    {
+      "content": "Man merkt sofort die Erfahrung im Webbereich. Die Website ist schnell, responsiv und funktioniert einwandfrei.",
+      "name": "Michael Fischer",
+      "imgSrc": "https://randomuser.me/api/portraits/men/36.jpg",
+      "company": "TechVision"
+    },
+    {
+      "content": "Ein sehr talentierter Entwickler. Design und Performance der Website sind besser als erwartet.",
+      "name": "Antoine Lefevre",
+      "imgSrc": "https://randomuser.me/api/portraits/men/18.jpg",
+      "company": "DigitalFlow"
+    },
+    {
+      "content": "Professionelle Arbeit! Pünktlich geliefert mit einem modernen Design und einer flüssigen Benutzererfahrung.",
+      "name": "Ava Thompson",
+      "imgSrc": "https://randomuser.me/api/portraits/women/52.jpg",
+      "company": "TechMosaic"
+    },
+    {
+      "content": "Sehr gute Umsetzung des Projekts! Hochwertiger Code, responsives Design und starke Problemlösungsfähigkeiten.",
+      "name": "Jonas Becker",
+      "imgSrc": "https://randomuser.me/api/portraits/men/55.jpg",
+      "company": "NextGen IT"
+    }
+  ]
+}

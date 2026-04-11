@@ -3,10 +3,12 @@ import { tags, works } from "../data";
 import ProjectCard from "../UI/ProjectCard";
 import AnimatedHeader from "../UI/AnimatedHeader";
 import AnimatedPara from "../UI/AnimatedPara";
+import { useTranslation } from "react-i18next";
 
 const Work = () => {
   const [tag, setTag] = useState("all")
   const [filteredWorks, setFilteredWorks] = useState(works)
+  const {t}=useTranslation("projects")
   const handelFilterWork = (item) => {
     if (item === tag) {
       // clicked tag is already active, show all projects
@@ -24,12 +26,11 @@ const Work = () => {
   }
 
 
-  console.log(filteredWorks)
   return (
     <section id="work" className="section">
       <div className="container space-y-8">
         <AnimatedHeader className="headline-2 capitalize">
-          My portfolio highlights
+          {t("title")}
         </AnimatedHeader>
         <AnimatedPara>
           {tags.map((item, i) =>

@@ -3,9 +3,11 @@ import Navbar from "./Navbar"
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
 import SelectLang from "../UI/SelectLang"
+import { useTranslation } from "react-i18next"
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
     const navRef = useRef(null);
+    const {t}=useTranslation("navbar")
 
     useEffect(() => {
         const handleClickOutside = (e) => {
@@ -43,7 +45,7 @@ const Header = () => {
                 <div className="items-center gap-x-4 justify-end lg:flex hidden">
                 <SelectLang className="" />
                 <a href={"#contact"} className="btn btn-secondary md:justify-self-center capitalize text-nowrap">
-                    contact me
+                    {t("contact me")}
                 </a>
                 </div>
             </div>

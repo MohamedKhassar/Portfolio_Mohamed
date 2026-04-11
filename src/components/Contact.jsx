@@ -1,7 +1,9 @@
+import { useTranslation } from "react-i18next";
 import AnimatedHeader from "../UI/AnimatedHeader";
 import AnimatedPara from "../UI/AnimatedPara";
 import { motion } from "framer-motion";
 const Contact = () => {
+    const { t } = useTranslation("contact")
     const socialLinks = [
         {
             href: 'https://github.com/mohamedkhassar',
@@ -30,10 +32,10 @@ const Contact = () => {
             <div className="container lg:grid lg:grid-cols-2 lg:items-stretch">
                 <div className="mb-12 space-y-4 lg:mb-0 lg:flex lg:flex-col">
                     <AnimatedHeader className="headline-2 lg:max-w-[12ch] ">
-                        Contact me for collaboration
+                        {t("title")}
                     </AnimatedHeader>
                     <AnimatedPara className="text-zinc-400 mt-3 mb-8 max-w-[50ch] lg:max-w-[30ch] ">
-                        Reach out today to discuss your project needs and start collaborating on something amazing!
+                        {t("text")}
                     </AnimatedPara>
                     <div className="flex items-center gap-2 mt-auto">
                         {socialLinks.map(({ href,
@@ -62,29 +64,29 @@ const Contact = () => {
                                 htmlFor="name"
                                 className="label "
                             >
-                                Name
+                                {t("name")}
                             </label>
                         </div>
                         <div className="mb-4 flex flex-col-reverse">
-                            <input type="email" name="email" id="email" autoComplete="email" required placeholder="email@example.com" className="text-field  peer" />
+                            <input type="email" name="email" id="email" autoComplete="email" required placeholder={t("emailPlaceholder")} className="text-field  peer" />
                             <label
                                 htmlFor="email"
                                 className="label "
                             >
-                                Email
+                                {t("email")}
                             </label>
                         </div>
                     </div>
                     <div className="mb-4 flex flex-col-reverse">
-                        <textarea name="message" id="message" placeholder="Hi!" required className="text-field  peer resize-y min-h-32 max-h-80"></textarea>
+                        <textarea name="message" id="message" placeholder={t("textareaPlaceholder")} required className="text-field  peer resize-y min-h-32 max-h-80"></textarea>
                         <label
                             htmlFor="message"
                             className="label "
                         >
-                            Message
+                            {t("message")}
                         </label>
                     </div>
-                    <button type="submit" className="btn btn-primary w-full cursor-pointer justify-center ">Submit</button>
+                    <button type="submit" className="btn btn-primary w-full cursor-pointer justify-center ">{t("submit")}</button>
                 </motion.form>
             </div>
         </section>

@@ -12,16 +12,38 @@ import enSkills from "./locales/en/skills.json";
 import deSkills from "./locales/de/skills.json";
 import enCertificate from "./locales/en/certificate.json";
 import deCertificate from "./locales/de/certificate.json";
-
-
+import enProjects from "./locales/en/projects.json";
+import deProjects from "./locales/de/projects.json";
+import enReviews from "./locales/en/reviews.json";
+import deReviews from "./locales/de/reviews.json";
+import enContact from "./locales/en/contact.json";
+import deContact from "./locales/de/contact.json";
 
 i18n
   .use(LanguageDetector) // 👈 detects navigator.language automatically
   .use(initReactI18next)
   .init({
     resources: {
-      en: { navbar: enNavbar, hero: enHero ,about: enAbout, skills: enSkills, certificate: enCertificate},
-      de: { navbar: deNavbar, hero: deHero ,about: deAbout, skills: deSkills, certificate: deCertificate},
+      en: {
+        navbar: enNavbar,
+        hero: enHero,
+        about: enAbout,
+        skills: enSkills,
+        certificate: enCertificate,
+        projects: enProjects,
+        reviews: enReviews,
+        contact: enContact,
+      },
+      de: {
+        navbar: deNavbar,
+        hero: deHero,
+        about: deAbout,
+        skills: deSkills,
+        certificate: deCertificate,
+        projects: deProjects,
+        reviews: deReviews,
+        contact: deContact,
+      },
     },
     fallbackLng: "en", // 👈 default when language not supported
     supportedLngs: ["en", "de"], // 👈 only these two, nothing else
