@@ -12,10 +12,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Analytics } from "@vercel/analytics/react"
 import Certificates from "./components/Certificates"
 import Reviews from "./components/Reviews"
+import useMetaData from "./hooks/useMetaData"
 gsap.registerPlugin(ScrollTrigger);
 
 
 const App = () => {
+  useMetaData();
   return (
     <ReactLenis root>
       <Analytics />

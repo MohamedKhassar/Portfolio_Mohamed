@@ -20,6 +20,8 @@ import enContact from "./locales/en/contact.json";
 import deContact from "./locales/de/contact.json";
 import enFooter from "./locales/en/footer.json";
 import deFooter from "./locales/de/footer.json";
+import enMeta from "./locales/en/meta.json";
+import deMeta from "./locales/de/meta.json";
 
 i18n
   .use(LanguageDetector) // 👈 detects navigator.language automatically
@@ -36,6 +38,7 @@ i18n
         reviews: enReviews,
         contact: enContact,
         footer: enFooter,
+        meta: enMeta,
       },
       de: {
         navbar: deNavbar,
@@ -47,13 +50,15 @@ i18n
         reviews: deReviews,
         contact: deContact,
         footer: deFooter,
+        meta: deMeta,
       },
     },
     fallbackLng: "en", // 👈 default when language not supported
     supportedLngs: ["en", "de"], // 👈 only these two, nothing else
     detection: {
-      order: ["navigator"], // saved choice takes priority over browser
-      caches: [""], // persist the choice
+      order: ["querystring", "localStorage", "navigator"], // 👈 querystring first
+      lookupQuerystring: "lang", // 👈 reads ?lang=de
+      caches: ["localStorage"],
     },
     interpolation: { escapeValue: false },
   });
