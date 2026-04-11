@@ -87,7 +87,7 @@ html{
 }
 
 .headline-1{
-    @apply text-5xl leading-tight font-medium lg:text-[55px] lg:leading-16 max-w-max bg-gradient-to-r from-[#fafafa] to-[#a1a1aa] bg-clip-text text-transparent
+    @apply text-4xl leading-tight font-medium lg:text-[55px] lg:leading-16 max-w-max bg-gradient-to-r from-[#fafafa] to-[#a1a1aa] bg-clip-text text-transparent
 }
 
 .btn-primary{
