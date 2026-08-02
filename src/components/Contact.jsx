@@ -44,7 +44,7 @@ const Contact = () => {
                                 initial={{ opacity: 0 }}
                                 whileInView={{ opacity: 1, transition: { duration: .5, delay: (.1 * key) + .1 } }}
                                 viewport={{ once: true }}
-                                href={href} key={key} target="_blank" className="w-12 h-12 grid place-items-center ring-inset ring-2 ring-zinc-50/5 rounded-lg transition-[background-color,color] hover:bg-zinc-50 hover:text-zinc-950 duration-300 active:bg-zinc-50/80 ">{icon}</motion.a>
+                                href={href} key={key} target="_blank" className="bg-gradient-to-b from-slate-800 to-slate-800/60 w-12 h-12 grid place-items-center ring-inset ring-2 ring-zinc-50/5 rounded-2xl transition-colors hover:to-slate-800/80 duration-300 active:bg-zinc-800/90">{icon}</motion.a>
                         ))}
                     </div>
                 </div>

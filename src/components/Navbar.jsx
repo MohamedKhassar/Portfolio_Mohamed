@@ -35,11 +35,11 @@ const Navbar = ({ navOpen, navRef }) => {
       link: '#work',
       className: 'nav-link'
     },
-    {
-      label: 'reviews',
-      link: '#reviews',
-      className: 'nav-link'
-    },
+    // {
+    //   label: 'reviews',
+    //   link: '#reviews',
+    //   className: 'nav-link'
+    // },
     {
       label: 'contact',
       link: '#contact',

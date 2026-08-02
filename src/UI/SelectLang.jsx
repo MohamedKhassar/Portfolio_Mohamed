@@ -53,7 +53,7 @@ const SelectLang = ({ className = "" }) => {
         <article className={`relative group bg-gradient-to-b from-slate-800 to-slate-800/40 backdrop-blur-2xl rounded-3xl cursor-pointer py-2.5 px-2 hover:to-slate-800/80 transition duration-500 lg:min-w-24 min-w-20 ${className}`}>
             {
                 language && (
-                    <div ref={SelectRef} className='flex gap-x-2 items-center justify-center lg:text-base text-sm' onClick={() => setShowLanguages(pre => !pre)}>
+                    <div ref={SelectRef} className='flex gap-x-2 items-center justify-center lg:text-sm text-xs' onClick={() => setShowLanguages(pre => !pre)}>
                         {/* {LANGUAGES.find((lang) => lang.code === language)?.image} */}
                         <span className='uppercase'>{LANGUAGES.find((lang) => lang.code === language)?.image}</span>
                         <CgChevronDown className={`text-xl group-hover:rotate-180 transition-transform duration-500 ${showLanguages ? 'rotate-180' : ''}`} />
@@ -65,7 +65,7 @@ const SelectLang = ({ className = "" }) => {
                     <button onClick={() => changeLanguage(code, image, label)} key={code} className={`flex gap-x-2 px-4 py-2 justify-center w-full text-sm rounded-3xl bg-gradient-to-b from-slate-800 to-slate-800/60 hover:bg-slate-900 cursor-pointer focus:bg-slate-950 ${i18nHook.language === code ? "bg-slate-950" : ""}`}>
                         {/* <img src={image} alt={label} width={20} height={20} /> */}
                         {/* {image} */}
-                        <span className='lg:text-base text-xs'>{label}</span>
+                        <span className='lg:text-sm text-xs'>{label}</span>
                     </button>
                 ))}
             </div>
