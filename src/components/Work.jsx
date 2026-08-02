@@ -34,7 +34,7 @@ const Work = () => {
         </AnimatedHeader>
         <AnimatedPara>
           {tags.map((item, i) =>
-            <span onClick={() => handelFilterWork(item)} key={i} className={`px-3 py-1.5  hover:!bg-slate-500/40 duration-300 cursor-pointer active:!bg-slate-400/40 !backdrop-blur-2xl rounded-lg mx-1 border !border-gray-600 text-gray-200 text-sm ${item.toLowerCase()==tag.toLowerCase()?"!bg-slate-400/40":"!bg-slate-600/40"}`}>{item}</span>
+            <span onClick={() => handelFilterWork(item)} key={i} className={`bg-gradient-to-b from-slate-700 px-3 py-1.5  hover:!to-slate-500/40 duration-300 cursor-pointer active:!to-slate-400/40 !backdrop-blur-2xl rounded-3xl mx-1 border !border-gray-700 text-gray-200 text-sm ${item.toLowerCase()==tag.toLowerCase()?"!to-slate-700/40":"!to-slate-700/80"}`}>{item}</span>
           )}
         </AnimatedPara>
         <div className="grid gap-x-4 gap-y-5 grid-cols-[repeat(auto-fill,_minmax(357px,_1fr))]">

@@ -50,22 +50,22 @@ const SelectLang = ({ className = "" }) => {
         return () => document.removeEventListener("mousedown", handleClickOutside);
     }, []);
     return (
-        <article className={`relative group bg-slate-800 rounded-lg cursor-pointer py-2 px-4 hover:bg-slate-600/60 transition duration-500 lg:min-w-34 ${className}`}>
+        <article className={`relative group bg-gradient-to-b from-slate-800 to-slate-800/40 backdrop-blur-2xl rounded-3xl cursor-pointer py-2.5 px-2 hover:to-slate-800/80 transition duration-500 lg:min-w-24 min-w-20 ${className}`}>
             {
                 language && (
-                    <div ref={SelectRef} className='flex gap-x-2 items-center justify-center w-full lg:text-base text-sm' onClick={() => setShowLanguages(pre => !pre)}>
-                        {LANGUAGES.find((lang) => lang.code === language)?.image}
-                        <span className='lg:block hidden'>{LANGUAGES.find((lang) => lang.code === language)?.label}</span>
+                    <div ref={SelectRef} className='flex gap-x-2 items-center justify-center lg:text-base text-sm' onClick={() => setShowLanguages(pre => !pre)}>
+                        {/* {LANGUAGES.find((lang) => lang.code === language)?.image} */}
+                        <span className='uppercase'>{LANGUAGES.find((lang) => lang.code === language)?.image}</span>
                         <CgChevronDown className={`text-xl group-hover:rotate-180 transition-transform duration-500 ${showLanguages ? 'rotate-180' : ''}`} />
                     </div>
                 )
             }
-            <div className={`flex flex-col gap-2 items-center justify-start absolute group-hover:opacity-100 group-hover:visible transition-[opacity, visibility] duration-500 bg-slate-700/90 rounded-lg top-full left-0 mt-1.5 opacity-0 invisible w-full py-2 px-2 ${showLanguages ? 'opacity-100 visible' : ''}`}>
+            <div className={`flex flex-col gap-1 items-center justify-start absolute group-hover:opacity-100 group-hover:visible transition-[opacity, visibility] duration-500 bg-slate-700 rounded-2xl top-full left-0 mt-1.5 opacity-0 invisible w-full py-2 px-2 ${showLanguages ? 'opacity-100 visible' : ''}`}>
                 {LANGUAGES.map(({ code, image, label }) => (
-                    <button onClick={() => changeLanguage(code, image, label)} key={code} className={`flex gap-x-2 px-4 py-2 justify-center bg-slate-800 w-full mx-2 rounded-lg hover:bg-slate-900 cursor-pointer focus:bg-slate-950 ${i18nHook.language === code ? "bg-slate-950" : ""}`}>
+                    <button onClick={() => changeLanguage(code, image, label)} key={code} className={`flex gap-x-2 px-4 py-2 justify-center w-full text-sm rounded-3xl bg-gradient-to-b from-slate-800 to-slate-800/60 hover:bg-slate-900 cursor-pointer focus:bg-slate-950 ${i18nHook.language === code ? "bg-slate-950" : ""}`}>
                         {/* <img src={image} alt={label} width={20} height={20} /> */}
-                        {image}
-                        <span className='lg:block hidden'>{label}</span>
+                        {/* {image} */}
+                        <span className='lg:text-base text-xs'>{label}</span>
                     </button>
                 ))}
             </div>

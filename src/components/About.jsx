@@ -20,7 +20,7 @@ const About = () => {
       viewport={{ once: true }}
       id="about" className="section">
       <div className="container">
-        <div className="bg-slate-800/50 p-7 rounded-2xl md:p-12">
+        <div className="bg-gradient-to-b from-slate-900 to-slate-900/50 p-7 rounded-4xl shadow-2xl shadow-slate-600/30 md:p-12">
           <p className="text-slate-300 mb-4 md:mb-8 md:text-xl md:max-w-[60ch]">
             {t("text")}
           </p>

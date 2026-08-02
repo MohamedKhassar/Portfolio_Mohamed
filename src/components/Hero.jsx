@@ -60,14 +60,14 @@ const Hero = () => {
                                 (
 
                                     /* GitHub Button */
-                                    <ButtonPrimary target={"_blank"} label={'GitHub'} href="https://github.com/mohamedkhassar" classes={"capitalize !bg-white !font-bold hover:!bg-gray-200 !duration-200 md:text-base! text-sm!"} icon={<FaGithub loading="lazy" alt="github_logo" className="md:size-6 size-4" />} />
+                                    <ButtonPrimary target={"_blank"} label={'GitHub'} href="https://github.com/mohamedkhassar" classes={"capitalize !from-white !to-white/60 !font-bold hover:!to-white/70 !duration-200 md:text-base! text-sm!"} icon={<FaGithub loading="lazy" alt="github_logo" className="md:size-6 size-4" />} />
                                 )
                                 :
                                 <>
                                     {/* NSAYBLIK Button */}
-                                    <ButtonPrimary target={"_blank"} href="https://nsayblik.com/Mohamed_Khassar" classes={"capitalize !bg-white text-black !font-bold hover:!bg-gray-200 !duration-200"} icon={<img src={nsayblik_logo} loading="lazy" alt="nsayblik_logo" className="md:size-20 size-16 object-contain" />} />
+                                    <ButtonPrimary target={"_blank"} href="https://nsayblik.com/Mohamed_Khassar" classes={"capitalize !from-white !to-white/60 text-black !font-bold hover:!to-white/70 !duration-200"} icon={<img src={nsayblik_logo} loading="lazy" alt="nsayblik_logo" className="md:size-20 size-16 object-contain" />} />
                                     {/* Fiverr Button */}
-                                    <ButtonPrimary href="https://www.fiverr.com/s/jjEmy0L" classes={"capitalize !bg-green-900 !text-white hover:!bg-green-50 hover:!text-green-900 !duration-500"} target="_blank" icon={<SiFiverr className="md:size-14 size-12" />} />
+                                    <ButtonPrimary href="https://www.fiverr.com/s/jjEmy0L" classes={"capitalize !from-green-900 !to-green-900/60 !text-white hover:!to-green-900/70 !duration-500"} target="_blank" icon={<SiFiverr className="md:size-14 size-12" />} />
                                 </>
                         }
                         {/* Scroll Down Button */}
