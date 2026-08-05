@@ -1,42 +1,47 @@
 import PropTypes from "prop-types";
 import { useEffect, useRef } from "react";
+import { useTranslation } from "react-i18next";
+import i18n from "../i18n";
+import { useLanguage } from "../hooks/useLanguage";
 const Navbar = ({ navOpen, navRef }) => {
+  const { t } = useTranslation('navbar');
+
   const lastActiveLink = useRef()
   const activeBox = useRef()
   const navItems = [
     {
-      label: 'Home',
+      label: 'home',
       link: '#home',
       className: 'nav-link active',
       ref: lastActiveLink
     },
     {
-      label: 'About',
+      label: 'about',
       link: '#about',
       className: 'nav-link'
     },
     {
-      label: 'Skills',
+      label: 'skills',
       link: '#skills',
       className: 'nav-link'
     },
     {
-      label: 'Certificates',
+      label: 'certificates',
       link: '#certificates',
       className: 'nav-link'
     },
     {
-      label: 'Work',
+      label: 'work',
       link: '#work',
       className: 'nav-link'
     },
+    // {
+    //   label: 'reviews',
+    //   link: '#reviews',
+    //   className: 'nav-link'
+    // },
     {
-      label: 'Reviews',
-      link: '#reviews',
-      className: 'nav-link'
-    },
-    {
-      label: 'Contact',
+      label: 'contact',
       link: '#contact',
       className: "nav-link contact",
     }
@@ -50,6 +55,7 @@ const Navbar = ({ navOpen, navRef }) => {
     activeBox.current.style.height = lastActiveLink.current.offsetHeight + "px"
   }
 
+  const { language } = useLanguage();
 
   const handelSelectActive = (event) => {
     lastActiveLink.current?.classList.remove("active");
@@ -61,10 +67,14 @@ const Navbar = ({ navOpen, navRef }) => {
   useEffect(() => {
     window.addEventListener('resize', selectActiveBox)
     return () => {
+      i18n.off('languageChanged', selectActiveBox);
       document.removeEventListener('resize', selectActiveBox);
     };
   })
+  useEffect(() => {
+    selectActiveBox()
 
+  }, [language]);
   return (
     <nav
       ref={navRef}
@@ -78,7 +88,7 @@ const Navbar = ({ navOpen, navRef }) => {
             className={className}
             key={i}
           >
-            {label}
+            {t(label)}
           </a>
 
         ))

@@ -1,13 +1,34 @@
 import { FiArrowDown, FiDownload } from "react-icons/fi";
 import { ButtonPrimary, ButtonOutline } from "../UI/Button"
+import { FaGithub } from "react-icons/fa6";
 // import { SiFiverr } from "react-icons/si";
 import nsayblik_logo from "/assets/imgs/nsayblik_logo.png";
 import { SiFiverr } from "react-icons/si";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
+import { useLanguage } from "../hooks/useLanguage";
+import { useTranslation } from "react-i18next";
 const Hero = () => {
     const [loaded, setLoaded] = useState(false);
+    const { language } = useLanguage();
+    const { t } = useTranslation("hero");
+    const words = t("title.words", { returnObjects: true });
+    const [index, setIndex] = useState(0);
+    const measureRef = useRef(null);
+    const [width, setWidth] = useState(0);
 
+    useLayoutEffect(() => {
+        if (measureRef.current) {
+            setWidth(measureRef.current.offsetWidth);
+        }
+    }, [index, words]);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prev) => (prev + 1) % words.length);
+        }, 2500);
+
+        return () => clearInterval(interval);
+    }, [words]);
     return (
         <section className="pt-28 lg:pt-36" id="home">
             <div
@@ -18,30 +39,91 @@ const Hero = () => {
                         whileInView={{ opacity: 1, y: 0, transition: { delay: .2, duration: .3, type: "spring", stiffness: 200 } }}
                         viewport={{ once: true }}
                         className="flex items-center gap-3">
-                        <figure className="img-box w-9 h-9 rounded-lg">
+                        <figure className="img-box w-9 h-9 rounded-2xl">
                             <img
                                 src="/assets/imgs/avatar-1.jpg"
                                 width={40}
                                 height={40}
-                                alt="Mohamed_Khassar_avatar"
+                                alt={`Mohamed Khassar ${language === "de" ? "Entweckler" : "Developer"}`}
                                 loading="lazy"
                                 className="img-cover"
                             />
                         </figure>
                         <div className="flex items-center gap-1.5 tex-zinc-400 text-sm tracking-wide">
                             <span className="relative h-2 w-2 bg-emerald-400 rounded-full">
-                                <span className="absolute bg-emerald-400 rounded-full inset-0 whileInView-ping"></span>
+                                <span className="absolute bg-emerald-400 rounded-full inset-0 animate-ping"></span>
                             </span>
-                            Available for work
+                            {t('availability')}
                         </div>
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0, transition: { delay: .3, duration: .3, type: "spring", stiffness: 200 } }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                delay: 0.3,
+                                duration: 0.3,
+                                type: "spring",
+                                stiffness: 200,
+                            },
+                        }}
+                        transition={{
+                            duration: 0.8,
+                            type: "spring",
+                            stiffness: 120,
+                            damping: 15,
+                        }}
                         viewport={{ once: true }}
+                        className="headline-1 max-w-[15ch] sm:max-w-[20ch] mt-5 mb-8 lg:mb-10"
+                    >
+                        {t("title.before")}{" "}
 
-                        className="headline-1 max-w-[15ch] sm:max-w-[20ch] mt-5 mb-8 lg:mb-10">
-                        Building Scalable Modern Websites for the Future
+                        <motion.span
+                            animate={{ width }}
+                            transition={{
+                                duration: 0.4,
+                                ease: "easeInOut",
+                            }}
+                            className="relative inline-block h-[1.2em] overflow-hidden align-bottom"
+                        >
+                            <AnimatePresence mode="wait">
+                                <motion.span
+                                    key={words[index]}
+                                    className="absolute inset-0 whitespace-nowrap bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent"
+                                    initial={{
+                                        y: 30,
+                                        opacity: 0,
+                                        scale: 0.9,
+                                        filter: "blur(8px)",
+                                    }}
+                                    animate={{
+                                        y: 0,
+                                        opacity: 1,
+                                        scale: 1,
+                                        filter: "blur(0px)",
+                                    }}
+                                    exit={{
+                                        y: -30,
+                                        opacity: 0,
+                                        scale: 1.1,
+                                        filter: "blur(8px)",
+                                    }}
+                                >
+                                    {words[index]}
+                                </motion.span>
+                            </AnimatePresence>
+
+                            {/* Hidden text for measuring */}
+                            <span
+                                ref={measureRef}
+                                className="invisible whitespace-nowrap"
+                            >
+                                {words[index]}
+                            </span>
+                        </motion.span>
+                        {" "}
+                        {t("title.after")}
                     </motion.h2>
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}
@@ -50,13 +132,24 @@ const Hero = () => {
 
                         className="flex items-center gap-3 flex-wrap">
                         {/* CV Button */}
-                        <ButtonPrimary label={"download cv"} icon={<FiDownload className="text-[18px]" />} href="/assets/file/Resume-Frontend.pdf" target="_blank" classes={"capitalize group"} />
-                        {/* NSAYBLIK Button */}
-                        <ButtonPrimary target={"_blank"} href="https://nsayblik.com/Mohamed_Khassar" classes={"capitalize !bg-white text-black !font-bold hover:!bg-gray-200 !duration-200"} icon={<img src={nsayblik_logo} loading="lazy" alt="nsayblik_logo" className="md:size-20 size-16 object-contain" />} />
-                        {/* Fiverr Button */}
-                        <ButtonPrimary href="https://www.fiverr.com/s/jjEmy0L" classes={"capitalize !bg-green-900 !text-white hover:!bg-green-50 hover:!text-green-900 !duration-500"} target="_blank" icon={<SiFiverr className="md:size-14 size-12" />} />
+                        <ButtonPrimary label={t('CV')} icon={<FiDownload className="text-[18px]" />} href="/assets/file/Resume-Frontend.pdf" target="_blank" classes={"capitalize group normal-case!"} />
+                        {
+                            language === "de" ?
+                                (
+
+                                    /* GitHub Button */
+                                    <ButtonPrimary target={"_blank"} label={'GitHub'} href="https://github.com/mohamedkhassar" classes={"capitalize !from-white !to-white/60 !font-bold hover:!to-white/70 !duration-200 md:text-base! text-sm!"} icon={<FaGithub loading="lazy" alt="github_logo" className="md:size-6 size-4" />} />
+                                )
+                                :
+                                <>
+                                    {/* NSAYBLIK Button */}
+                                    <ButtonPrimary target={"_blank"} href="https://nsayblik.com/Mohamed_Khassar" classes={"capitalize !from-white !to-white/60 text-black !font-bold hover:!to-white/70 !duration-200"} icon={<img src={nsayblik_logo} loading="lazy" alt="nsayblik_logo" className="md:size-20 size-16 object-contain" />} />
+                                    {/* Fiverr Button */}
+                                    <ButtonPrimary href="https://www.fiverr.com/s/jjEmy0L" classes={"capitalize !from-green-900 !to-green-900/60 !text-white hover:!to-green-900/70 !duration-500"} target="_blank" icon={<SiFiverr className="md:size-14 size-12" />} />
+                                </>
+                        }
                         {/* Scroll Down Button */}
-                        <ButtonOutline href="#about" label={"scroll down"} classes={"capitalize"} icon={<FiArrowDown className="whileInView-bounce" />} />
+                        <ButtonOutline href="#about" label={t('scroll_down')} classes={"capitalize normal-case!"} icon={<FiArrowDown className="whileInView-bounce" />} />
                     </motion.div>
                 </div>
                 <motion.div

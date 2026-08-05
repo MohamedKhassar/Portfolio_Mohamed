@@ -2,9 +2,12 @@ import { FiMenu, FiX } from "react-icons/fi"
 import Navbar from "./Navbar"
 import { useEffect, useRef, useState } from "react"
 import { motion } from "framer-motion"
+import SelectLang from "../UI/SelectLang"
+import { useTranslation } from "react-i18next"
 const Header = () => {
     const [navOpen, setNavOpen] = useState(false)
     const navRef = useRef(null);
+    const {t}=useTranslation("navbar")
 
     useEffect(() => {
         const handleClickOutside = (e) => {
@@ -27,7 +30,8 @@ const Header = () => {
                         <img src="assets/imgs/logo.svg" width={30} height={30} alt="Mohamed_Khassar_logo" />
                     </h1>
                 </a>
-                <div className="md:justify-self-center relative">
+                <div className="md:justify-self-center relative flex items-center gap-x-4">
+                    <SelectLang className="lg:hidden" />
                     <button onClick={() => setNavOpen(pre => !pre)} className="menu-btn">
                         {
                             navOpen ?
@@ -38,9 +42,12 @@ const Header = () => {
                     </button>
                     <Navbar navRef={navRef} navOpen={navOpen} />
                 </div>
-                <a href={"#contact"} className="btn btn-secondary md:justify-self-center capitalize">
-                    contact me
+                <div className="items-center gap-x-4 justify-end lg:flex hidden">
+                <SelectLang className="" />
+                <a href={"#contact"} className="btn btn-secondary md:justify-self-center capitalize text-nowrap">
+                    {t("contact me")}
                 </a>
+                </div>
             </div>
         </motion.header>
     )

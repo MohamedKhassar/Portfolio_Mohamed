@@ -125,27 +125,27 @@ export const tags = ["Frontend", "Backend", "Full-Stack"];
 
 export const sitemap = [
   {
-    label: "Home",
+    label: "home",
     href: "#home",
   },
   {
-    label: "About",
+    label: "about",
     href: "#about",
   },
   {
-    label: "Skills",
+    label: "skills",
     href: "#skills",
   },
   {
-    label: "Work",
+    label: "work",
     href: "#work",
   },
   {
-    label: "Reviews",
+    label: "reviews",
     href: "#reviews",
   },
   {
-    label: "Contact me",
+    label: "contact_me",
     href: "#contact",
   },
 ];

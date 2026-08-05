@@ -4,11 +4,14 @@ import './index.css'
 import App from './App.jsx'
 import { BrowserRouter } from 'react-router-dom'
 import 'lenis/dist/lenis.css'
+import { LanguageProvider } from './Provider/LanguageProvider.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>
+    <LanguageProvider>
       <App />
+    </LanguageProvider>
     </BrowserRouter>
   </StrictMode>,
 )

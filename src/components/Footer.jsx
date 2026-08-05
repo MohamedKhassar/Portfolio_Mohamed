@@ -4,17 +4,18 @@ import { Link } from "react-router-dom";
 import AnimatedHeader from "../UI/AnimatedHeader";
 import { sitemap, socials } from "../data";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 const Footer = () => {
-
+  const { t } = useTranslation(["footer", "navbar"])
   return (
     <footer className="section">
       <div className="container">
         <div className="lg:grid lg:grid-cols-2">
           <div className="mb-10">
             <AnimatedHeader className="headline-1 mb-8 lg:max-w-[12ch] ">
-              Let&apos;s work together today!
+              {t("footer:text")}
             </AnimatedHeader>
-            <ButtonPrimary href="mailto:mohamedkhassar775@gmail.com" label={"start project"} classes={"capitalize w-fit "} icon={<CgChevronRight />} />
+            <ButtonPrimary href="mailto:mohamedkhassar775@gmail.com" label={t("footer:startProject")} classes={"capitalize w-fit "} icon={<CgChevronRight />} />
           </div>
           <div className="grid grid-cols-2 gap-4 lg:pl-20">
             <div className="">
@@ -23,7 +24,7 @@ const Footer = () => {
                 {sitemap.map(({ label, href }, key) => (
                   <li key={key}>
                     <a href={href}
-                      className="block text-sm text-zinc-400 py-1 transition-colors  hover:text-zinc-200 ">{label}</a>
+                      className="block text-sm text-zinc-400 py-1 transition-colors  hover:text-zinc-200">{t(`navbar:${label}`)}</a>
                   </li>
                 ))}
               </ul>
