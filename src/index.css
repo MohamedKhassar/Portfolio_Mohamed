@@ -83,7 +83,7 @@ html{
 }
 
 .img-cover{
-    @apply w-full h-full object-cover
+    @apply w-full h-full object-cover;
 }
 
 .headline-1{
@@ -114,7 +114,7 @@ html{
 }
 
 .text-field{
-    @apply block outline-none w-full px-3 py-3 text-sm bg-slate-800 rounded-xl ring-1 ring-inset ring-transparent transition-shadow hover:ring-slate-50/5 focus:ring-sky-400 focus-within:ring-2 placeholder:text-slate-400 focus:invalid:ring-red-500 focus:invalid:placeholder:!text-red-300/50
+    @apply block outline-none w-full px-3 py-3 text-sm bg-gradient-to-b from-slate-800 to-slate-800/60 rounded-xl ring-1 ring-inset ring-transparent transition-shadow hover:ring-slate-50/5 focus:ring-sky-400 focus-within:ring-2 placeholder:text-slate-400 focus:invalid:ring-red-500 focus:invalid:placeholder:!text-red-300/50
 }
 
 .reveal-up{

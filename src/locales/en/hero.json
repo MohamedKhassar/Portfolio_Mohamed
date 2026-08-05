@@ -1,6 +1,10 @@
 {
-    "availability":"Available for work",
-    "title":"Building Scalable Modern Websites for the Future",
-    "CV":"Download Resume",
-    "scroll_down":"scroll down"
+  "availability": "Available for work",
+  "title": {
+    "before": "Crafting",
+    "words": ["Fast", "Scalable", "Modern", "Accessible", "High-Performance"],
+    "after": "Web Experiences"
+  },
+  "CV": "Download Resume",
+  "scroll_down": "scroll down"
 }

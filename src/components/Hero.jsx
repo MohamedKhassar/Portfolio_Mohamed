@@ -4,14 +4,31 @@ import { FaGithub } from "react-icons/fa6";
 // import { SiFiverr } from "react-icons/si";
 import nsayblik_logo from "/assets/imgs/nsayblik_logo.png";
 import { SiFiverr } from "react-icons/si";
-import { motion } from "framer-motion";
-import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useLanguage } from "../hooks/useLanguage";
 import { useTranslation } from "react-i18next";
 const Hero = () => {
     const [loaded, setLoaded] = useState(false);
     const { language } = useLanguage();
     const { t } = useTranslation("hero");
+    const words = t("title.words", { returnObjects: true });
+    const [index, setIndex] = useState(0);
+    const measureRef = useRef(null);
+    const [width, setWidth] = useState(0);
+
+    useLayoutEffect(() => {
+        if (measureRef.current) {
+            setWidth(measureRef.current.offsetWidth);
+        }
+    }, [index, words]);
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setIndex((prev) => (prev + 1) % words.length);
+        }, 2500);
+
+        return () => clearInterval(interval);
+    }, [words]);
     return (
         <section className="pt-28 lg:pt-36" id="home">
             <div
@@ -22,7 +39,7 @@ const Hero = () => {
                         whileInView={{ opacity: 1, y: 0, transition: { delay: .2, duration: .3, type: "spring", stiffness: 200 } }}
                         viewport={{ once: true }}
                         className="flex items-center gap-3">
-                        <figure className="img-box w-9 h-9 rounded-lg">
+                        <figure className="img-box w-9 h-9 rounded-2xl">
                             <img
                                 src="/assets/imgs/avatar-1.jpg"
                                 width={40}
@@ -41,11 +58,72 @@ const Hero = () => {
                     </motion.div>
                     <motion.h2
                         initial={{ opacity: 0, y: 10 }}
-                        whileInView={{ opacity: 1, y: 0, transition: { delay: .3, duration: .3, type: "spring", stiffness: 200 } }}
+                        whileInView={{
+                            opacity: 1,
+                            y: 0,
+                            transition: {
+                                delay: 0.3,
+                                duration: 0.3,
+                                type: "spring",
+                                stiffness: 200,
+                            },
+                        }}
+                        transition={{
+                            duration: 0.8,
+                            type: "spring",
+                            stiffness: 120,
+                            damping: 15,
+                        }}
                         viewport={{ once: true }}
+                        className="headline-1 max-w-[15ch] sm:max-w-[20ch] mt-5 mb-8 lg:mb-10"
+                    >
+                        {t("title.before")}{" "}
 
-                        className="headline-1 max-w-[15ch] sm:max-w-[20ch] mt-5 mb-8 lg:mb-10">
-                        {t('title')}
+                        <motion.span
+                            animate={{ width }}
+                            transition={{
+                                duration: 0.4,
+                                ease: "easeInOut",
+                            }}
+                            className="relative inline-block h-[1.2em] overflow-hidden align-bottom"
+                        >
+                            <AnimatePresence mode="wait">
+                                <motion.span
+                                    key={words[index]}
+                                    className="absolute inset-0 whitespace-nowrap bg-gradient-to-r from-sky-400 via-cyan-300 to-blue-500 bg-clip-text text-transparent"
+                                    initial={{
+                                        y: 30,
+                                        opacity: 0,
+                                        scale: 0.9,
+                                        filter: "blur(8px)",
+                                    }}
+                                    animate={{
+                                        y: 0,
+                                        opacity: 1,
+                                        scale: 1,
+                                        filter: "blur(0px)",
+                                    }}
+                                    exit={{
+                                        y: -30,
+                                        opacity: 0,
+                                        scale: 1.1,
+                                        filter: "blur(8px)",
+                                    }}
+                                >
+                                    {words[index]}
+                                </motion.span>
+                            </AnimatePresence>
+
+                            {/* Hidden text for measuring */}
+                            <span
+                                ref={measureRef}
+                                className="invisible whitespace-nowrap"
+                            >
+                                {words[index]}
+                            </span>
+                        </motion.span>
+                        {" "}
+                        {t("title.after")}
                     </motion.h2>
                     <motion.div
                         initial={{ opacity: 0, y: 10 }}

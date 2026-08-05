@@ -11,7 +11,7 @@ const ProjectCard = ({ imgSrc, title, tags, classes, projectLink, index }) => {
             whileInView={{ opacity: 1, transition: { duration: .8, delay: .15 * index } }}
             viewport={{ once: true }}
             className={classes + " overflow-hidden relative rounded-3xl ring-1 ring-inset ring-slate-50/5 transition-colors group"}>
-                <div className="group-hover:bg-black/60 transition-colors duration-300 absolute inset-0 w-full h-full z-10 group-hover:backdrop-blur" />
+                <div className="bg-gradient-to-b group-hover:to-black/80 transition-colors duration-300 absolute inset-0 z-10 lg:group-hover:backdrop-blur lg:backdrop-blur-none backdrop-blur-xs" />
             <figure className={`img-box aspect-video rounded-lg ${imgSrc.length > 1 && "flex"}`}>
                 {
                     imgSrc.length > 1 ? (
@@ -27,16 +27,16 @@ const ProjectCard = ({ imgSrc, title, tags, classes, projectLink, index }) => {
 
                 }
             </figure>
-            <div className="flex items-center justify-between gap-4 absolute group-hover:bottom-0 transition-all duration-300 left-0 right-0 bottom-[-100%] p-4 z-20">
+            <div className="flex items-center justify-between gap-4 absolute lg:group-hover:bottom-0 bottom-0 transition-all duration-300 left-0 right-0 lg:bottom-[-100%] p-4 z-20">
                 <div>
                     <h3 className="title-1 mb-3">
                         <Link to={projectLink} target="_blank" className="hover:underline">
                             {title}
                         </Link>
                     </h3>
-                    <div className="flex flex-wrap items-center gap-2">
+                    <div className="flex flex-wrap items-center lg:gap-2 gap-1">
                         {tags.map((label, index) => (
-                            <span className="h-8 text-xs text-slate-400 bg-slate-900/50 grid items-center px-3 rounded-3xl" key={index}>{label}</span>
+                            <span className="h-8 lg:text-xs text-[12px] text-slate-400 bg-slate-900/50 grid items-center px-3 rounded-3xl" key={index}>{label}</span>
                         ))}
 
                     </div>
