@@ -2,14 +2,14 @@ export const works = [
   {
     imgSrc: ["/assets/imgs/mockups/hello-park-mockup.png"],
     title: "Hello Park",
-    tags: ["WordPress", "WooCommerce", "Full-Stack", "cms", "eCommerce"],
-    projectLink: "http://arty.ma",
+    tags: ["Frontend", "Web Development", "Web Design", "Landing Page"],
+    projectLink: "https://hello-park.lovable.app/",
   },
   {
     imgSrc: ["/assets/imgs/mockups/arty.jpg", "/assets/imgs/mockups/arty-mockup.png"],
     title: "Arty.ma (E-commerce Website)",
-    tags: ["Frontend", "Web Development", "Web Design", "Landing Page"],
-    projectLink: "http://arty.ma",
+    tags: ["WordPress", "WooCommerce", "Full-Stack", "cms", "eCommerce"],
+    projectLink: "https://arty.ma",
   },
   {
     imgSrc: [
