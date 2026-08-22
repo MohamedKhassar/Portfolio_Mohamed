@@ -1,15 +1,21 @@
 export const works = [
   {
-    imgSrc: ["/assets/imgs/mockups/hello-park-mockup.png"],
-    title: "Hello Park",
-    tags: ["Frontend", "Web Development", "Web Design", "Landing Page"],
-    projectLink: "https://hello-park.lovable.app/",
+    imgSrc: ["/assets/imgs/mockups/signprint-mockup.png"],
+    title: "SignPrint (Branding Website)",
+    tags: ["WordPress", "Elementor", "Full-Stack", "cms", "Landing Page"],
+    projectLink: "https://signprint.ma",
   },
   {
-    imgSrc: ["/assets/imgs/mockups/arty.jpg", "/assets/imgs/mockups/arty-mockup.png"],
+    imgSrc: ["/assets/imgs/mockups/arty-mockup.png"],
     title: "Arty.ma (E-commerce Website)",
     tags: ["WordPress", "WooCommerce", "Full-Stack", "cms", "eCommerce"],
     projectLink: "https://arty.ma",
+  },
+  {
+    imgSrc: ["/assets/imgs/mockups/hello-park-mockup.png"],
+    title: "Hello Park (Landing Page)",
+    tags: ["Frontend", "Web Development", "Web Design", "Landing Page"],
+    projectLink: "https://hello-park.lovable.app/",
   },
   {
     imgSrc: [
