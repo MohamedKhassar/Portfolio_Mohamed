@@ -1,13 +1,13 @@
 import { FiArrowDown, FiDownload } from "react-icons/fi";
 import { ButtonPrimary, ButtonOutline } from "../UI/Button"
-import { FaGithub } from "react-icons/fa6";
-// import { SiFiverr } from "react-icons/si";
 import nsayblik_logo from "/assets/imgs/nsayblik_logo.png";
 import { SiFiverr } from "react-icons/si";
 import { AnimatePresence, motion } from "framer-motion";
 import { useEffect, useLayoutEffect, useRef, useState } from "react";
 import { useLanguage } from "../hooks/useLanguage";
 import { useTranslation } from "react-i18next";
+import ResumeViewer from "./ResumeViewer";
+import { CgClose } from "react-icons/cg";
 const Hero = () => {
     const [loaded, setLoaded] = useState(false);
     const { language } = useLanguage();
@@ -16,6 +16,7 @@ const Hero = () => {
     const [index, setIndex] = useState(0);
     const measureRef = useRef(null);
     const [width, setWidth] = useState(0);
+    const [showCV, setShowCV] = useState(false)
 
     useLayoutEffect(() => {
         if (measureRef.current) {
@@ -29,6 +30,23 @@ const Hero = () => {
 
         return () => clearInterval(interval);
     }, [words]);
+    useEffect(() => {
+    if (showCV) {
+      document.documentElement.style.overflow = 'hidden';
+      document.body.style.overflow = 'hidden';
+      document.body.style.height = '100vh';
+    } else {
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+      document.body.style.height = '';
+    }
+
+    return () => {
+      document.documentElement.style.overflow = '';
+      document.body.style.overflow = '';
+      document.body.style.height = '';
+    };
+  }, [showCV]);
     return (
         <section className="pt-28 lg:pt-36" id="home">
             <div
@@ -132,22 +150,12 @@ const Hero = () => {
 
                         className="flex items-center gap-3 flex-wrap">
                         {/* CV Button */}
-                        <ButtonPrimary label={t('CV')} icon={<FiDownload className="text-[18px]" />} href="/assets/file/Resume-Frontend.pdf" target="_blank" classes={"capitalize group normal-case!"} />
-                        {
-                            language === "de" ?
-                                (
+                        <button className="capitalize group btn btn-primary" onClick={() => setShowCV(prev => !prev)}> {t('CV')} <FiDownload className="text-[18px]" /></button>
+                        {/* NSAYBLIK Button */}
+                        <ButtonPrimary target={"_blank"} href="https://nsayblik.com/Mohamed_Khassar" classes={"capitalize !from-white !to-white/60 text-black !font-bold hover:!to-white/70 !duration-200"} icon={<img src={nsayblik_logo} loading="lazy" alt="nsayblik_logo" className="md:size-20 size-16 object-contain" />} />
+                        {/* Fiverr Button */}
+                        <ButtonPrimary href="https://www.fiverr.com/s/jjEmy0L" classes={"capitalize !from-green-900 !to-green-900/60 !text-white hover:!to-green-900/70 !duration-500"} target="_blank" icon={<SiFiverr className="md:size-14 size-12" />} />
 
-                                    /* GitHub Button */
-                                    <ButtonPrimary target={"_blank"} label={'GitHub'} href="https://github.com/mohamedkhassar" classes={"capitalize !from-white !to-white/60 !font-bold hover:!to-white/70 !duration-200 md:text-base! text-sm!"} icon={<FaGithub loading="lazy" alt="github_logo" className="md:size-6 size-4" />} />
-                                )
-                                :
-                                <>
-                                    {/* NSAYBLIK Button */}
-                                    <ButtonPrimary target={"_blank"} href="https://nsayblik.com/Mohamed_Khassar" classes={"capitalize !from-white !to-white/60 text-black !font-bold hover:!to-white/70 !duration-200"} icon={<img src={nsayblik_logo} loading="lazy" alt="nsayblik_logo" className="md:size-20 size-16 object-contain" />} />
-                                    {/* Fiverr Button */}
-                                    <ButtonPrimary href="https://www.fiverr.com/s/jjEmy0L" classes={"capitalize !from-green-900 !to-green-900/60 !text-white hover:!to-green-900/70 !duration-500"} target="_blank" icon={<SiFiverr className="md:size-14 size-12" />} />
-                                </>
-                        }
                         {/* Scroll Down Button */}
                         <ButtonOutline href="#about" label={t('scroll_down')} classes={"capitalize normal-case!"} icon={<FiArrowDown className="whileInView-bounce" />} />
                     </motion.div>
@@ -173,6 +181,18 @@ const Hero = () => {
                     </figure>
                 </motion.div>
             </div>
+            {
+                showCV &&
+                <AnimatePresence>
+                    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed top-0 left-0 w-full h-full bg-black/80 backdrop-blur-lg z-[9999] flex items-center justify-center p-4">
+                        <ResumeViewer />
+                        <button className="btn btn-outline absolute top-4 right-4 cursor-pointer" onClick={() => setShowCV(false)}>
+                        <CgClose className="size-3.5" />
+                        </button>
+                    </motion.div>
+                </AnimatePresence>
+            }
+
         </section>
     );
 };
