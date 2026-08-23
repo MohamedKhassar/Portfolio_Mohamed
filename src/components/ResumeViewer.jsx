@@ -10,7 +10,7 @@ pdfjs.GlobalWorkerOptions.workerSrc = new URL(
 
 export default function ResumeViewer() {
     const { width, ref } = useResizeDetector();
-    const {language}=useLanguage()
+    const { language } = useLanguage()
 
     return (
         <div
@@ -26,8 +26,9 @@ export default function ResumeViewer() {
                 <Page
                     pageNumber={1}
                     width={width ? Math.min(width, 900) : 300} // Dynamic width calculation
-                    renderTextLayer={false}
-                    renderAnnotationLayer={false}
+                    renderTextLayer={false}       // Speeds up rendering by omitting selectable text
+                    renderAnnotationLayer={false} // Speeds up rendering by skipping embedded PDF links
+                    renderInteractiveForms={false}
                 />
 
             </Document>

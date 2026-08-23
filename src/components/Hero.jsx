@@ -8,6 +8,7 @@ import { useLanguage } from "../hooks/useLanguage";
 import { useTranslation } from "react-i18next";
 import ResumeViewer from "./ResumeViewer";
 import { CgClose } from "react-icons/cg";
+import { MdDownload } from "react-icons/md";
 const Hero = () => {
     const [loaded, setLoaded] = useState(false);
     const { language } = useLanguage();
@@ -187,7 +188,10 @@ const Hero = () => {
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="fixed top-0 left-0 w-full h-full bg-black/80 backdrop-blur-lg z-[9999] flex items-center justify-center p-4">
                         <ResumeViewer />
                         <button className="btn btn-outline absolute top-4 right-4 cursor-pointer" onClick={() => setShowCV(false)}>
-                        <CgClose className="size-3.5" />
+                        <CgClose className="size-4.5" />
+                        </button>
+                        <button  className="btn btn-outline absolute top-4 right-20 cursor-pointer" onClick={() => window.open(`/assets/file/Resume-${language}.pdf`)}>
+                        <MdDownload className="size-4.5" />
                         </button>
                     </motion.div>
                 </AnimatePresence>

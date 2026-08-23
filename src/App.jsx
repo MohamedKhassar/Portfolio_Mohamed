@@ -1,39 +1,35 @@
-import About from "./components/About"
-import Contact from "./components/Contact"
-import Footer from "./components/Footer"
-import Header from "./components/Header"
-import Hero from "./components/Hero"
-// import Reviews from "./components/Reviews"
-import Skills from "./components/Skills"
-import Work from "./components/Work"
-import { ReactLenis } from 'lenis/react'
+import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HelmetProvider } from 'react-helmet-async';
+
+
+import { ReactLenis } from 'lenis/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { Analytics } from "@vercel/analytics/react"
-import Certificates from "./components/Certificates"
-// import Reviews from "./components/Reviews"
-import useMetaData from "./hooks/useMetaData"
+import { Analytics } from "@vercel/analytics/react";
+import { MainPortfolio } from './components/MainPortfolio';
+
 gsap.registerPlugin(ScrollTrigger);
 
 
-const App = () => {
-  useMetaData();
-  return (
-    <ReactLenis root>
-      <Analytics />
-      <Header />
-      <main>
-        <Hero />
-        <About />
-        <Skills />
-        <Certificates />
-        <Work />
-        {/* <Reviews /> */}
-        <Contact />
-      </main>
-      <Footer />
-    </ReactLenis>
-  )
-}
 
-export default App
+const App = () => {
+  return (
+    <HelmetProvider>
+      <ReactLenis root>
+        <Analytics />
+        <BrowserRouter>
+          <Routes>
+            {/* English / Default route */}
+            <Route path="/" element={<MainPortfolio />} />
+            {/* Localized route (e.g. /fr) */}
+            <Route path="/:lang" element={<MainPortfolio />} />
+            {/* Fallback for unknown routes */}
+            <Route path="*" element={<Navigate to="/" replace />} />
+          </Routes>
+        </BrowserRouter>
+      </ReactLenis>
+    </HelmetProvider>
+  );
+};
+
+export default App;

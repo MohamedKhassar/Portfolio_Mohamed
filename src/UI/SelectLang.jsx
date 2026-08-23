@@ -3,6 +3,7 @@ import { useTranslation } from 'react-i18next';
 import { CgChevronDown } from 'react-icons/cg';
 import PropTypes from 'prop-types';
 import { useLanguage } from '../hooks/useLanguage';
+import { Link } from 'react-router-dom';
 
 const LANGUAGES = [
     {
@@ -56,7 +57,7 @@ const LANGUAGES = [
 const SelectLang = ({ className = "" }) => {
     const { i18n: i18nHook } = useTranslation();
     const [showLanguages, setShowLanguages] = useState(false);
-    const { language, changeLanguage } = useLanguage();
+    const { language } = useLanguage();
     const SelectRef = useRef(null);
 
     useEffect(() => {
@@ -81,12 +82,12 @@ const SelectLang = ({ className = "" }) => {
                 )
             }
             <div className={`flex flex-col gap-1 items-center justify-start absolute group-hover:opacity-100 group-hover:visible transition-[opacity, visibility] duration-500 bg-slate-900 rounded-2xl top-full left-0 mt-1.5 opacity-0 invisible w-full py-2 px-2 ${showLanguages ? 'opacity-100 visible' : ''}`}>
-                {LANGUAGES.map(({ code, image, label }) => (
-                    <button onClick={() => changeLanguage(code, image, label)} key={code} className={`flex gap-x-2 px-4 py-2 justify-center w-full text-sm rounded-3xl bg-gradient-to-b from-slate-800 to-slate-800/60 hover:bg-slate-900 cursor-pointer focus:bg-slate-950 ${i18nHook.language === code ? "bg-slate-950" : ""}`}>
+                {LANGUAGES.map(({ code, label }) => (
+                    <Link to={`/${code=="en" ? "" : code}`} key={code} className={`flex gap-x-2 px-4 py-2 justify-center w-full text-sm rounded-3xl bg-gradient-to-b from-slate-800 to-slate-800/60 hover:bg-slate-900 cursor-pointer focus:bg-slate-950 ${i18nHook.language === code ? "bg-slate-950" : ""}`}>
                         {/* <img src={image} alt={label} width={20} height={20} /> */}
                         {/* {image} */}
                         <span className='lg:text-sm text-xs'>{label}</span>
-                    </button>
+                    </Link>
                 ))}
             </div>
         </article >
