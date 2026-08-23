@@ -46,9 +46,9 @@ export const MainPortfolio = () => {
         <meta name="description" content={t('description')} />
         
         {/* Alternate canonical links for SEO */}
-        <link rel="alternate" hrefLang="en" href="https://yourportfolio.com/" />
-        <link rel="alternate" hrefLang="fr" href="https://yourportfolio.com/fr" />
-        <link rel="alternate" hrefLang="x-default" href="https://yourportfolio.com/" />
+        <link rel="alternate" hrefLang="en" href="https://www.mohamed-khassar.ma/" />
+        <link rel="alternate" hrefLang="fr" href="https://www.mohamed-khassar.ma/fr" />
+        <link rel="alternate" hrefLang="x-default" href="https://www.mohamed-khassar.ma/" />
       </Helmet>
 
       <Header currentLang={currentLang} />
