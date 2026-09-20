@@ -65,7 +65,15 @@ const Hero = () => {
                                 height={40}
                                 alt={`Mohamed Khassar ${language === "de" ? "Entweckler" : "Developer"}`}
                                 loading="lazy"
-                                className="img-cover"
+                                className="img-cover hidden md:block"
+                            />
+                            <img
+                                src="/assets/imgs/hero-banner.png"
+                                width={40}
+                                height={40}
+                                alt={`Mohamed Khassar ${language === "de" ? "Entweckler" : "Developer"}`}
+                                loading="lazy"
+                                className="img-cover block md:hidden"
                             />
                         </figure>
                         <div className="flex items-center gap-1.5 tex-zinc-400 text-sm tracking-wide">
@@ -167,7 +175,7 @@ const Hero = () => {
                     viewport={{ once: true }}
                     className="hidden lg:block">
                     <figure
-                        className={`w-full ml-auto max-w-[480px] bg-slate-800 rounded-[60px] overflow-hidden 
+                        className={`w-full ml-auto max-w-[480px] rounded-full overflow-hidden 
         ${!loaded ? "animate-pulse" : ""}`}
                     >
                         <img

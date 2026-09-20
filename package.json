@@ -13,6 +13,7 @@
     "@gsap/react": "^2.1.2",
     "@tailwindcss/vite": "^4.0.3",
     "@vercel/analytics": "^1.5.0",
+    "@vercel/speed-insights": "^2.0.0",
     "clsx": "^2.1.1",
     "color-thief-browser": "^2.0.2",
     "framer-motion": "^12.23.12",

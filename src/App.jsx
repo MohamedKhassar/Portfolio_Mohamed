@@ -7,7 +7,7 @@ import gsap from 'gsap';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Analytics } from "@vercel/analytics/react";
 import { MainPortfolio } from './components/MainPortfolio';
-
+import { SpeedInsights } from "@vercel/speed-insights/react"
 gsap.registerPlugin(ScrollTrigger);
 
 
@@ -17,6 +17,7 @@ const App = () => {
     <HelmetProvider>
       <ReactLenis root>
         <Analytics />
+        <SpeedInsights />
         <BrowserRouter>
           <Routes>
             {/* English / Default route */}
