@@ -175,7 +175,7 @@ const Hero = () => {
                     viewport={{ once: true }}
                     className="hidden lg:block">
                     <figure
-                        className={`w-full ml-auto max-w-[480px] rounded-full overflow-hidden 
+                        className={`w-full ml-auto max-w-[480px] rounded-[60px] overflow-hidden 
         ${!loaded ? "animate-pulse" : ""}`}
                     >
                         <img
@@ -184,7 +184,7 @@ const Hero = () => {
                             loading="lazy"
                             width={656}
                             height={800}
-                            className="w-full"
+                            className="w-full aspect-square object-cover object-top"
                             onLoad={() => setLoaded(true)}
                         />
                     </figure>
